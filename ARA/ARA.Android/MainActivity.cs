@@ -19,6 +19,8 @@ namespace ARA.Droid
 
 			base.OnCreate (bundle);
 
+            SetContentView(Resource.Layout.FlightInfo1);
+
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 			LoadApplication (new ARA.App ());
 		}

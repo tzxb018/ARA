@@ -1,7 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</LinearLayout>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/linearLayout1">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/questionLayout"
+        p1:paddingLeft="8dp"
+        p1:paddingRight="8dp"
+        p1:paddingTop="8dp">
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceLarge"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView1"
+            p1:layout_marginTop="8dp"
+            p1:text="Checked NOTAMS?" />
+        <ToggleButton
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/toggleButton1" />
+        <TextView
+            p1:text="Checked out with FBO?"
+            p1:textAppearance="?android:attr/textAppearanceLarge"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView2"
+            p1:layout_marginTop="8dp" />
+        <ToggleButton
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/toggleButton2" />
+        <TextView
+            p1:text="Filed a flight plan?"
+            p1:textAppearance="?android:attr/textAppearanceLarge"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView4"
+            p1:layout_marginTop="8dp" />
+        <ToggleButton
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/toggleButton3" />
+    </LinearLayout>
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/relativeLayout2"
+        p1:layout_alignParentBottom="true"
+        p1:layout_marginBottom="10dp"
+        p1:layout_marginRight="10dp">
+        <ImageButton
+            p1:src="@android:drawable/ic_media_next"
+            p1:layout_width="120dp"
+            p1:layout_height="80dp"
+            p1:id="@+id/btnContinue"
+            p1:layout_alignParentRight="true"
+            p1:clickable="true" />
+    </RelativeLayout>
+</RelativeLayout>

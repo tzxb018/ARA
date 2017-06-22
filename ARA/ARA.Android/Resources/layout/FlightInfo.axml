@@ -69,4 +69,14 @@
             p1:layout_alignParentRight="true"
             p1:clickable="true" />
     </RelativeLayout>
+    <TextView
+        p1:text="This form should not be completed more than 12 hours prior to takeoff."
+        p1:textAppearance="?android:attr/textAppearanceSmall"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/questionLayout"
+        p1:id="@+id/textView5"
+        p1:layout_marginTop="8dp"
+        p1:layout_marginLeft="8dp"
+        p1:layout_marginRight="8dp" />
 </RelativeLayout>

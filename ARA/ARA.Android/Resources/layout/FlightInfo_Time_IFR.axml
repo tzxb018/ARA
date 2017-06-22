@@ -12,28 +12,22 @@
         android:paddingLeft="8dp"
         android:paddingTop="16dp">
         <TextView
-            android:text="Time (Flying under VFR)"
+            android:text="Time (Flying under IFR)"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView1" />
         <Button
-            android:text="Day, Pvt/Comm/CFI Solo &amp; Flight Team "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnDayVFR"
-            android:layout_marginTop="8dp" />
-        <Button
             android:text="Day/Night, Dual"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/btnDualVFR"
+            android:id="@+id/btnDualIFR"
             android:layout_marginTop="8dp" />
         <Button
-            android:text="Night, Commerical/CFI Solo"
+            android:text="Day, Commerical/CFI Solo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnNightVFR"
+            android:id="@+id/btnDayIFR"
             android:layout_marginTop="8dp" />
     </LinearLayout>
     <RelativeLayout
@@ -55,7 +49,7 @@
                 android:id="@+id/relativeLayout4">
                 <ImageButton
                     android:src="@android:drawable/ic_media_previous"
-                    android:id="@+id/btnBackFromVFRTime"
+                    android:id="@+id/btnBackfromIFRTime"
                     android:layout_width="120dp"
                     android:layout_height="80dp"
                     android:layout_alignParentBottom="true"
@@ -73,7 +67,7 @@
                 android:layout_marginBottom="10dp">
                 <ImageButton
                     android:src="@android:drawable/ic_media_next"
-                    android:id="@+id/btnContinuefromVFRTime"
+                    android:id="@+id/btnContinuefromIFRTime"
                     android:clickable="true"
                     android:layout_width="120dp"
                     android:layout_height="80dp"

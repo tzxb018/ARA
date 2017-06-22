@@ -112,6 +112,9 @@
     <AndroidResource Include="Resources\layout\FlightInfo_Time_VFR.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\FlightInfo_Time_IFR.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />

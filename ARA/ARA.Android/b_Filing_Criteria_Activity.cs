@@ -12,8 +12,8 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Filing_Criteria_Activity")]
-    public class Filing_Criteria_Activity : Activity
+    [Activity(Label = "Filing Criteria - 2 of 5")]
+    public class b_Filing_Criteria_Activity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,7 +27,7 @@ namespace ARA.Droid
 
             back.Click += delegate
             {
-                StartActivity(typeof(MainActivity));
+                StartActivity(typeof(a_Flight_Info_Activity));
             };
 
 

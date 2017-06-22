@@ -103,16 +103,19 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\FlightInfo1.axml">
+    <AndroidResource Include="Resources\layout\FlightInfo.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FlightInfo_FilingCriteria.axml">
+    <AndroidResource Include="Resources\layout\Filing_Criteria.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FlightInfo_Time_VFR.axml">
+    <AndroidResource Include="Resources\layout\Time_VFR.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FlightInfo_Time_IFR.axml">
+    <AndroidResource Include="Resources\layout\Time_IFR.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Syllabus.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

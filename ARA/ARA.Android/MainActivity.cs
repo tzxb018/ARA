@@ -21,7 +21,7 @@ namespace ARA.Droid
 			base.OnCreate (bundle);
 
             //testing purposes
-            SetContentView(Resource.Layout.FlightInfo_Time_VFR);
+            SetContentView(Resource.Layout.Time_VFR);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 			LoadApplication (new ARA.App ());

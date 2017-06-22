@@ -17,9 +17,11 @@ namespace ARA.Droid
 			TabLayoutResource = Resource.Layout.Tabbar;
 			ToolbarResource = Resource.Layout.Toolbar; 
 
+
 			base.OnCreate (bundle);
 
-            SetContentView(Resource.Layout.FlightInfo1);
+            //testing purposes
+            SetContentView(Resource.Layout.FlightInfo_FilingCriteria);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 			LoadApplication (new ARA.App ());

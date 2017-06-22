@@ -25,7 +25,8 @@
         <ToggleButton
             p1:layout_width="match_parent"
             p1:layout_height="wrap_content"
-            p1:id="@+id/toggleButton1" />
+            p1:id="@+id/toggleButton1"
+            p1:layout_marginTop="8dp" />
         <TextView
             p1:text="Checked out with FBO?"
             p1:textAppearance="?android:attr/textAppearanceLarge"
@@ -36,7 +37,8 @@
         <ToggleButton
             p1:layout_width="match_parent"
             p1:layout_height="wrap_content"
-            p1:id="@+id/toggleButton2" />
+            p1:id="@+id/toggleButton2"
+            p1:layout_marginTop="8dp" />
         <TextView
             p1:text="Filed a flight plan?"
             p1:textAppearance="?android:attr/textAppearanceLarge"
@@ -47,7 +49,8 @@
         <ToggleButton
             p1:layout_width="match_parent"
             p1:layout_height="wrap_content"
-            p1:id="@+id/toggleButton3" />
+            p1:id="@+id/toggleButton3"
+            p1:layout_marginTop="8dp" />
     </LinearLayout>
     <RelativeLayout
         p1:minWidth="25px"

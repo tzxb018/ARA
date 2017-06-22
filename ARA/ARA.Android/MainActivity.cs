@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace ARA.Droid
 {
-	[Activity (Label = "ARA", Icon = "@drawable/icon", Theme="@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "ARA", Icon = "@drawable/icon", Theme="@style/MainTheme", MainLauncher = true)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)
@@ -21,7 +21,7 @@ namespace ARA.Droid
 			base.OnCreate (bundle);
 
             //testing purposes
-            SetContentView(Resource.Layout.FlightInfo_FilingCriteria);
+            SetContentView(Resource.Layout.FlightInfo_Time_VFR);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 			LoadApplication (new ARA.App ());

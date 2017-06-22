@@ -29,7 +29,8 @@
             <ToggleButton
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
-                p1:id="@+id/toggleButton1" />
+                p1:id="@+id/toggleButton1"
+                p1:layout_marginTop="8dp" />
         </LinearLayout>
         <RelativeLayout
             p1:minWidth="25px"

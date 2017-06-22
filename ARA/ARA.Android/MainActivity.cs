@@ -15,13 +15,22 @@ namespace ARA.Droid
 		protected override void OnCreate (Bundle bundle)
 		{
 			TabLayoutResource = Resource.Layout.Tabbar;
-			ToolbarResource = Resource.Layout.Toolbar; 
-
+			ToolbarResource = Resource.Layout.Toolbar;
+            Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
 
 			base.OnCreate (bundle);
 
-            //testing purposes
-            SetContentView(Resource.Layout.Time_VFR);
+           
+            SetContentView(Resource.Layout.a_Flight_Info);
+
+
+            var next = FindViewById<ImageButton>(Resource.Id.btnContinueFromFlightInfo1);
+
+            next.Click += delegate
+            {
+                StartActivity(typeof(Filing_Criteria_Activity));
+            };
+
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 			LoadApplication (new ARA.App ());

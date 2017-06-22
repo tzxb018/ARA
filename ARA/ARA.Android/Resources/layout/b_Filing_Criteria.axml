@@ -12,58 +12,18 @@
         android:paddingLeft="8dp"
         android:paddingTop="16dp">
         <TextView
-            android:text="Departure Date"
+            android:text="Select Filing Criteria"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView1" />
-        <Button
-            android:text="Select Date"
+        <ToggleButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnSelectDate"
-            android:layout_marginTop="8dp" />
-        <TextView
-            android:text="Departure Time"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:layout_marginTop="8dp" />
-        <Button
-            android:text="Select Time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnSelectTime"
-            android:layout_marginTop="8dp" />
-        <TextView
-            android:text="This form should not be completed more than 12 hours prior to takeoff."
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            android:layout_marginTop="8dp" />
-        <TextView
-            android:text="Student Name"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:layout_marginTop="8dp" />
-        <EditText
-            android:inputType="textPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtFirstName"
-            android:hint="First Name"
-            android:layout_marginTop="8dp" />
-        <EditText
-            android:inputType="textPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtLastName"
-            android:hint="Last Name"
-            android:layout_marginTop="5dp" />
+            android:id="@+id/tglFilingCriteria"
+            android:layout_marginTop="8dp"
+            android:textOff="VFR"
+            android:textOn="IFR" />
     </LinearLayout>
     <RelativeLayout
         android:minWidth="25px"
@@ -84,7 +44,7 @@
                 android:id="@+id/relativeLayout4">
                 <ImageButton
                     android:src="@android:drawable/ic_media_previous"
-                    android:id="@+id/btnBackFromPersonalInfo"
+                    android:id="@+id/btnBackfromFilingCriteria"
                     android:layout_width="120dp"
                     android:layout_height="80dp"
                     android:layout_alignParentBottom="true"
@@ -100,9 +60,9 @@
                 android:id="@+id/relativeLayout3"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp">
-                <Button
-                    android:id="@+id/btnSubmit"
-                    android:text="Submit"
+                <ImageButton
+                    android:src="@android:drawable/ic_media_next"
+                    android:id="@+id/btnContinueFromFilingCriteria"
                     android:clickable="true"
                     android:layout_width="120dp"
                     android:layout_height="80dp"

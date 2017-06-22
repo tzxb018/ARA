@@ -26,7 +26,9 @@
             p1:layout_width="match_parent"
             p1:layout_height="wrap_content"
             p1:id="@+id/tglNOTMAS"
-            p1:layout_marginTop="8dp" />
+            p1:layout_marginTop="8dp"
+            p1:textOff="No"
+            p1:textOn="Yes" />
         <TextView
             p1:text="Checked out with FBO?"
             p1:textAppearance="?android:attr/textAppearanceLarge"
@@ -38,7 +40,9 @@
             p1:layout_width="match_parent"
             p1:layout_height="wrap_content"
             p1:id="@+id/tglFBO"
-            p1:layout_marginTop="8dp" />
+            p1:layout_marginTop="8dp"
+            p1:textOff="No"
+            p1:textOn="Yes" />
         <TextView
             p1:text="Filed a flight plan?"
             p1:textAppearance="?android:attr/textAppearanceLarge"
@@ -50,7 +54,9 @@
             p1:layout_width="match_parent"
             p1:layout_height="wrap_content"
             p1:id="@+id/tglFlightPlan"
-            p1:layout_marginTop="8dp" />
+            p1:layout_marginTop="8dp"
+            p1:textOff="No, I'm staying in the local area under VFR."
+            p1:textOn="Yes" />
     </LinearLayout>
     <RelativeLayout
         p1:minWidth="25px"

@@ -83,7 +83,7 @@
                 android:layout_marginBottom="10dp">
                 <ImageButton
                     android:src="@android:drawable/ic_media_next"
-                    android:id="@+id/btnContinue2"
+                    android:id="@+id/btnContinueFromSyllabus"
                     android:clickable="true"
                     android:layout_width="120dp"
                     android:layout_height="80dp"

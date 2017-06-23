@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "D_Syllabus_Activity")]
+    [Activity(Label = "Risk Assessment - 4 of 5")]
     public class D_Syllabus_Activity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -36,6 +36,11 @@ namespace ARA.Droid
                     StartActivity(typeof(C_Time_IFR_Activity));
                 }
                 //returns back to the previous page using a boolean from the selecting page of VFR vs. IFR
+            };
+
+            next.Click += delegate
+            {
+                StartActivity(typeof(E_Personal_Information));
             };
         }
     }

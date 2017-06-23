@@ -100,6 +100,7 @@
     <Compile Include="C_Time_IFR_Activity.cs" />
     <Compile Include="C_Time_VFR_Activity.cs" />
     <Compile Include="D_Syllabus_Activity.cs" />
+    <Compile Include="E_Personal_Information.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

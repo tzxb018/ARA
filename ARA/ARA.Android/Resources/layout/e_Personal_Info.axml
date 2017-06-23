@@ -11,38 +11,83 @@
         android:paddingRight="8dp"
         android:paddingLeft="8dp"
         android:paddingTop="16dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3">
+            <TextView
+                android:text="Departure Date"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical" />
+            <ImageButton
+                android:src="@android:drawable/ic_menu_today"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/btnSelectDate"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
         <TextView
-            android:text="Departure Date"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Select a Date"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView1" />
-        <Button
-            android:text="Select Date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnSelectDate"
+            android:layout_height="25.3dp"
+            android:id="@+id/txtDateView"
             android:layout_marginTop="8dp" />
-        <TextView
-            android:text="Departure Time"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:layout_marginTop="8dp" />
-        <Button
-            android:text="Select Time"
+            android:id="@+id/linearLayout4"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:text="Departure Time"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnSelectTime"
-            android:layout_marginTop="8dp" />
+            android:layout_height="45dp"
+            android:id="@+id/linearLayout5"
+            android:layout_marginTop="8dp">
+            <EditText
+                android:inputType="number"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:id="@+id/txtHour"
+                android:hint="Hour"
+                android:gravity="center" />
+            <TextView
+                android:text=":"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textView6"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="30sp" />
+            <EditText
+                android:inputType="number"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:id="@+id/txtMinute"
+                android:hint="Minute"
+                android:gravity="center" />
+        </LinearLayout>
         <TextView
             android:text="This form should not be completed more than 12 hours prior to takeoff."
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="10dp" />
         <TextView
             android:text="Student Name"
             android:textAppearance="?android:attr/textAppearanceLarge"

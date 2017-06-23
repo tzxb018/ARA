@@ -15,6 +15,8 @@ namespace ARA.Droid
     [Activity(Label = "Filing Criteria - 2 of 5")]
     public class B_Filing_Criteria_Activity : Activity
     {
+        public static bool isVFR;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,27 +29,30 @@ namespace ARA.Droid
             var VFR_IFR = FindViewById<ToggleButton>(Resource.Id.tglFilingCriteria);
             var txt = FindViewById<TextView>(Resource.Id.txtVFRIFR);
 
-            next.Click += delegate
+            next.Click += delegate //in case user does not press the toggle button, then the next button has to be triggered to first state of the toggle button
             {
                 StartActivity(typeof(C_Time_IFR_Activity));
+                isVFR = false;
             };
 
-            VFR_IFR.CheckedChange += (s, e) =>
+            VFR_IFR.CheckedChange += (s, e) => //if any chanages are made to the toggle button, the next slide has to correspond to the next change
             {
                 if (e.IsChecked)
                 {
-                    txt.Text = "VFR";
+                    
                     next.Click += delegate
                     {
                         StartActivity(typeof(C_Time_VFR_Activity));
+                        isVFR = true;
                     };
                 }
                 else
                 {
-                    txt.Text = "IFR";
+                    
                     next.Click += delegate
                     {
                         StartActivity(typeof(C_Time_IFR_Activity));
+                        isVFR = false;
                     };
                 }
             };

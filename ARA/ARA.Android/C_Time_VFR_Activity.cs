@@ -30,7 +30,10 @@ namespace ARA.Droid
                 StartActivity(typeof(B_Filing_Criteria_Activity));
             };
 
-           
+            next.Click += delegate
+            {
+                StartActivity(typeof(D_Syllabus_Activity));
+            };
 
         }
     }

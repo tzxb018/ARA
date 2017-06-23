@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "C_Time_IFR_Activity")]
+    [Activity(Label = "Type of Flight - 3 of 5")]
     public class C_Time_IFR_Activity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -28,6 +28,11 @@ namespace ARA.Droid
             back.Click += delegate
             {
                 StartActivity(typeof(B_Filing_Criteria_Activity));
+            };
+
+            next.Click += delegate
+            {
+                StartActivity(typeof(D_Syllabus_Activity));
             };
         }
     }

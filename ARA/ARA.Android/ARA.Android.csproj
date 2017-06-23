@@ -95,8 +95,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="b_Filing_Criteria_Activity.cs" />
-    <Compile Include="a_Flight_Info_Activity.cs" />
+    <Compile Include="B_Filing_Criteria_Activity.cs" />
+    <Compile Include="A_Flight_Info_Activity.cs" />
+    <Compile Include="C_Time_IFR_Activity.cs" />
+    <Compile Include="C_Time_VFR_Activity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

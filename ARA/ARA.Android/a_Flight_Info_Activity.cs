@@ -10,7 +10,7 @@ using Android.OS;
 namespace ARA.Droid
 {
 	[Activity (Label = "Flight Information - 1 of 5", Icon = "@drawable/icon", MainLauncher = true)] // Theme="@style/MainTheme", 
-    public class a_Flight_Info_Activity : Activity //global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    public class A_Flight_Info_Activity : Activity //global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -23,7 +23,7 @@ namespace ARA.Droid
 
             next.Click += delegate
             {
-                StartActivity(typeof(b_Filing_Criteria_Activity));
+                StartActivity(typeof(B_Filing_Criteria_Activity));
             };
 
 

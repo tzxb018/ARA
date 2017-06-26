@@ -73,7 +73,7 @@
             p1:layout_height="80dp"
             p1:id="@+id/btnContinueFromFlightInfo1"
             p1:layout_alignParentRight="true"
-            p1:clickable="true" />
+            p1:clickable="false" />
     </RelativeLayout>
     <TextView
         p1:text="This form should not be completed more than 12 hours prior to takeoff."

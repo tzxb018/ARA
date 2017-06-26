@@ -27,7 +27,6 @@ namespace ARA.Droid
             var next = FindViewById<ImageButton>(Resource.Id.btnContinueFromFilingCriteria);
             var back = FindViewById<ImageButton>(Resource.Id.btnBackfromFilingCriteria);
             var VFR_IFR = FindViewById<ToggleButton>(Resource.Id.tglFilingCriteria);
-            var txt = FindViewById<TextView>(Resource.Id.txtVFRIFR);
 
             next.Click += delegate //in case user does not press the toggle button, then the next button has to be triggered to first state of the toggle button
             {

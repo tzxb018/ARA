@@ -101,7 +101,21 @@ namespace ARA.Droid
 
             next.Click += delegate
             {
-                StartActivity(typeof(D_Syllabus_Activity));
+                if (VFRisDay == false && VFRisDual == false && VFRisNight == false)
+                {
+                    AlertDialog.Builder alertVFR = new AlertDialog.Builder(this);
+                    alertVFR.SetTitle("Alert");
+                    alertVFR.SetMessage("You must select a time to continue.");
+                    alertVFR.SetNeutralButton("OK", delegate
+                    {
+                        alertVFR.Dispose();
+                    });
+                    alertVFR.Show();
+                }
+                else
+                {
+                    StartActivity(typeof(D_Syllabus_Activity));
+                }
             };
 
         }

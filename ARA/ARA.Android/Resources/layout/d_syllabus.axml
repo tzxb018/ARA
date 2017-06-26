@@ -23,18 +23,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtFlightInfo"
-            android:layout_marginTop="8dp" />
-        <Button
-            android:text="Local"
+            android:layout_marginTop="10dp" />
+        <ToggleButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnLocal"
-            android:layout_marginTop="8dp" />
-        <Button
-            android:text="Cross Country"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/btnCross"
+            android:id="@+id/tglArea"
             android:layout_marginTop="8dp" />
         <TextView
             android:text="Risk: 0"

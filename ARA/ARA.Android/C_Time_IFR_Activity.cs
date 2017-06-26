@@ -77,7 +77,21 @@ namespace ARA.Droid
 
             next.Click += delegate
             {
-                StartActivity(typeof(D_Syllabus_Activity));
+                if (IFRisDay == false && IFRisDual == false)
+                {
+                    AlertDialog.Builder alertIFR = new AlertDialog.Builder(this);
+                    alertIFR.SetTitle("Alert");
+                    alertIFR.SetMessage("You must select a time to continue.");
+                    alertIFR.SetNeutralButton("OK", delegate
+                    {
+                        alertIFR.Dispose();
+                    });
+                    alertIFR.Show();
+                }
+                else
+                {
+                    StartActivity(typeof(D_Syllabus_Activity));
+                }
             };
         }
     }

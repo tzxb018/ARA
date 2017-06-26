@@ -3,77 +3,85 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/linearLayout1"
-      android:paddingRight="8dp"
-      android:paddingLeft="8dp"
-      android:paddingTop="16dp">
-    <TextView
-        android:text="Time (Flying under IFR)"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <Button
-        android:text="Day/Night, Dual"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/btnDualIFR"
-        android:layout_marginTop="8dp" />
-    <Button
-        android:text="Day, Commerical/CFI Solo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnDayIFR"
-        android:layout_marginTop="8dp" />
-  </LinearLayout>
-  <RelativeLayout
-      android:minWidth="25px"
-      android:minHeight="25px"
-      android:id="@+id/relativeLayout2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2">
-      <RelativeLayout
-          android:minWidth="25px"
-          android:minHeight="25px"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/relativeLayout4">
-        <ImageButton
-            android:src="@android:drawable/ic_media_previous"
-            android:id="@+id/btnBackfromIFRTime"
-            android:layout_width="120dp"
-            android:layout_height="80dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp" />
-      </RelativeLayout>
-      <RelativeLayout
-          android:minWidth="25px"
-          android:minHeight="25px"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/relativeLayout3"
-          android:layout_marginRight="10dp"
-          android:layout_marginBottom="10dp">
-        <ImageButton
-            android:src="@android:drawable/ic_media_next"
-            android:id="@+id/btnContinuefromIFRTime"
-            android:clickable="true"
-            android:layout_width="120dp"
-            android:layout_height="80dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true" />
-      </RelativeLayout>
+        android:id="@+id/linearLayout1"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="16dp">
+        <TextView
+            android:text="Time (Flying under IFR)"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+        <Button
+            android:text="Day/Night, Dual"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnDualIFR"
+            android:layout_marginTop="8dp" />
+        <Button
+            android:text="Day, Commerical/CFI Solo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDayIFR"
+            android:layout_marginTop="8dp" />
+        <TextView
+            android:text="Select a Time"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtIFRTime"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="5dp" />
     </LinearLayout>
-  </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout4">
+                <ImageButton
+                    android:src="@android:drawable/ic_media_previous"
+                    android:id="@+id/btnBackfromIFRTime"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout3"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+                <ImageButton
+                    android:src="@android:drawable/ic_media_next"
+                    android:id="@+id/btnContinuefromIFRTime"
+                    android:clickable="true"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

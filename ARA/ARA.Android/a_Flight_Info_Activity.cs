@@ -56,6 +56,7 @@ namespace ARA.Droid
                 FlightPlan.Checked = false;
             }
 
+            //Changes the static var associated with the toggle button to keep the boolean data through out the program
             NOTMAS.Click += (s, e) =>
             {
                 if (NOTMAS.Checked)

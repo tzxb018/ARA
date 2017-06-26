@@ -28,35 +28,38 @@ namespace ARA.Droid
             var back = FindViewById<ImageButton>(Resource.Id.btnBackfromFilingCriteria);
             var VFR_IFR = FindViewById<ToggleButton>(Resource.Id.tglFilingCriteria);
 
-            next.Click += delegate //in case user does not press the toggle button, then the next button has to be triggered to first state of the toggle button
+            if (isVFR) //setting toggle button to value given by the static bool 
             {
-                StartActivity(typeof(C_Time_IFR_Activity));
-                isVFR = false;
-            };
+                VFR_IFR.Checked = true;
+            }
+            else
+            {
+                VFR_IFR.Checked = false;
+            }
 
-            VFR_IFR.CheckedChange += (s, e) => //if any chanages are made to the toggle button, the next slide has to correspond to the next change
+            VFR_IFR.Click += (s, e) => //if any chanages are made to the toggle button, the next slide has to correspond to the next change
             {
-                if (e.IsChecked)
+                if (VFR_IFR.Checked)
                 {
-                    
-                    next.Click += delegate
-                    {
-                        StartActivity(typeof(C_Time_VFR_Activity));
-                        isVFR = true;
-                    };
+                    isVFR = true;
                 }
                 else
                 {
-                    
-                    next.Click += delegate
-                    {
-                        StartActivity(typeof(C_Time_IFR_Activity));
-                        isVFR = false;
-                    };
+                    isVFR = false;
                 }
             };
 
-            back.Click += delegate
+            next.Click += delegate //when clicked, it checks for the bool and then starts the appropriate activity
+            {
+                if (isVFR == true)
+                {
+                    StartActivity(typeof(C_Time_VFR_Activity));
+                }
+                else
+                    StartActivity(typeof(C_Time_IFR_Activity));
+            };
+
+            back.Click += delegate //goes back to the first activity, with all the values inputted by the user svaed on there
             {
                 StartActivity(typeof(A_Flight_Info_Activity));
             };

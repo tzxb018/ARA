@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "UNO Flight Risk Assessment", MainLauncher = true )]
+    [Activity(Label = "UNO Flight Risk Assessment" )]
     public class TitleActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

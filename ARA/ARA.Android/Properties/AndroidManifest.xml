@@ -2,10 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" />
 	<application android:label="UNO Flight Risk Assessment" name="UNO Flight Risk Assessment" android:icon="@drawable/uno_icon_two">
-		<intent-filter>
-			<action android:name="android.intent.action.MAIN" />
-			<category android:name="android.intent.category.LAUNCHER" />
-			<categroy android:name="android.intent.category.DEFAULT" />
-		</intent-filter>
+    <activity
+        android:name=".a_Flight_Info"
+        android:label ="Flight Information - 1 of 5">
+      <intent-filter android:label ="UNO Flight Risk Assessment">
+        <action android:name="android.intent.action.MAIN"/>
+        <categroy android:name ="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
 	</application>
 </manifest>

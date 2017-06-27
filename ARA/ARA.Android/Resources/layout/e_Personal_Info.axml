@@ -71,7 +71,9 @@
                 android:layout_height="match_parent"
                 android:id="@+id/txtHour"
                 android:hint="Hour"
-                android:gravity="center" />
+                android:gravity="center"
+                android:ellipsize="end"
+                android:nextFocusDown="@+id/txtMinute"/>
             <TextView
                 android:text=":"
                 android:textAppearance="?android:attr/textAppearanceMedium"

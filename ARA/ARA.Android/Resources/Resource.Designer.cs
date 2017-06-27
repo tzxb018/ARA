@@ -2738,8 +2738,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070044
 			public const int textView5 = 2131165252;
 			
-			// aapt resource value: 0x7f07009a
-			public const int textView6 = 2131165338;
+			// aapt resource value: 0x7f07009b
+			public const int textView6 = 2131165339;
 			
 			// aapt resource value: 0x7f070097
 			public const int textView7 = 2131165335;
@@ -2798,8 +2798,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07009e
 			public const int txtLastName = 2131165342;
 			
-			// aapt resource value: 0x7f07009b
-			public const int txtMinute = 2131165339;
+			// aapt resource value: 0x7f07009a
+			public const int txtMinute = 2131165338;
 			
 			// aapt resource value: 0x7f070087
 			public const int txtRisk = 2131165319;

@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace ARA.Droid
 {
-	[Activity (Label = "Flight Information - 1 of 5", Icon = "@drawable/icon", MainLauncher = true)] // Theme="@style/MainTheme", 
+	[Activity (Label = "Flight Information - 1 of 5")] // Theme="@style/MainTheme", 
    
     public class A_Flight_Info_Activity : Activity //global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{

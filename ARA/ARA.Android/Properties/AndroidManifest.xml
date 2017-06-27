@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="UNO Flight Risk Assessment" name ="UNO Flight Risk Assessment">
-    <intent-filter>
-      <action android:name="android.intent.action.MAIN" />
-      <category android:name ="android.intent.category.LAUNCHER" />
-      <categroy android:name ="android.intent.category.DEFAULT" />
-    </intent-filter>
-  </application>
+	<application android:label="UNO Flight Risk Assessment" name="UNO Flight Risk Assessment" android:icon="@drawable/uno_icon_two">
+		<intent-filter>
+			<action android:name="android.intent.action.MAIN" />
+			<category android:name="android.intent.category.LAUNCHER" />
+			<categroy android:name="android.intent.category.DEFAULT" />
+		</intent-filter>
+	</application>
 </manifest>

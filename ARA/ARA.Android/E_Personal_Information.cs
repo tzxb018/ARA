@@ -13,7 +13,7 @@ using static Android.App.DatePickerDialog;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Personal Information - 5 of 5")]
+    [Activity(Label = "Personal Information - 5 of 5", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class E_Personal_Information : Activity,IOnDateSetListener
     {
         private const int DATE_DIALOG = 1;

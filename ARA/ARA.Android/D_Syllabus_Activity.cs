@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Risk Assessment - 4 of 5")]
+    [Activity(Label = "Risk Assessment - 4 of 5", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class D_Syllabus_Activity : Activity
     {
 

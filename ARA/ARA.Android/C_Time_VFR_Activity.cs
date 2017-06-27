@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Type of Flight - 3 of 5")]
+    [Activity(Label = "Type of Flight - 3 of 5", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class C_Time_VFR_Activity : Activity
     {
         public static bool VFRisDay;

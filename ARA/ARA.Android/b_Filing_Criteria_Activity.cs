@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Filing Criteria - 2 of 5")]
+    [Activity(Label = "Filing Criteria - 2 of 5", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class B_Filing_Criteria_Activity : Activity
     {
         public static bool isVFR;

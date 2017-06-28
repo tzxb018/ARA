@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/linearLayout1"
+    p1:paddingLeft="8dp"
+    p1:paddingRight="8dp"
+    p1:paddingTop="8dp">
+    <TextView
+        p1:text="Type of Syllabus Flight:"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textView1" />
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout2"
+        p1:paddingTop="8dp"
+        p1:gravity="center">
+        <Button
+            p1:text="Normal"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/btnSyllabusFlightNormal" />
+        <Button
+            p1:text="Stage Check"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/btnSyllabusFlightStageCheck" />
+        <Button
+            p1:text="FAA Check"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/btnSyllabusFlightFAA" />
+    </LinearLayout>
+    <TextView
+        p1:text="Select type of syllabus flight with buttons above."
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/txtSyllabusFlight"
+        p1:layout_marginTop="5dp" />
+    <TextView
+        p1:text="Outside Temperature (°F):"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textView2"
+        p1:layout_marginTop="8dp" />
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout3"
+        p1:weightSum="2">
+        <Button
+            p1:id="@+id/btnTemp0"
+            p1:text="0°F - 29°F"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:layout_weight="1" />
+        <Button
+            p1:text="30°F - 54°F"
+            p1:id="@+id/btnTemp30"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout4"
+        p1:weightSum="2">
+        <Button
+            p1:text="55°F - 75°F"
+            p1:id="@+id/btnTemp55"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:layout_weight="1" />
+        <Button
+            p1:text="76°F - 89°F"
+            p1:id="@+id/btnTemp76"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:layout_weight="1" />
+    </LinearLayout>
+    <Button
+        p1:text="90°F +"
+        p1:id="@+id/btnTemp90"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content" />
+    <TextView
+        p1:text="Select temperature with buttons above."
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/txtTemp"
+        p1:layout_marginTop="16dp" />
+    <TextView
+        p1:text="Student Human Factor Risks: 0"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/txtSHFRisk1"
+        p1:layout_marginTop="26.7dp"
+        p1:gravity="center"
+        p1:textColor="@android:color/holo_green_dark" />
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:id="@+id/relativeLayout2"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout2">
+            <RelativeLayout
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/relativeLayout4">
+                <ImageButton
+                    p1:src="@android:drawable/ic_media_previous"
+                    p1:id="@+id/btnBackfromSHF2"
+                    p1:layout_width="120dp"
+                    p1:layout_height="80dp"
+                    p1:layout_alignParentBottom="true"
+                    p1:layout_alignParentLeft="true"
+                    p1:layout_marginBottom="10dp"
+                    p1:layout_marginLeft="10dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/relativeLayout3"
+                p1:layout_marginRight="10dp"
+                p1:layout_marginBottom="10dp">
+                <ImageButton
+                    p1:src="@android:drawable/ic_media_next"
+                    p1:id="@+id/btnContinueFromSHF2"
+                    p1:clickable="true"
+                    p1:layout_width="120dp"
+                    p1:layout_height="80dp"
+                    p1:layout_alignParentBottom="true"
+                    p1:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

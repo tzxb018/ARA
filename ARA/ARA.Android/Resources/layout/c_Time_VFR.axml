@@ -36,7 +36,7 @@
             android:id="@+id/btnNightVFR"
             android:layout_marginTop="8dp" />
         <TextView
-            android:text="Select a Time"
+            android:text="Select a time with buttons above."
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

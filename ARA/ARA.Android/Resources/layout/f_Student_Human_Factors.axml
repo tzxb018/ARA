@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/linearLayout1"
+    p1:paddingLeft="8dp"
+    p1:paddingRight="8dp"
+    p1:paddingTop="8dp">
+    <TextView
+        p1:text="Previous flights that day:"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textView1" />
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout2"
+        p1:paddingTop="8dp"
+        p1:gravity="center">
+        <Button
+            p1:text="None"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/btnNoPreviousFlights" />
+        <Button
+            p1:text="1"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/btn1PrevFlight" />
+        <Button
+            p1:text="2"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/btn2PrevFlights" />
+    </LinearLayout>
+    <TextView
+        p1:text="Select number of previous flights with buttons above."
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/txtPrevFlightChoice"
+        p1:layout_marginTop="5dp" />
+    <TextView
+        p1:text="Flight Duty Period began:"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textView2"
+        p1:layout_marginTop="8dp" />
+    <Button
+        p1:text="&lt; 8 hours ago"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/btnDutyLessThanEight"
+        p1:layout_marginTop="5dp" />
+    <Button
+        p1:text="8 - 10 hours ago"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/btnDutyEightToTen" />
+    <Button
+        p1:text="10 - 13 hours ago"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/btnDutyTenToThirteen" />
+    <TextView
+        p1:text="Select duty period time with buttons above."
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/txtDutyHoursAgo"
+        p1:layout_marginTop="8 dp" />
+    <TextView
+        p1:text="Student Human Factor Risks: 0"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/txtSHFRisk1"
+        p1:layout_marginTop="24.7dp"
+        p1:gravity="center"
+        p1:textColor="@android:color/holo_green_dark" />
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:id="@+id/relativeLayout2"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout2">
+            <RelativeLayout
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/relativeLayout4">
+                <ImageButton
+                    p1:src="@android:drawable/ic_media_previous"
+                    p1:id="@+id/btnBackfromFilingCriteria"
+                    p1:layout_width="120dp"
+                    p1:layout_height="80dp"
+                    p1:layout_alignParentBottom="true"
+                    p1:layout_alignParentLeft="true"
+                    p1:layout_marginBottom="10dp"
+                    p1:layout_marginLeft="10dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/relativeLayout3"
+                p1:layout_marginRight="10dp"
+                p1:layout_marginBottom="10dp">
+                <ImageButton
+                    p1:src="@android:drawable/ic_media_next"
+                    p1:id="@+id/btnContinueFromFilingCriteria"
+                    p1:clickable="true"
+                    p1:layout_width="120dp"
+                    p1:layout_height="80dp"
+                    p1:layout_alignParentBottom="true"
+                    p1:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

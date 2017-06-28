@@ -24,11 +24,24 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtFlightInfo"
             android:layout_marginTop="10dp" />
-        <ToggleButton
+        <Button
+            android:text="Local"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tglArea"
+            android:id="@+id/btnLocal"
             android:layout_marginTop="8dp" />
+        <Button
+            android:text="Cross Country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCross" />
+        <TextView
+            android:text="Select your flying area using the buttons above."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAreaChoice"
+            android:layout_marginTop="10.0dp" />
         <TextView
             android:text="Risk: 0"
             android:textAppearance="?android:attr/textAppearanceLarge"

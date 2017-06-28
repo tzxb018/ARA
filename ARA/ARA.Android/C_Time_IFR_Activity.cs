@@ -35,7 +35,8 @@ namespace ARA.Droid
             {
                 IFR_Dual.Selected = true;
                 IFR_Day.Selected = false;
-                IFR_Day.Pressed = true; //changing the states of the two buttons to allow the user to see which he/she has selected
+                //IFR_Dual.Pressed = true; //changing the states of the two buttons to allow the user to see which he/she has selected
+                //IFR_Day.Pressed = false;
                 IFR_Dual.RequestFocus();
                 IFR_Text.Text = "You have selected the Day/Night Option.";
             }
@@ -43,7 +44,8 @@ namespace ARA.Droid
             {
                 IFR_Day.Selected = true;
                 IFR_Dual.Selected = false;
-                IFR_Dual.Pressed = true;
+                //IFR_Day.Pressed = true;
+                //IFR_Dual.Pressed = false;
                 IFR_Day.RequestFocus();
                 IFR_Text.Text = "You have selcted the Day Time Option.";
             }
@@ -52,7 +54,8 @@ namespace ARA.Droid
             {
                 IFR_Dual.Selected = true;
                 IFR_Day.Selected = false;
-                IFR_Day.Pressed = true; //changing the states of the two buttons to allow the user to see which he/she has selected
+                //IFR_Dual.Pressed = true; //changing the states of the two buttons to allow the user to see which he/she has selected
+                //IFR_Day.Pressed = false;
                 IFR_Dual.RequestFocus();
                 IFRisDual = true;
                 IFRisDay = false; //changing the variables
@@ -63,7 +66,8 @@ namespace ARA.Droid
             {
                 IFR_Day.Selected = true;
                 IFR_Dual.Selected = false;
-                IFR_Dual.Pressed = true;
+                //IFR_Day.Pressed = true;
+                //IFR_Dual.Pressed = false;
                 IFR_Day.RequestFocus();
                 IFRisDay = true;
                 IFRisDual = false;

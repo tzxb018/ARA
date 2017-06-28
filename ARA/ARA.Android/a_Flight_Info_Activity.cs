@@ -95,7 +95,7 @@ namespace ARA.Droid
                 {
                     AlertDialog.Builder alertFBOandNOTMAS = new AlertDialog.Builder(this);
                     alertFBOandNOTMAS.SetTitle("Alert");
-                    alertFBOandNOTMAS.SetMessage("You must have to have checked NOTMAS and FBO to proceed with flight.");
+                    alertFBOandNOTMAS.SetMessage("You must have to have checked NOTAMS and FBO to proceed with flight.");
                     alertFBOandNOTMAS.SetNeutralButton("OK", delegate
                     {
                         alertFBOandNOTMAS.Dispose();

@@ -72,16 +72,16 @@
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
         p1:id="@+id/txtDutyHoursAgo"
-        p1:layout_marginTop="8 dp" />
+        p1:layout_marginTop="8dp" />
     <TextView
         p1:text="Student Human Factor Risks: 0"
         p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:id="@+id/txtSHFRisk1"
+        p1:gravity="center"
+        p1:textColor="@android:color/holo_green_dark"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/txtSHFRisk1"
-        p1:layout_marginTop="24.7dp"
-        p1:gravity="center"
-        p1:textColor="@android:color/holo_green_dark" />
+        p1:layout_marginTop="10dp" />
     <RelativeLayout
         p1:minWidth="25px"
         p1:minHeight="25px"
@@ -101,7 +101,7 @@
                 p1:id="@+id/relativeLayout4">
                 <ImageButton
                     p1:src="@android:drawable/ic_media_previous"
-                    p1:id="@+id/btnBackfromFilingCriteria"
+                    p1:id="@+id/btnBackfromSHF1"
                     p1:layout_width="120dp"
                     p1:layout_height="80dp"
                     p1:layout_alignParentBottom="true"
@@ -113,13 +113,13 @@
                 p1:minWidth="25px"
                 p1:minHeight="25px"
                 p1:layout_width="wrap_content"
-                p1:layout_height="wrap_content"
                 p1:id="@+id/relativeLayout3"
                 p1:layout_marginRight="10dp"
-                p1:layout_marginBottom="10dp">
+                p1:layout_marginBottom="10dp"
+                p1:layout_height="wrap_content">
                 <ImageButton
                     p1:src="@android:drawable/ic_media_next"
-                    p1:id="@+id/btnContinueFromFilingCriteria"
+                    p1:id="@+id/btnContinueFromSHF1"
                     p1:clickable="true"
                     p1:layout_width="120dp"
                     p1:layout_height="80dp"

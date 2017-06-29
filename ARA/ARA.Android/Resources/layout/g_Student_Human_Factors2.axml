@@ -105,8 +105,8 @@
         p1:textAppearance="?android:attr/textAppearanceLarge"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/txtSHFRisk1"
-        p1:layout_marginTop="26.7dp"
+        p1:id="@+id/txtSHFRisk2"
+        p1:layout_marginTop="10dp"
         p1:gravity="center"
         p1:textColor="@android:color/holo_green_dark" />
     <RelativeLayout

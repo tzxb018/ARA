@@ -28,7 +28,6 @@ namespace ARA.Droid
             // Create your application here
             SetContentView(Resource.Layout.e_Personal_Info);
 
-            var submit = FindViewById<Button>(Resource.Id.btnSubmit);
             var back = FindViewById<ImageButton>(Resource.Id.btnBackFromPersonalInfo);
             var date = FindViewById<ImageButton>(Resource.Id.btnSelectDate);
             var txtTimeHour = FindViewById<EditText>(Resource.Id.txtHour);
@@ -36,6 +35,7 @@ namespace ARA.Droid
             var txtfirstName = FindViewById<EditText>(Resource.Id.txtFirstName);
             var txtlastName = FindViewById<EditText>(Resource.Id.txtLastName);
             var txtDate = FindViewById<TextView>(Resource.Id.txtDateView);
+            var btnContinue = FindViewById<Button>(Resource.Id.btnContinueFromPersonalInfo);
 
 
             //default values (if this hasnt been filled out yet) if values have been filled out, the values should be saved 
@@ -137,6 +137,39 @@ namespace ARA.Droid
             date.Click += delegate
             {
                 ShowDialog(DATE_DIALOG);
+            };
+
+            btnContinue.Click += delegate
+            {
+                if (sharableDay != 0 && sharableYear != 0)
+                {
+                    if (String.IsNullOrEmpty(first) == false && String.IsNullOrEmpty(last) == false)
+                    {
+                        StartActivity(typeof(F_Student_Human_Factors));
+                    }
+                    else
+                    {
+                        AlertDialog.Builder alterName = new AlertDialog.Builder(this);
+                        alterName.SetTitle("Alert");
+                        alterName.SetMessage("Please enter full name");
+                        alterName.SetNeutralButton("OK", delegate
+                        {
+                            alterName.Dispose();
+                        });
+                        alterName.Show();
+                    }
+                }
+                else
+                {
+                    AlertDialog.Builder alertDate = new AlertDialog.Builder(this);
+                    alertDate.SetTitle("Alert");
+                    alertDate.SetMessage("Please enter a date");
+                    alertDate.SetNeutralButton("OK", delegate
+                    {
+                        alertDate.Dispose();
+                    });
+                    alertDate.Show();
+                }
             };
 
 

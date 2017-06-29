@@ -1,0 +1,227 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+
+namespace ARA.Droid
+{
+    [Activity(Label = "Student Human Factors - 1 of 2", MainLauncher = true)]
+    public class F_Student_Human_Factors : Activity
+    {
+        public static int previousFlights = 0; //each variable represents risk value for section depending on question
+        public static int FlightDutyPeriod = 0;
+        public static int SHFRisk = 0;
+    
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+
+            // Create your application here
+            SetContentView(Resource.Layout.f_Student_Human_Factors);
+
+            var btnnext = FindViewById<ImageButton>(Resource.Id.btnContinueFromSHF1);
+            var btnback = FindViewById<ImageButton>(Resource.Id.btnBackfromSHF1);
+            var btnPrev0 = FindViewById<Button>(Resource.Id.btnNoPreviousFlights);
+            var btnPrev1 = FindViewById<Button>(Resource.Id.btn1PrevFlight);
+            var btnPrev2 = FindViewById<Button>(Resource.Id.btn2PrevFlights);
+            var txtPrevInfo = FindViewById<TextView>(Resource.Id.txtPrevFlightChoice);
+            var btnLess8Flight = FindViewById<Button>(Resource.Id.btnDutyLessThanEight);
+            var btn8to10 = FindViewById<Button>(Resource.Id.btnDutyEightToTen);
+            var btn10Plus = FindViewById<Button>(Resource.Id.btnDutyTenToThirteen);
+            var txtDutyInfo = FindViewById<TextView>(Resource.Id.txtDutyHoursAgo);
+            var txtRisk = FindViewById<TextView>(Resource.Id.txtSHFRisk1);
+
+            //Default Values
+            if (previousFlights == 0)
+            {
+                btnPrev0.Pressed = true;
+                btnPrev1.Pressed = false;
+                btnPrev2.Pressed = false;
+                txtPrevInfo.Text = "You have selected the 'none' option";
+            }
+            else if (previousFlights == 1)
+            {
+                btnPrev0.Pressed = false;
+                btnPrev1.Pressed = true;
+                btnPrev2.Pressed = false;
+                txtPrevInfo.Text = "You have selected the '1' option";
+            }
+            else if (previousFlights == 3)
+            {
+                btnPrev0.Pressed = false;
+                btnPrev1.Pressed = false;
+                btnPrev2.Pressed = true;
+                txtPrevInfo.Text = "You have selected the '2' option";
+            }
+            else
+            {
+                
+                    btnPrev0.Pressed = false;
+                    btnPrev1.Pressed = false;
+                    btnPrev2.Pressed = false;
+                    txtPrevInfo.Text = "Select number of previous flights with buttons above.";
+               
+            }
+
+            if (FlightDutyPeriod == 0)
+            {
+                btnLess8Flight.Pressed = true;
+                btn8to10.Pressed = false;
+                btn10Plus.Pressed = false;
+                txtDutyInfo.Text = "You have selected the '<8 hours ago' option";
+            }
+            else if (FlightDutyPeriod == 1)
+            {
+                btnLess8Flight.Pressed = false;
+                btn8to10.Pressed = true;
+                btn10Plus.Pressed = false;
+                txtDutyInfo.Text = "You have selected the '8-10 hours ago' option";
+            }
+            else if (FlightDutyPeriod == 3)
+            {
+                btnLess8Flight.Pressed = false;
+                btn8to10.Pressed = false;
+                btn10Plus.Pressed = true;
+                txtDutyInfo.Text = "You have selected the '10-13 hours ago' option";
+            }
+            else
+            {
+
+                btnLess8Flight.Pressed = false;
+                btn8to10.Pressed = false;
+                btn10Plus.Pressed = false;
+                txtDutyInfo.Text = "Select when flight duty period began with buttons above.";
+
+            }
+
+            //Reading Click Values
+            btnPrev0.Click += delegate
+            {
+                btnPrev0.Pressed = true;
+                btnPrev1.Pressed = false;
+                btnPrev2.Pressed = false;
+                txtPrevInfo.Text = "You have selected the 'none' option";
+                previousFlights = 0;
+                SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
+                txtRisk.Text = "Student Human Factors Risk = " + SHFRisk.ToString();
+            };
+
+            btnPrev1.Click += delegate
+             {
+                 btnPrev0.Pressed = false;
+                 btnPrev1.Pressed = true;
+                 btnPrev2.Pressed = false;
+                 txtPrevInfo.Text = "You have selected the '1' option";
+                 previousFlights = 1;
+                 SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
+                 if (SHFRisk > -1) //because the defualt risk values are neg., all neg values have to be roudned up to zero
+                 {
+                     txtRisk.Text = "Student Human Factors Risk = " + SHFRisk.ToString();
+                 }
+                 else
+                 {
+                     txtRisk.Text = "Student Human Factors Risk = 0";
+
+                 }
+             };
+
+            btnPrev2.Click += delegate
+            {
+                btnPrev0.Pressed = false;
+                btnPrev1.Pressed = false;
+                btnPrev2.Pressed = true;
+                txtPrevInfo.Text = "You have selected the '2' option";
+                previousFlights = 3;
+                SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
+                if (SHFRisk > -1) //because the defualt risk values are neg., all neg values have to be roudned up to zero
+                {
+                    txtRisk.Text = "Student Human Factors Risk = " + SHFRisk.ToString();
+                }
+                else
+                {
+                    txtRisk.Text = "Student Human Factors Risk = 0";
+
+                };
+            };
+
+            btnLess8Flight.Click += delegate
+           {
+               btnLess8Flight.Pressed = true;
+               btn8to10.Pressed = false;
+               btn10Plus.Pressed = false;
+               txtDutyInfo.Text = "You have selected the '<8 hours ago' option";
+               FlightDutyPeriod = 0;
+               SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
+               if (SHFRisk > -1) //because the defualt risk values are neg., all neg values have to be roudned up to zero
+               {
+                   txtRisk.Text = "Student Human Factors Risk = " + SHFRisk.ToString();
+               }
+               else
+               {
+                   txtRisk.Text = "Student Human Factors Risk = 0";
+
+               }
+           };
+
+            btn8to10.Click += delegate
+            {
+                btnLess8Flight.Pressed = false;
+                btn8to10.Pressed = true;
+                btn10Plus.Pressed = false;
+                txtDutyInfo.Text = "You have selected the '8-10 hours ago' option";
+                FlightDutyPeriod = 1;
+                SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
+                if (SHFRisk > -1) //because the defualt risk values are neg., all neg values have to be roudned up to zero
+                {
+                    txtRisk.Text = "Student Human Factors Risk = " + SHFRisk.ToString();
+                }
+                else
+                {
+                    txtRisk.Text = "Student Human Factors Risk = 0";
+
+                }
+            };
+
+            btn10Plus.Click += delegate
+            {
+                btnLess8Flight.Pressed = false;
+                btn8to10.Pressed = false;
+                btn10Plus.Pressed = true;
+                txtDutyInfo.Text = "You have selected the '10-13 hours ago' option";
+                FlightDutyPeriod = 3;
+                SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
+                if (SHFRisk > -1) //because the defualt risk values are neg., all neg values have to be roudned up to zero
+                {
+                    txtRisk.Text = "Student Human Factors Risk = " + SHFRisk.ToString();
+                }
+                else
+                {
+                    txtRisk.Text = "Student Human Factors Risk = 0";
+
+                }
+            };
+
+            //showing risk on bottom
+            
+
+            txtRisk.Text = "Student Human Factors Risk = " + SHFRisk.ToString();
+
+            btnback.Click += delegate
+            {
+                StartActivity(typeof(E_Personal_Information));
+            };
+
+            btnnext.Click += delegate
+          {
+              StartActivity(typeof(G_Student_Human_Factors_2));
+          };
+        }
+    }
+}

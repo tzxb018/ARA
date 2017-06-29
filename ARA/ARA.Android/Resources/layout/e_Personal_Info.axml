@@ -156,13 +156,13 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp">
                 <Button
-                    android:id="@+id/btnSubmit"
-                    android:text="Submit"
+                    android:id="@+id/btnContinueFromPersonalInfo"
                     android:clickable="true"
                     android:layout_width="120dp"
                     android:layout_height="80dp"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true" />
+                    android:layout_alignParentRight="true"
+                    android:text="Continue" />
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>

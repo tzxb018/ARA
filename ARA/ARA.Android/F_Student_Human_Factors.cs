@@ -104,11 +104,27 @@ namespace ARA.Droid
             }
 
             //Reading Click Values
-            btnPrev0.Click += delegate
+            btnPrev0.Touch += (s,e) =>
             {
-                btnPrev0.Pressed = true;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (btnPrev0.Pressed == false)
+                    btnPrev0.Pressed = !btnPrev0.Pressed;
+
                 btnPrev1.Pressed = false;
                 btnPrev2.Pressed = false;
+
+                e.Handled = true;
+
                 txtPrevInfo.Text = "You have selected the 'none' option";
                 previousFlights = 0;
                 SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
@@ -130,11 +146,27 @@ namespace ARA.Droid
                   
             };
 
-            btnPrev1.Click += delegate
+            btnPrev1.Touch += (s,e) =>
              {
+                 if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                 {
+                     e.Handled = true;
+                     return;
+                 }
+
+                 if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                 {
+                     e.Handled = false;
+                 }
+
+                 if (btnPrev1.Pressed == false)
+                    btnPrev1.Pressed = !btnPrev1.Pressed;
+
                  btnPrev0.Pressed = false;
-                 btnPrev1.Pressed = true;
                  btnPrev2.Pressed = false;
+
+                 e.Handled = true;
+
                  txtPrevInfo.Text = "You have selected the '1' option";
                  previousFlights = 1;
                  SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
@@ -155,11 +187,27 @@ namespace ARA.Droid
                  }
              };
 
-            btnPrev2.Click += delegate
+            btnPrev2.Touch += (s,e) =>
             {
-                btnPrev0.Pressed = false;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if(btnPrev2.Pressed == false)
+                    btnPrev2.Pressed = !btnPrev2.Pressed;
+
                 btnPrev1.Pressed = false;
-                btnPrev2.Pressed = true;
+                btnPrev0.Pressed = false;
+
+                e.Handled = true;
+
                 txtPrevInfo.Text = "You have selected the '2' option";
                 previousFlights = 3;
                 SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
@@ -180,11 +228,27 @@ namespace ARA.Droid
                 }
             };
 
-            btnLess8Flight.Click += delegate
+            btnLess8Flight.Touch += (s,e) =>
            {
-               btnLess8Flight.Pressed = true;
+               if (e.Event.Action == Android.Views.MotionEventActions.Down)
+               {
+                   e.Handled = true;
+                   return;
+               }
+
+               if (e.Event.Action == Android.Views.MotionEventActions.Up)
+               {
+                   e.Handled = false;
+               }
+
+               if (btnLess8Flight.Pressed == false)
+                    btnLess8Flight.Pressed = !btnLess8Flight.Pressed;
+
                btn8to10.Pressed = false;
                btn10Plus.Pressed = false;
+
+               e.Handled = true;
+
                txtDutyInfo.Text = "You have selected the '<8 hours ago' option";
                FlightDutyPeriod = 0;
                SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
@@ -205,11 +269,28 @@ namespace ARA.Droid
                }
            };
 
-            btn8to10.Click += delegate
+            btn8to10.Touch += (s,e) =>
             {
-                btnLess8Flight.Pressed = false;
-                btn8to10.Pressed = true;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (btn8to10.Pressed == false)
+                    btn8to10.Pressed = !btn8to10.Pressed;
+
                 btn10Plus.Pressed = false;
+                btnLess8Flight.Pressed = false;
+
+                e.Handled = true;
+
+
                 txtDutyInfo.Text = "You have selected the '8-10 hours ago' option";
                 FlightDutyPeriod = 1;
                 SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;
@@ -230,11 +311,27 @@ namespace ARA.Droid
                 }
             };
 
-            btn10Plus.Click += delegate
+            btn10Plus.Touch += (s, e) =>
             {
-                btnLess8Flight.Pressed = false;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (btn10Plus.Pressed == false)
+                    btn10Plus.Pressed = !btn10Plus.Pressed;
+
+                e.Handled = true;
+
                 btn8to10.Pressed = false;
-                btn10Plus.Pressed = true;
+                btnLess8Flight.Pressed = false;
+
                 txtDutyInfo.Text = "You have selected the '10-13 hours ago' option";
                 FlightDutyPeriod = 3;
                 SHFRisk = FlightDutyPeriod + previousFlights + G_Student_Human_Factors_2.temperature + G_Student_Human_Factors_2.syllabusFlight;

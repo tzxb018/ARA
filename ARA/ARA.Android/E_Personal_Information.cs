@@ -28,6 +28,9 @@ namespace ARA.Droid
             // Create your application here
             SetContentView(Resource.Layout.e_Personal_Info);
 
+            Vibrator vib = (Vibrator)this.ApplicationContext.GetSystemService(Context.VibratorService);
+            vib.Cancel();
+
             var back = FindViewById<ImageButton>(Resource.Id.btnBackFromPersonalInfo);
             var date = FindViewById<ImageButton>(Resource.Id.btnSelectDate);
             var txtTimeHour = FindViewById<EditText>(Resource.Id.txtHour);
@@ -136,6 +139,7 @@ namespace ARA.Droid
 
             date.Click += delegate
             {
+                
                 ShowDialog(DATE_DIALOG);
             };
 
@@ -180,7 +184,7 @@ namespace ARA.Droid
             this.year = year;
             this.month = dayOfMonth;
             this.day = dayOfMonth;
-
+           
             var dateDisplay = FindViewById<TextView>(Resource.Id.txtDateView);
 
             dateDisplay.Text = (month + 1) + "/" + day + "/" + year;
@@ -192,7 +196,7 @@ namespace ARA.Droid
         }
 
         protected override Dialog OnCreateDialog(int id)
-        {
+        { 
             switch(id)
             {
                 case DATE_DIALOG:

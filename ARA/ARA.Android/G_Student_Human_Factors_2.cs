@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Student Human Factors - 1 of 2")]
+    [Activity(Label = "Student Human Factors - 2 of 2")]
     public class G_Student_Human_Factors_2 : Activity
     {
         public static int syllabusFlight = 0;
@@ -136,12 +136,29 @@ namespace ARA.Droid
 
 
             //Click events
-            btnSylNormal.Click += delegate
+            btnSylNormal.Touch += (s, e) =>
             {
-                syllabusFlight = 0;
-                btnSylNormal.Pressed = true;
+                //keeps the button looking like it is pressed to allow the user to easlity identify
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (btnSylNormal.Pressed==false)
+                    btnSylNormal.Pressed = !btnSylNormal.Pressed;
+
                 btnSylStage.Pressed = false;
                 btnSylFAA.Pressed = false;
+
+                e.Handled = true;
+                syllabusFlight = 0;
+                
                 txtSyl.Text = "You have selected the 'Normal' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
                 if (F_Student_Human_Factors.SHFRisk < 7)
@@ -161,12 +178,28 @@ namespace ARA.Droid
                 }
             };
 
-            btnSylStage.Click += delegate
+            btnSylStage.Touch += (s,e) =>
             {
-                syllabusFlight = 1;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (btnSylStage.Pressed == false)
+                    btnSylStage.Pressed = !btnSylStage.Pressed;
+
                 btnSylNormal.Pressed = false;
-                btnSylStage.Pressed = true;
                 btnSylFAA.Pressed = false;
+
+                e.Handled = true;
+                syllabusFlight = 1;
+                
                 txtSyl.Text = "You have selected the 'Stage Check' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
                 if (F_Student_Human_Factors.SHFRisk < 7)
@@ -186,12 +219,27 @@ namespace ARA.Droid
                 }
             };
 
-            btnSylFAA.Click += delegate
+            btnSylFAA.Touch += (s,e) =>
             {
                 syllabusFlight = 3;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (btnSylFAA.Pressed == false)
+                    btnSylFAA.Pressed = !btnSylFAA.Pressed;
+
                 btnSylNormal.Pressed = false;
                 btnSylStage.Pressed = false;
-                btnSylFAA.Pressed = true;
+
+                e.Handled = true;
                 txtSyl.Text = "You have selected the 'FAA Check' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
                 if (F_Student_Human_Factors.SHFRisk < 7)
@@ -212,14 +260,31 @@ namespace ARA.Droid
             };
 
             //TEmperature
-            btnTemp55.Click += delegate
+            btnTemp55.Touch += (s,e) =>
             {
                 temperature = 0;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (btnTemp55.Pressed == false)
+                    btnTemp55.Pressed = !btnTemp55.Pressed;
+
+
                 btnTemp0.Pressed = false;
                 btnTemp30.Pressed = false;
-                btnTemp55.Pressed = true;
+              
                 btnTemp76.Pressed = false;
                 btnTemp90.Pressed = false;
+
+                e.Handled = true;
                 txtTempInfo.Text = "You have selected the '55 - 75' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
                 if (F_Student_Human_Factors.SHFRisk < 7)
@@ -239,13 +304,28 @@ namespace ARA.Droid
                 }
             };
 
-            btnTemp76.Click += delegate
+            btnTemp76.Touch += (s,e) =>
             {
                 temperature = 1;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if(btnTemp76.Pressed == false)
+                    btnTemp76.Pressed = !btnTemp76.Pressed;
+
+                e.Handled = true;
+
                 btnTemp0.Pressed = false;
                 btnTemp30.Pressed = false;
                 btnTemp55.Pressed = false;
-                btnTemp76.Pressed = true;
                 btnTemp90.Pressed = false;
                 isLowerThan55 = false;
                 txtTempInfo.Text = "You have selected the '76- 89' option.";
@@ -267,14 +347,31 @@ namespace ARA.Droid
                 }
             };
 
-            btnTemp90.Click += delegate
+            btnTemp90.Touch += (s,e) =>
             {
                 temperature = 3;
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if(btnTemp90.Pressed == false)
+                    btnTemp90.Pressed = !btnTemp90.Pressed;
+
+
                 btnTemp0.Pressed = false;
                 btnTemp30.Pressed = false;
                 btnTemp55.Pressed = false;
                 btnTemp76.Pressed = false;
-                btnTemp90.Pressed = true;
+                e.Handled = true;
+
                 isLowerThan55 = false;
                 txtTempInfo.Text = "You have selected the '90 +' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
@@ -295,15 +392,29 @@ namespace ARA.Droid
                 }
             };
 
-            btnTemp30.Click += delegate
+            btnTemp30.Touch += (s,e) =>
             {
                 temperature = 1;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if(btnTemp30.Pressed == false)
+                    btnTemp30.Pressed = !btnTemp30.Pressed;
+
                 btnTemp0.Pressed = false;
-                btnTemp30.Pressed = true;
                 btnTemp55.Pressed = false;
                 btnTemp76.Pressed = false;
                 btnTemp90.Pressed = false;
-                isLowerThan55 = false;
+                e.Handled = true;
+                isLowerThan55 = true;
                 txtTempInfo.Text = "You have selected the '30 - 54' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
                 if (F_Student_Human_Factors.SHFRisk < 7)
@@ -323,15 +434,29 @@ namespace ARA.Droid
                 }
             };
 
-            btnTemp0.Click += delegate
+            btnTemp0.Touch += (s,e) =>
             {
                 temperature = 3;
-                btnTemp0.Pressed = true;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (btnTemp0.Pressed == false)
+                    btnTemp0.Pressed = !btnTemp0.Pressed;
+
+                e.Handled = true;
+                isLowerThan55 = true;
                 btnTemp30.Pressed = false;
                 btnTemp55.Pressed = false;
                 btnTemp76.Pressed = false;
                 btnTemp90.Pressed = false;
-                isLowerThan55 = false;
                 txtTempInfo.Text = "You have selected the '0 - 29' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
                 if (F_Student_Human_Factors.SHFRisk < 7)

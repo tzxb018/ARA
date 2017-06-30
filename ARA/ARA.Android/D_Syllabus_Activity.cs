@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 using Android.App;
 using Android.Content;
@@ -42,14 +43,20 @@ namespace ARA.Droid
                     btnLocal.Text = "Local Pattern (2)";
                     btnCross.Text = "XC, Practice Area, Aux Field (3)";
                     flightInfo.Text = "(Flying under VFR - Day, Pvt/Comm/CFI Solo & Flight Team)";
-                    riskVal = 2;
+                    areaInfo.Text = "You have selected the 'local pattern' choice.";
+                    riskVal = 2; //default value is local area
+                    btnLocal.Pressed = true;
+                    btnCross.Pressed = false;
                 }
                 else if (C_Time_VFR_Activity.VFRisDual)
                 {
                     btnLocal.Text = "Local Pattern (4)";
                     btnCross.Text = "XC, Practice Area, Aux Field (5)";
-                    flightInfo.Text = "(Flying under VFR - Day/Night Dual";
+                    flightInfo.Text = "(Flying under VFR - Day/Night Dual)";
                     riskVal = 4;
+                    areaInfo.Text = "You have selected the 'local pattern' choice.";
+                    btnLocal.Pressed = true;
+                    btnCross.Pressed = false;
                 }
                 else
                 {
@@ -57,6 +64,9 @@ namespace ARA.Droid
                     btnCross.Text = "XC (7)";
                     flightInfo.Text = "(Flying under VFR - Night, Commerical/CFI Solo)";
                     riskVal = 6;
+                    areaInfo.Text = "You have selected the 'local pattern' choice.";
+                    btnLocal.Pressed = true;
+                    btnCross.Pressed = false;
                 }
             }
             else
@@ -67,6 +77,9 @@ namespace ARA.Droid
                     btnCross.Text = "Cross Country (9)";
                     flightInfo.Text = "(Flying udner IFR, Day/Night, Dual)";
                     riskVal = 8;
+                    areaInfo.Text = "You have selected the 'local area' choice.";
+                    btnLocal.Pressed = true;
+                    btnCross.Pressed = false;
                 }
                 else
                 {
@@ -74,6 +87,9 @@ namespace ARA.Droid
                     btnCross.Text = "Cross Country (11)";
                     flightInfo.Text = "(Flying under IFR, Day, Commerical/CFI Solo)";
                     riskVal = 10;
+                    areaInfo.Text = "You have selected the 'local area' choice.";
+                    btnLocal.Pressed = true;
+                    btnCross.Pressed = false;
                 }
             }
 
@@ -93,6 +109,9 @@ namespace ARA.Droid
                         btnLocal.Selected = true;
                         riskVal = 2;
                         risk.Text = "Risk: " + riskVal;
+                        btnLocal.Pressed = true;
+                        btnCross.Pressed = false;
+                        //btnLocal.SetBackgroundColor("#6A696B");
                     };
 
                     btnCross.Click += delegate
@@ -115,6 +134,8 @@ namespace ARA.Droid
                         btnLocal.Selected = true;
                         riskVal = 4;
                         risk.Text = "Risk: " + riskVal;
+                        btnLocal.Pressed = true;
+                        btnCross.Pressed = false;
                     };
 
                     btnCross.Click += delegate
@@ -125,6 +146,8 @@ namespace ARA.Droid
                         btnLocal.Selected = false;
                         riskVal = 5;
                         risk.Text = "Risk: " + riskVal;
+                        btnLocal.Pressed = false;
+                        btnCross.Pressed = true;
                     };
                 }
                 else
@@ -137,6 +160,8 @@ namespace ARA.Droid
                         btnLocal.Selected = true;
                         riskVal = 6;
                         risk.Text = "Risk: " + riskVal;
+                        btnLocal.Pressed = true;
+                        btnCross.Pressed = false;
                     };
 
                     btnCross.Click += delegate
@@ -147,6 +172,8 @@ namespace ARA.Droid
                         btnLocal.Selected = false;
                         riskVal = 7;
                         risk.Text = "Risk: " + riskVal;
+                        btnLocal.Pressed = false;
+                        btnCross.Pressed = true;
                     };
                 }
             }
@@ -162,6 +189,9 @@ namespace ARA.Droid
                         btnLocal.Selected = true;
                         riskVal = 8;
                         risk.Text = "Risk: " + riskVal;
+                        btnLocal.Pressed = true;
+                        btnCross.Pressed = false;
+
                     };
 
                     btnCross.Click += delegate
@@ -172,6 +202,8 @@ namespace ARA.Droid
                         btnLocal.Selected = false;
                         riskVal = 9;
                         risk.Text = "Risk: " + riskVal;
+                        btnLocal.Pressed = false;
+                        btnCross.Pressed = true;
                     };
                 }
                 else
@@ -184,6 +216,8 @@ namespace ARA.Droid
                         btnLocal.Selected = true;
                         riskVal = 10;
                         risk.Text = "Risk: " + riskVal;
+                        btnLocal.Pressed = true;
+                        btnCross.Pressed = false;
                     };
 
                     btnCross.Click += delegate
@@ -194,6 +228,8 @@ namespace ARA.Droid
                         btnLocal.Selected = false;
                         riskVal = 11;
                         risk.Text = "Risk: " + riskVal;
+                        btnLocal.Pressed = false;
+                        btnCross.Pressed = true;
                     };
                 }
             }

@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "G_Student_Human_Factors_2")]
+    [Activity(Label = "Student Human Factors - 1 of 2")]
     public class G_Student_Human_Factors_2 : Activity
     {
         public static int syllabusFlight = 0;
@@ -144,13 +144,20 @@ namespace ARA.Droid
                 btnSylFAA.Pressed = false;
                 txtSyl.Text = "You have selected the 'Normal' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
-                if (F_Student_Human_Factors.SHFRisk > -1)
+                if (F_Student_Human_Factors.SHFRisk < 7)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Green);
+                    txtRisk2.Text = "OKAY - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
-                else
+                else if (F_Student_Human_Factors.SHFRisk >= 7 && F_Student_Human_Factors.SHFRisk <= 8)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = 0";
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Yellow);
+                    txtRisk2.Text = "CAUTION - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                }
+                else if (F_Student_Human_Factors.SHFRisk > 8)
+                {
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Red);
+                    txtRisk2.Text = "NO GO! - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
             };
 
@@ -162,13 +169,20 @@ namespace ARA.Droid
                 btnSylFAA.Pressed = false;
                 txtSyl.Text = "You have selected the 'Stage Check' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
-                if (F_Student_Human_Factors.SHFRisk > -1)
+                if (F_Student_Human_Factors.SHFRisk < 7)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Green);
+                    txtRisk2.Text = "OKAY - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
-                else
+                else if (F_Student_Human_Factors.SHFRisk >= 7 && F_Student_Human_Factors.SHFRisk <= 8)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = 0";
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Yellow);
+                    txtRisk2.Text = "CAUTION - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                }
+                else if (F_Student_Human_Factors.SHFRisk > 8)
+                {
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Red);
+                    txtRisk2.Text = "NO GO! - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
             };
 
@@ -180,13 +194,20 @@ namespace ARA.Droid
                 btnSylFAA.Pressed = true;
                 txtSyl.Text = "You have selected the 'FAA Check' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
-                if (F_Student_Human_Factors.SHFRisk > -1)
+                if (F_Student_Human_Factors.SHFRisk < 7)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Green);
+                    txtRisk2.Text = "OKAY - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
-                else
+                else if (F_Student_Human_Factors.SHFRisk >= 7 && F_Student_Human_Factors.SHFRisk <= 8)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = 0";
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Yellow);
+                    txtRisk2.Text = "CAUTION - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                }
+                else if (F_Student_Human_Factors.SHFRisk > 8)
+                {
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Red);
+                    txtRisk2.Text = "NO GO! - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
             };
 
@@ -201,13 +222,20 @@ namespace ARA.Droid
                 btnTemp90.Pressed = false;
                 txtTempInfo.Text = "You have selected the '55 - 75' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
-                if (F_Student_Human_Factors.SHFRisk > -1)
+                if (F_Student_Human_Factors.SHFRisk < 7)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Green);
+                    txtRisk2.Text = "OKAY - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
-                else
+                else if (F_Student_Human_Factors.SHFRisk >= 7 && F_Student_Human_Factors.SHFRisk <= 8)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = 0";
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Yellow);
+                    txtRisk2.Text = "CAUTION - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                }
+                else if (F_Student_Human_Factors.SHFRisk > 8)
+                {
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Red);
+                    txtRisk2.Text = "NO GO! - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
             };
 
@@ -222,13 +250,20 @@ namespace ARA.Droid
                 isLowerThan55 = false;
                 txtTempInfo.Text = "You have selected the '76- 89' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
-                if (F_Student_Human_Factors.SHFRisk > -1)
+                if (F_Student_Human_Factors.SHFRisk < 7)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Green);
+                    txtRisk2.Text = "OKAY - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
-                else
+                else if (F_Student_Human_Factors.SHFRisk >= 7 && F_Student_Human_Factors.SHFRisk <= 8)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = 0";
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Yellow);
+                    txtRisk2.Text = "CAUTION - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                }
+                else if (F_Student_Human_Factors.SHFRisk > 8)
+                {
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Red);
+                    txtRisk2.Text = "NO GO! - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
             };
 
@@ -243,13 +278,20 @@ namespace ARA.Droid
                 isLowerThan55 = false;
                 txtTempInfo.Text = "You have selected the '90 +' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
-                if (F_Student_Human_Factors.SHFRisk > -1)
+                if (F_Student_Human_Factors.SHFRisk < 7)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Green);
+                    txtRisk2.Text = "OKAY - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
-                else
+                else if (F_Student_Human_Factors.SHFRisk >= 7 && F_Student_Human_Factors.SHFRisk <= 8)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = 0";
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Yellow);
+                    txtRisk2.Text = "CAUTION - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                }
+                else if (F_Student_Human_Factors.SHFRisk > 8)
+                {
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Red);
+                    txtRisk2.Text = "NO GO! - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
             };
 
@@ -264,13 +306,20 @@ namespace ARA.Droid
                 isLowerThan55 = false;
                 txtTempInfo.Text = "You have selected the '30 - 54' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
-                if (F_Student_Human_Factors.SHFRisk > -1)
+                if (F_Student_Human_Factors.SHFRisk < 7)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Green);
+                    txtRisk2.Text = "OKAY - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
-                else
+                else if (F_Student_Human_Factors.SHFRisk >= 7 && F_Student_Human_Factors.SHFRisk <= 8)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = 0";
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Yellow);
+                    txtRisk2.Text = "CAUTION - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                }
+                else if (F_Student_Human_Factors.SHFRisk > 8)
+                {
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Red);
+                    txtRisk2.Text = "NO GO! - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
             };
 
@@ -285,23 +334,37 @@ namespace ARA.Droid
                 isLowerThan55 = false;
                 txtTempInfo.Text = "You have selected the '0 - 29' option.";
                 F_Student_Human_Factors.SHFRisk = (syllabusFlight) + F_Student_Human_Factors.previousFlights + F_Student_Human_Factors.FlightDutyPeriod + temperature;
-                if (F_Student_Human_Factors.SHFRisk > -1)
+                if (F_Student_Human_Factors.SHFRisk < 7)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Green);
+                    txtRisk2.Text = "OKAY - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
-                else
+                else if (F_Student_Human_Factors.SHFRisk >= 7 && F_Student_Human_Factors.SHFRisk <= 8)
                 {
-                    txtRisk2.Text = "Student Human Factors Risk = 0";
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Yellow);
+                    txtRisk2.Text = "CAUTION - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                }
+                else if (F_Student_Human_Factors.SHFRisk > 8)
+                {
+                    txtRisk2.SetTextColor(Android.Graphics.Color.Red);
+                    txtRisk2.Text = "NO GO! - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
                 }
             };
 
-            if (F_Student_Human_Factors.SHFRisk > -1)
+            if (F_Student_Human_Factors.SHFRisk < 7)
             {
-                txtRisk2.Text = "Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+                txtRisk2.SetTextColor(Android.Graphics.Color.Green);
+                txtRisk2.Text = "OKAY - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
             }
-            else
+            else if (F_Student_Human_Factors.SHFRisk >= 7 && F_Student_Human_Factors.SHFRisk <= 8)
             {
-                txtRisk2.Text = "Student Human Factors Risk = 0";
+                txtRisk2.SetTextColor(Android.Graphics.Color.Yellow);
+                txtRisk2.Text = "CAUTION - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
+            }
+            else if (F_Student_Human_Factors.SHFRisk > 8)
+            {
+                txtRisk2.SetTextColor(Android.Graphics.Color.Red);
+                txtRisk2.Text = "NO GO! - Student Human Factors Risk = " + F_Student_Human_Factors.SHFRisk.ToString();
             }
 
 

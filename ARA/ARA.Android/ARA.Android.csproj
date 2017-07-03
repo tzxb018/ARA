@@ -160,6 +160,9 @@
     <AndroidResource Include="Resources\layout\h_VFR_Day_Local_Q2.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\i_VFR_Day_Local_PIC.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />

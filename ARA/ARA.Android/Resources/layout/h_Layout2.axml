@@ -89,7 +89,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtRiskText"
+        android:id="@+id/txtRiskText2"
         android:layout_marginTop="35.5dp"
         android:text="OKAY - Home Airfield Risk = 0"
         android:textColor="@android:color/holo_green_dark" />
@@ -112,7 +112,7 @@
                 android:id="@+id/relativeLayout4">
                 <ImageButton
                     android:src="@android:drawable/ic_media_previous"
-                    android:id="@+id/btnBackfrom3"
+                    android:id="@+id/btnBackfrom2"
                     android:layout_width="120dp"
                     android:layout_height="80dp"
                     android:layout_alignParentBottom="true"
@@ -130,7 +130,7 @@
                 android:layout_marginBottom="10dp">
                 <ImageButton
                     android:src="@android:drawable/ic_media_next"
-                    android:id="@+id/btnContinueFrom3"
+                    android:id="@+id/btnContinueFrom2"
                     android:clickable="true"
                     android:layout_width="120dp"
                     android:layout_height="80dp"

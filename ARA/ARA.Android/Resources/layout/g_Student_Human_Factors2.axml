@@ -101,7 +101,7 @@
         p1:id="@+id/txtTemp"
         p1:layout_marginTop="16dp" />
     <TextView
-        p1:text="Student Human Factor Risks: 0"
+        p1:text="OKAY - Student Human Factor Risks = 0"
         p1:textAppearance="?android:attr/textAppearanceLarge"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"

@@ -36,58 +36,101 @@ namespace ARA.Droid
             //setting up the screen using the boolean values (if first time, all bool will be false, therefore none of these will run)
             if (VFRisDay)
             {
-                VFR_Day.Selected = true;
-                VFR_Dual.Selected = false;
-                VFR_Night.Selected = false;
-                VFR_Day.RequestFocus();
+                VFR_Day.Pressed = true;
+                VFR_Dual.Pressed = false;
+                VFR_Night.Pressed = false;
                 VFR_Text.Text = "You have selected the Day Option.";
             }
             if (VFRisDual)
             {
-                VFR_Dual.Selected = true;
-                VFR_Day.Selected = false;
-                VFR_Night.Selected = false;
-                VFR_Dual.RequestFocus();
+                VFR_Day.Pressed = false;
+                VFR_Dual.Pressed = true;
+                VFR_Night.Pressed = false;
                 VFR_Text.Text = "You have selected the Day/Night Option.";
             }
             if (VFRisNight)
             {
-                VFR_Night.Selected = true;
-                VFR_Day.Selected = false;
-                VFR_Dual.Selected = false;
-                VFR_Night.RequestFocus();
+                VFR_Day.Pressed = false;
+                VFR_Dual.Pressed = false;
+                VFR_Night.Pressed = true;
                 VFR_Text.Text = "You have selected the Night Option.";
             }
 
             //when one of them are clicked, the rest are unselected, because only one option can be selected
-            VFR_Day.Click += delegate
+            VFR_Day.Touch += (s,e) =>
             {
-                VFR_Day.Selected = true;
-                VFR_Dual.Selected = false;
-                VFR_Night.Selected = false;
-                VFR_Day.RequestFocus();
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (VFR_Day.Pressed == false)
+                    VFR_Day.Pressed = !VFR_Day.Pressed;
+
+                e.Handled = true;
+
+                VFR_Dual.Pressed = false;
+                VFR_Night.Pressed = false;
+
                 VFR_Text.Text = "You have selected the Day Option."; //displaying the selection
+
                 VFRisDay = true;
                 VFRisDual = false;
                 VFRisNight = false; //setting and changing the respecitive booleans
             };
-            VFR_Dual.Click += delegate
+            VFR_Dual.Touch += (s,e) =>
             {
-                VFR_Day.Selected = false;
-                VFR_Dual.Selected = true;
-                VFR_Night.Selected = false;
-                VFR_Dual.RequestFocus();
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (VFR_Dual.Pressed == false)
+                    VFR_Dual.Pressed = !VFR_Dual.Pressed;
+
+                e.Handled = true;
+
+                VFR_Day.Pressed = false;
+                VFR_Night.Pressed = false;
+
                 VFR_Text.Text = "You have selected the Day/Night Option."; //displaying the selection
                 VFRisDay = false;
                 VFRisDual = true;
                 VFRisNight = false; //setting and changing the respecitive booleans
             };
-            VFR_Night.Click += delegate
+            VFR_Night.Touch += (s,e) =>
             {
-                VFR_Day.Selected = false;
-                VFR_Dual.Selected = false;
-                VFR_Night.Selected = true;
-                VFR_Night.RequestFocus();
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (VFR_Night.Pressed == false)
+                    VFR_Night.Pressed = !VFR_Night.Pressed;
+
+                e.Handled = true;
+
+                VFR_Day.Pressed = false;
+                VFR_Dual.Pressed = false;
+
                 VFR_Text.Text = "You have selected the Night Option."; //displaying the selection
                 VFRisDay = false;
                 VFRisDual = false;

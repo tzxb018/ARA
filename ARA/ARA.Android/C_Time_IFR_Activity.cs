@@ -32,42 +32,64 @@ namespace ARA.Droid
             var IFR_Text = FindViewById<TextView>(Resource.Id.txtIFRTime);
 
             if (IFRisDual) //opens the page with the options already selected
-            {
-                IFR_Dual.Selected = true;
-                IFR_Day.Selected = false;
-                //IFR_Dual.Pressed = true; //changing the states of the two buttons to allow the user to see which he/she has selected
-                //IFR_Day.Pressed = false;
-                IFR_Dual.RequestFocus();
+            {          
+                IFR_Dual.Pressed = true; //changing the states of the two buttons to allow the user to see which he/she has selected
+                IFR_Day.Pressed = false;
                 IFR_Text.Text = "You have selected the Day/Night Option.";
             }
             else if (IFRisDay)
             {
-                IFR_Day.Selected = true;
-                IFR_Dual.Selected = false;
-                //IFR_Day.Pressed = true;
-                //IFR_Dual.Pressed = false;
-                IFR_Day.RequestFocus();
+                IFR_Day.Pressed = true;
+                IFR_Dual.Pressed = false;
                 IFR_Text.Text = "You have selcted the Day Time Option.";
             }
 
-            IFR_Dual.Click += delegate
+            IFR_Dual.Touch += (s,e) =>
             {
-                IFR_Dual.Selected = true;
-                IFR_Day.Selected = false;
-                //IFR_Dual.Pressed = true; //changing the states of the two buttons to allow the user to see which he/she has selected
-                //IFR_Day.Pressed = false;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (IFR_Dual.Pressed == false)
+                    IFR_Dual.Pressed = !IFR_Dual.Pressed;
+
+                e.Handled = true;
+
+                IFR_Day.Pressed = false; 
+
                 IFR_Dual.RequestFocus();
                 IFRisDual = true;
                 IFRisDay = false; //changing the variables
                 IFR_Text.Text = "You have selected the Day/Night Option.";
             };
 
-            IFR_Day.Click += delegate
+            IFR_Day.Touch += (s,e) =>
             {
-                IFR_Day.Selected = true;
-                IFR_Dual.Selected = false;
-                //IFR_Day.Pressed = true;
-                //IFR_Dual.Pressed = false;
+                if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                {
+                    e.Handled = false;
+                }
+
+                if (IFR_Day.Pressed == false)
+                    IFR_Day.Pressed = !IFR_Day.Pressed;
+
+                e.Handled = true;
+
+                IFR_Dual.Pressed = false;
+
                 IFR_Day.RequestFocus();
                 IFRisDay = true;
                 IFRisDual = false;

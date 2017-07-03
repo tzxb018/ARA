@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp">
+    <TextView
+        android:text="Ceiling (Day)"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:weightSum="3"
+        android:layout_marginTop="5dp">
+        <Button
+            android:text="3000 + ft"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnVFR_Dual_Day_Ceiling0"
+            android:layout_weight="1" />
+        <Button
+            android:text="2500 - 2999 ft"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnVFR_Dual_Day_Ceiling1"
+            android:layout_weight="1" />
+        <Button
+            android:text="2000 - 2499 ft"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnVFR_Dual_Day_Ceiling3"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <TextView
+        android:text="Select ceiling height at day with buttons above."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtVFR_Dual_Day_Ceiling"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:text="Visibility (Day)"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginTop="5dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_marginTop="5dp"
+        android:weightSum="3">
+        <Button
+            android:text="5 + SM"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnVFR_Dual_Day_Vis0"
+            android:layout_weight="1" />
+        <Button
+            android:text="4 SM"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnVFR_Dual_Day_Vis1"
+            android:layout_weight="1" />
+        <Button
+            android:text="3 SM"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnVFR_Dual_Day_Vis3"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <TextView
+        android:text="Select visibility at night with buttons above."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtVFR_Dual_Day_Vis"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_VFR_Dual_HomeRisk4"
+        android:layout_marginTop="28.5dp"
+        android:text="OKAY - Home Airfield Risk = 0"
+        android:textColor="@android:color/holo_green_dark" />
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout4">
+                <ImageButton
+                    android:src="@android:drawable/ic_media_previous"
+                    android:id="@+id/btnBackfromVFR_Dual_Local_Day"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout3"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+                <ImageButton
+                    android:src="@android:drawable/ic_media_next"
+                    android:id="@+id/btnContinueFromVFR_Dual_Day"
+                    android:clickable="true"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:text="Wind (Other)"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

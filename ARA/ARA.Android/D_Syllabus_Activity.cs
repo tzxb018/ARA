@@ -101,79 +101,159 @@ namespace ARA.Droid
             {
                 if (C_Time_VFR_Activity.VFRisDay)
                 {
-                    btnLocal.Click += delegate
+                    btnLocal.Touch += (s,e) =>
                     {
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnLocal.Pressed == false)
+                            btnLocal.Pressed = !btnLocal.Pressed;
+
+                        e.Handled = true;
+                        btnCross.Pressed = false;
+
                         isLocal = true;
                         areaInfo.Text = "You have selected the 'local pattern' choice.";
-                        btnCross.Selected = false;
-                        btnLocal.Selected = true;
                         riskVal = 2;
                         risk.Text = "Risk: " + riskVal;
-                        btnLocal.Pressed = true;
-                        btnCross.Pressed = false;
-                        //btnLocal.SetBackgroundColor("#6A696B");
                     };
 
-                    btnCross.Click += delegate
+                    btnCross.Touch += (s,e) =>
                     {
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnCross.Pressed == false)
+                            btnCross.Pressed = !btnCross.Pressed;
+
+                        e.Handled = true;
+                        btnLocal.Pressed = false;
+
                         isLocal = false;
                         areaInfo.Text = "You have selected the 'XC, Practice Area, Aux Field' choice.";
-                        btnCross.Selected = true;
-                        btnLocal.Selected = false;
                         riskVal = 3;
                         risk.Text = "Risk: " + riskVal;
                     };
                 }
                 else if (C_Time_VFR_Activity.VFRisDual)
                 {
-                    btnLocal.Click += delegate
+                    btnLocal.Touch += (s,e) =>
                     {
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnLocal.Pressed == false)
+                            btnLocal.Pressed = !btnLocal.Pressed;
+
+                        e.Handled = true;
+                        btnCross.Pressed = false;
+
                         isLocal = true;
                         areaInfo.Text = "You have selected the 'local pattern' choice.";
-                        btnCross.Selected = false;
-                        btnLocal.Selected = true;
                         riskVal = 4;
                         risk.Text = "Risk: " + riskVal;
-                        btnLocal.Pressed = true;
-                        btnCross.Pressed = false;
                     };
 
-                    btnCross.Click += delegate
+                    btnCross.Touch += (s,e) =>
                     {
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnCross.Pressed == false)
+                            btnCross.Pressed = !btnCross.Pressed;
+
+                        e.Handled = true;
+                        btnLocal.Pressed = false;
+
                         isLocal = false;
                         areaInfo.Text = "You have selected the 'XC, Practice Area, Aux Field' choice.";
-                        btnCross.Selected = true;
-                        btnLocal.Selected = false;
                         riskVal = 5;
                         risk.Text = "Risk: " + riskVal;
-                        btnLocal.Pressed = false;
-                        btnCross.Pressed = true;
                     };
                 }
                 else
                 {
-                    btnLocal.Click += delegate
+                    btnLocal.Touch += (s,e) =>
                     {
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnLocal.Pressed == false)
+                            btnLocal.Pressed = !btnLocal.Pressed;
+
+                        e.Handled = true;
+                        btnCross.Pressed = false;
+
                         isLocal = true;
                         areaInfo.Text = "You have selected the 'local pattern' choice.";
-                        btnCross.Selected = false;
-                        btnLocal.Selected = true;
                         riskVal = 6;
                         risk.Text = "Risk: " + riskVal;
-                        btnLocal.Pressed = true;
-                        btnCross.Pressed = false;
                     };
 
-                    btnCross.Click += delegate
+                    btnCross.Touch += (s,e) =>
                     {
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnCross.Pressed == false)
+                            btnCross.Pressed = !btnCross.Pressed;
+
+                        e.Handled = true;
+                        btnLocal.Pressed = false;
+
                         isLocal = false;
                         areaInfo.Text = "You have selected the 'XC' choice.";
-                        btnCross.Selected = true;
-                        btnLocal.Selected = false;
                         riskVal = 7;
                         risk.Text = "Risk: " + riskVal;
-                        btnLocal.Pressed = false;
-                        btnCross.Pressed = true;
                     };
                 }
             }
@@ -181,55 +261,108 @@ namespace ARA.Droid
             {
                 if (C_Time_IFR_Activity.IFRisDual)
                 {
-                    btnLocal.Click += delegate
-                    {
+                    btnLocal.Touch += (s,e) =>
+                    { 
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnLocal.Pressed == false)
+                            btnLocal.Pressed = !btnLocal.Pressed;
+
+                        e.Handled = true;
+                        btnCross.Pressed = false;
+
                         isLocal = true;
                         areaInfo.Text = "You have selected the 'local area' choice.";
-                        btnCross.Selected = false;
-                        btnLocal.Selected = true;
                         riskVal = 8;
                         risk.Text = "Risk: " + riskVal;
-                        btnLocal.Pressed = true;
-                        btnCross.Pressed = false;
 
                     };
 
-                    btnCross.Click += delegate
+                    btnCross.Touch += (s,e) =>
                     {
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnCross.Pressed == false)
+                            btnCross.Pressed = !btnCross.Pressed;
+
+                        e.Handled = true;
+                        btnLocal.Pressed = false;
+
                         isLocal = false;
                         areaInfo.Text = "You have selected the 'cross country' choice.";
-                        btnCross.Selected = true;
-                        btnLocal.Selected = false;
                         riskVal = 9;
                         risk.Text = "Risk: " + riskVal;
-                        btnLocal.Pressed = false;
-                        btnCross.Pressed = true;
+
                     };
                 }
                 else
                 {
-                    btnLocal.Click += delegate
+                    btnLocal.Touch += (s,e) =>
                     {
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnLocal.Pressed == false)
+                            btnLocal.Pressed = !btnLocal.Pressed;
+
+                        e.Handled = true;
+                        btnCross.Pressed = false;
+
                         isLocal = true;
                         areaInfo.Text = "You have selected the 'local area' choice.";
-                        btnCross.Selected = false;
-                        btnLocal.Selected = true;
                         riskVal = 10;
                         risk.Text = "Risk: " + riskVal;
-                        btnLocal.Pressed = true;
-                        btnCross.Pressed = false;
                     };
 
-                    btnCross.Click += delegate
+                    btnCross.Touch += (s,e) =>
                     {
+                        if (e.Event.Action == Android.Views.MotionEventActions.Down)
+                        {
+                            e.Handled = true;
+                            return;
+                        }
+
+                        if (e.Event.Action == Android.Views.MotionEventActions.Up)
+                        {
+                            e.Handled = false;
+                        }
+
+                        if (btnCross.Pressed == false)
+                            btnCross.Pressed = !btnCross.Pressed;
+
+                        e.Handled = true;
+                        btnLocal.Pressed = false;
+
                         isLocal = false;
                         areaInfo.Text = "You have selected the 'cross country' choice.";
-                        btnCross.Selected = true;
-                        btnLocal.Selected = false;
                         riskVal = 11;
                         risk.Text = "Risk: " + riskVal;
-                        btnLocal.Pressed = false;
-                        btnCross.Pressed = true;
                     };
                 }
             }

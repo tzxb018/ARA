@@ -48,19 +48,19 @@ namespace ARA.Droid
             var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNum);
 
             lblWindSolo.Text = "Wind (Initial Solo Only)";
-            btnSolo0.Text = "0 - 5 kts.";
-            btnSolo1.Text = "6 - 10 kts.";
-            btnSolo3.Text = "11 - 15 kts.";
+            btnSolo0.Text = "0 - 5 kts";
+            btnSolo1.Text = "6 - 10 kts";
+            btnSolo3.Text = "11 - 15 kts";
 
             lblWindOther.Text = "Wind (Other)";
-            btnWind0.Text = "0 - 15 kts.";
-            btnWind1.Text = "16 - 20 kts.";
-            btnWind3.Text = "21 - 25 kts.";
+            btnWind0.Text = "0 - 15 kts";
+            btnWind1.Text = "16 - 20 kts";
+            btnWind3.Text = "21 - 25 kts";
 
             lblXWindSolo.Text = "Xwind (Initial Solo Only)";
-            btnXSolo0.Text = "0 - 3 kts.";
-            btnXSolo1.Text = "4 - 7 kts.";
-            btnXSolo3.Text = "8 - 10 kts.";
+            btnXSolo0.Text = "0 - 3 kts";
+            btnXSolo1.Text = "4 - 7 kts";
+            btnXSolo3.Text = "8 - 10 kts";
 
             //default values
             if (soloWind == 0)
@@ -68,21 +68,21 @@ namespace ARA.Droid
                 btnSolo0.Pressed = true;
                 btnSolo1.Pressed = false;
                 btnSolo3.Pressed = false;
-                txtWindSolo.Text = "You have selected the '0 - 5 kts.' option.";
+                txtWindSolo.Text = "You have selected the '0 - 5 kts' option.";
             }
             else if (soloWind == 1)
             {
                 btnSolo0.Pressed = false;
                 btnSolo1.Pressed = true;
                 btnSolo3.Pressed = false;
-                txtWindSolo.Text = "You have selected the '6 - 10 kts.' option";
+                txtWindSolo.Text = "You have selected the '6 - 10 kts' option";
             }
             else
             {
                 btnSolo0.Pressed = false;
                 btnSolo1.Pressed = false;
                 btnSolo3.Pressed = true;
-                txtWindSolo.Text = "You have selected the '11 - 15 kts.' option";
+                txtWindSolo.Text = "You have selected the '11 - 15 kts' option";
             }
 
             if (otherWind == 0)
@@ -90,21 +90,21 @@ namespace ARA.Droid
                 btnWind0.Pressed = true;
                 btnWind1.Pressed = false;
                 btnWind3.Pressed = false;
-                txtWindOther.Text = "You have selected the '0 - 15 kts.' option.";
+                txtWindOther.Text = "You have selected the '0 - 15 kts' option.";
             }
             else if (otherWind == 1)
             {
                 btnWind0.Pressed = false;
                 btnWind1.Pressed = true;
                 btnWind3.Pressed = false;
-                txtWindOther.Text = "You have selected the '16 - 20 kts.' option";
+                txtWindOther.Text = "You have selected the '16 - 20 kts' option";
             }
             else
             {
                 btnWind0.Pressed = false;
                 btnWind1.Pressed = false;
                 btnWind3.Pressed = true;
-                txtWindOther.Text = "You have selected the '21 - 25 kts.' option";
+                txtWindOther.Text = "You have selected the '21 - 25 kts' option";
             }
 
             if (soloXWind == 0)
@@ -112,42 +112,42 @@ namespace ARA.Droid
                 btnXSolo0.Pressed = true;
                 btnXSolo1.Pressed = false;
                 btnXSolo3.Pressed = false;
-                txtXWindSolo.Text = "You have selected the '0 - 3 kts.' option.";
+                txtXWindSolo.Text = "You have selected the '0 - 3 kts' option.";
             }
             else if (soloXWind == 1)
             {
                 btnXSolo0.Pressed = false;
                 btnXSolo1.Pressed = true;
                 btnXSolo3.Pressed = false;
-                txtXWindSolo.Text = "You have selected the '4 - 7 kts.' option";
+                txtXWindSolo.Text = "You have selected the '4 - 7 kts' option";
             }
             else
             {
                 btnXSolo0.Pressed = false;
                 btnXSolo1.Pressed = false;
                 btnXSolo3.Pressed = true;
-                txtXWindSolo.Text = "You have selected the '8 - 10 kts.' option";
+                txtXWindSolo.Text = "You have selected the '8 - 10 kts' option";
             }
 
             if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 7)
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Green);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                txtRisk.Text = "OKAY - Home Airfield Risk";
-                txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
+                txtRisk.Text = "Home Airfield Risk - OKAY";
+                txtRiskNum.Text = "Risk = " + (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
             }
             else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                txtRisk.Text = "CAUTION - Home Airfield Risk";
+                txtRisk.Text = "Home Airfield Risk - CAUTION";
                 txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
             }
             else
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Red);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                txtRisk.Text = "NO GO! - Home Airfield Risk";
+                txtRisk.Text = "Home Airfield Risk - NO GO!";
                 txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
             }
 
@@ -172,28 +172,28 @@ namespace ARA.Droid
                 btnSolo3.Pressed = false;
 
                 e.Handled = true;
-                txtWindSolo.Text = "You have selected the '0 - 5 kts.' option.";
+                txtWindSolo.Text = "You have selected the '0 - 5 kts' option.";
                 soloWind = 0;
 
                 if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "OKAY - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "CAUTION - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "NO GO! - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
 
@@ -218,28 +218,28 @@ namespace ARA.Droid
                 btnSolo3.Pressed = false;
 
                 e.Handled = true;
-                txtWindSolo.Text = "You have selected the '6 - 10 kts.' option";
+                txtWindSolo.Text = "You have selected the '6 - 10 kts' option";
                 soloWind = 1;
 
                 if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "OKAY - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "CAUTION - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "NO GO! - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
             };
@@ -263,7 +263,7 @@ namespace ARA.Droid
                 btnSolo0.Pressed = false;
 
                 e.Handled = true;
-                txtWindSolo.Text = "You have selected the '11 - 15 kts.' option";
+                txtWindSolo.Text = "You have selected the '11 - 15 kts' option";
 
                 soloWind = 3;
 
@@ -271,21 +271,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "OKAY - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "CAUTION - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "NO GO! - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
 
@@ -311,7 +311,7 @@ namespace ARA.Droid
                 btnWind3.Pressed = false;
 
                 e.Handled = true;
-                txtWindOther.Text = "You have selected the '0 - 15 kts.' option.";
+                txtWindOther.Text = "You have selected the '0 - 15 kts' option.";
 
                 otherWind = 0;
 
@@ -319,21 +319,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "OKAY - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "CAUTION - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "NO GO! - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
             };
@@ -357,7 +357,7 @@ namespace ARA.Droid
                 btnWind3.Pressed = false;
 
                 e.Handled = true;
-                txtWindOther.Text = "You have selected the '16 - 20 kts.' option";
+                txtWindOther.Text = "You have selected the '16 - 20 kts' option";
 
                 otherWind = 1;
 
@@ -365,21 +365,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "OKAY - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "CAUTION - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "NO GO! - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
             };
@@ -403,7 +403,7 @@ namespace ARA.Droid
                 btnWind0.Pressed = false;
 
                 e.Handled = true;
-                txtWindOther.Text = "You have selected the '21 - 25 kts.' option";
+                txtWindOther.Text = "You have selected the '21 - 25 kts' option";
 
                 otherWind = 3;
 
@@ -411,21 +411,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "OKAY - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "CAUTION - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "NO GO! - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
             };
@@ -450,7 +450,7 @@ namespace ARA.Droid
                 btnXSolo3.Pressed = false;
 
                 e.Handled = true;
-                txtXWindSolo.Text = "You have selected the '0 - 3 kts.' option.";
+                txtXWindSolo.Text = "You have selected the '0 - 3 kts' option.";
 
                 soloXWind = 0;
 
@@ -458,21 +458,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "OKAY - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "CAUTION - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "NO GO! - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
             };
@@ -504,21 +504,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "OKAY - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "CAUTION - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "NO GO! - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
             };
@@ -542,7 +542,7 @@ namespace ARA.Droid
                 btnXSolo0.Pressed = false;
 
                 e.Handled = true;
-                txtXWindSolo.Text = "You have selected the '8 - 10 kts.' option";
+                txtXWindSolo.Text = "You have selected the '8 - 10 kts' option";
 
                 soloXWind = 3;
 
@@ -550,7 +550,7 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "OKAY - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
                 else if (otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling < 9 && otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling >= 7)
@@ -564,7 +564,7 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "NO GO! - Home Airfield Risk";
+                    txtRisk.Text = "Home Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + +(otherWind + soloWind + soloXWind + H_VFR_Day_Local2.OtherXWind + H_VFR_Day_Local2.vis + H_VFR_Day_Local2.Ceiling);
                 }
             };

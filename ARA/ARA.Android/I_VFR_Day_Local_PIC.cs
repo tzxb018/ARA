@@ -41,6 +41,7 @@ namespace ARA.Droid
             var txtOtherLanding = FindViewById<TextView>(Resource.Id.txt2Answer2);
 
             var txtPICRisk = FindViewById<TextView>(Resource.Id.txt2RiskText2);
+            var txtPICRiskNum = FindViewById<TextView>(Resource.Id.txt2RiskNum);
 
             lblCFILanding.Text = "Last dual landing (C, CFI)";
             btnLessThan30.Text = "<30 days";
@@ -57,7 +58,23 @@ namespace ARA.Droid
             if (CFI_Landing + Other_Landing == 0)
             {
                 txtPICRisk.SetTextColor(Android.Graphics.Color.Green);
+                txtPICRiskNum.SetTextColor(Android.Graphics.Color.Green);
                 txtPICRisk.Text = "PIC Risk - OKAY";
+                txtPICRiskNum.Text = "Risk = " + (CFI_Landing + Other_Landing);
+            }
+            else if (CFI_Landing + Other_Landing < 3 && CFI_Landing + Other_Landing > 0)
+            {
+                txtPICRisk.SetTextColor(Android.Graphics.Color.Yellow);
+                txtPICRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
+                txtPICRisk.Text = "PIC Risk - CAUTION";
+                txtPICRiskNum.Text = "Risk = " + (CFI_Landing + Other_Landing);
+            }
+            else
+            {
+                txtPICRisk.SetTextColor(Android.Graphics.Color.Red);
+                txtPICRiskNum.SetTextColor(Android.Graphics.Color.Red);
+                txtPICRisk.Text = "PIC Risk - NO GO!";
+                txtPICRiskNum.Text = "Risk = " + (CFI_Landing + Other_Landing);
             }
 
 

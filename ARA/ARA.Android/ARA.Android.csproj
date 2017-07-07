@@ -116,10 +116,12 @@
     <Compile Include="F_Student_Human_Factors.cs" />
     <Compile Include="G_Student_Human_Factors_2.cs" />
     <Compile Include="I_VFR_Day_Local_PIC.cs" />
+    <Compile Include="K_VFR_Day_XC.cs" />
+    <Compile Include="L_VFR_Day_XC2.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="H_VFR_Day_Local1.cs" />
-    <Compile Include="H_VFR_Day_Local2.cs" />
+    <Compile Include="J_VFR_Day_Local2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

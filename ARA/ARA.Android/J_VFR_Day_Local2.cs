@@ -14,7 +14,7 @@ namespace ARA.Droid
 {
     [Activity(Label = "Home Airfield - 2 of 2")]
 
-    public class H_VFR_Day_Local2 : Activity
+    public class J_VFR_Day_Local2 : Activity
     {
         public static int OtherXWind;
         public static int Ceiling;

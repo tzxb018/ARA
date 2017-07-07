@@ -61,21 +61,21 @@ namespace ARA.Droid
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Green);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                txtRisk.Text = "PIC Risk - OKAY";
+                txtRisk.Text = "Departure Airfield Risk - OKAY";
                 txtRiskNum.Text = "Risk = " + (DepartureRisk);
             }
             else if (DepartureRisk < 9  && DepartureRisk > 6)
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                txtRisk.Text = "PIC Risk - CAUTION";
+                txtRisk.Text = "Departure Airfield Risk - CAUTION";
                 txtRiskNum.Text = "Risk = " + DepartureRisk;
             }
             else
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Red);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                txtRisk.Text = "PIC Risk - NO GO!";
+                txtRisk.Text = "Departure Airfield Risk - NO GO!";
                 txtRiskNum.Text = "Risk = " + (DepartureRisk);
             }
 
@@ -85,21 +85,21 @@ namespace ARA.Droid
                 btn0to15.Pressed = true;
                 btn16to20.Pressed = false;
                 btn21to25.Pressed = false;
-                txtDepartureWind.Text = "You have selected the '" + btn0to15.Text + "'choice.";
+                txtDepartureWind.Text = "You have selected the '" + btn0to15.Text + " 'choice.";
             }
             else if (wind == 1)
             {
                 btn0to15.Pressed = false;
                 btn16to20.Pressed = true;
                 btn21to25.Pressed = false;
-                txtDepartureWind.Text = "You have selected the '" + btn16to20.Text + "'choice.";
+                txtDepartureWind.Text = "You have selected the '" + btn16to20.Text + " 'choice.";
             }
             else
             {
                 btn0to15.Pressed = false;
                 btn16to20.Pressed = false;
                 btn21to25.Pressed = true;
-                txtDepartureWind.Text = "You have selected the '" + btn21to25.Text + "'choice.";
+                txtDepartureWind.Text = "You have selected the '" + btn21to25.Text + " 'choice.";
             }
 
             if (xwind == 0)
@@ -107,21 +107,21 @@ namespace ARA.Droid
                 btn0to5.Pressed = true;
                 btn6to10.Pressed = false;
                 btn11to15.Pressed = false;
-                txtDepartureXwind.Text = "You have selected the '" + btn0to5.Text + "'choice.";
+                txtDepartureXwind.Text = "You have selected the '" + btn0to5.Text + " 'choice.";
             }
             else if (xwind == 1)
             {
                 btn0to5.Pressed = false;
                 btn6to10.Pressed = true;
                 btn11to15.Pressed = false;
-                txtDepartureXwind.Text = "You have selected the '" + btn6to10.Text + "'choice.";
+                txtDepartureXwind.Text = "You have selected the '" + btn6to10.Text + " 'choice.";
             }
             else
             {
                 btn0to5.Pressed = false;
                 btn6to10.Pressed = false;
                 btn11to15.Pressed = true;
-                txtDepartureXwind.Text = "You have selected the '" + btn11to15.Text + "'choice.";
+                txtDepartureXwind.Text = "You have selected the '" + btn11to15.Text + " 'choice.";
             }
 
             //Pressed Events
@@ -154,21 +154,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "PIC Risk - OKAY";
+                    txtRisk.Text = "Departure Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + (wind + xwind);
                 }
                 else if (wind + xwind < 9 && wind + xwind > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "PIC Risk - CAUTION";
+                    txtRisk.Text = "Departure Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + (wind + xwind);
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "PIC Risk - NO GO!";
+                    txtRisk.Text = "Departure Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + (wind + xwind);
                 }
             };
@@ -202,21 +202,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "PIC Risk - OKAY";
+                    txtRisk.Text = "Departure Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
                 else if (DepartureRisk < 9 && DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "PIC Risk - CAUTION";
+                    txtRisk.Text = "Departure Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "PIC Risk - NO GO!";
+                    txtRisk.Text = "Departure Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
 
@@ -251,21 +251,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "PIC Risk - OKAY";
+                    txtRisk.Text = "Departure Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
                 else if (DepartureRisk < 9 && DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "PIC Risk - CAUTION";
+                    txtRisk.Text = "Departure Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "PIC Risk - NO GO!";
+                    txtRisk.Text = "Departure Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
 
@@ -301,21 +301,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "PIC Risk - OKAY";
+                    txtRisk.Text = "Departure Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
                 else if (DepartureRisk < 9 && DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "PIC Risk - CAUTION";
+                    txtRisk.Text = "Departure Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "PIC Risk - NO GO!";
+                    txtRisk.Text = "Departure Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
 
@@ -350,21 +350,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "PIC Risk - OKAY";
+                    txtRisk.Text = "Departure Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
                 else if (DepartureRisk < 9 && DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "PIC Risk - CAUTION";
+                    txtRisk.Text = "Departure Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "PIC Risk - NO GO!";
+                    txtRisk.Text = "Departure Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
 
@@ -399,21 +399,21 @@ namespace ARA.Droid
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
-                    txtRisk.Text = "PIC Risk - OKAY";
+                    txtRisk.Text = "Departure Airfield Risk - OKAY";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
                 else if (DepartureRisk < 9 && DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
-                    txtRisk.Text = "PIC Risk - CAUTION";
+                    txtRisk.Text = "Departure Airfield Risk - CAUTION";
                     txtRiskNum.Text = "Risk = " + DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
-                    txtRisk.Text = "PIC Risk - NO GO!";
+                    txtRisk.Text = "Departure Airfield Risk - NO GO!";
                     txtRiskNum.Text = "Risk = " + (DepartureRisk);
                 }
 

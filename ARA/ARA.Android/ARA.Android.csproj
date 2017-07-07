@@ -118,6 +118,8 @@
     <Compile Include="I_VFR_Day_Local_PIC.cs" />
     <Compile Include="K_VFR_Day_XC.cs" />
     <Compile Include="L_VFR_Day_XC2.cs" />
+    <Compile Include="M_VFR_Day_XC3.cs" />
+    <Compile Include="N_VFR_Day_XC4.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="H_VFR_Day_Local1.cs" />

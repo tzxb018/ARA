@@ -581,14 +581,14 @@ namespace ARA.Droid
                 }
                 else
                 {
-                    AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
-                    alertSHFisHigh.SetTitle("Alert");
-                    alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
-                    alertSHFisHigh.SetNeutralButton("OK", delegate
+                    AlertDialog.Builder alertHomeRisk = new AlertDialog.Builder(this);
+                    alertHomeRisk.SetTitle("Alert");
+                    alertHomeRisk.SetMessage("Your Home Airfield Risk is too high!");
+                    alertHomeRisk.SetNeutralButton("OK", delegate
                     {
-                        alertSHFisHigh.Dispose();
+                        alertHomeRisk.Dispose();
                     });
-                    alertSHFisHigh.Show();
+                    alertHomeRisk.Show();
                 }
                     
             };

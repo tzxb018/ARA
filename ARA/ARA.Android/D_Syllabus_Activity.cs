@@ -17,7 +17,7 @@ namespace ARA.Droid
     public class D_Syllabus_Activity : Activity
     {
 
-        public static bool isLocal;
+        public static bool isLocal = true;
         public static int riskVal;
 
         protected override void OnCreate(Bundle savedInstanceState)

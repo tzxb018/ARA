@@ -498,6 +498,86 @@ namespace ARA.Droid
                 StartActivity(typeof(F_Student_Human_Factors));
             };
 
+            btnNext.Click += delegate
+            {
+                if (B_Filing_Criteria_Activity.isVFR) //if VFR
+                {
+                    if (C_Time_VFR_Activity.VFRisDay) //Day
+                    {
+                        if (D_Syllabus_Activity.isLocal) //Local
+                        {
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(H_VFR_Day_Local1));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
+                                
+                        }
+                        else //XC
+                        {
+
+                        }
+                    }
+                    else if (C_Time_VFR_Activity.VFRisDual) //Dual
+                    {
+                        if (D_Syllabus_Activity.isLocal) //Local
+                        {
+
+                        }
+                        else //XC
+                        {
+
+                        }
+                    }
+                    else //Night
+                    {
+                        if (D_Syllabus_Activity.isLocal) //Local
+                        {
+
+                        }
+                        else //XC
+                        {
+
+                        }
+                    }
+                }
+                else //IFR
+                {
+                    if (C_Time_IFR_Activity.IFRisDual) //Dual
+                    {
+                        if (D_Syllabus_Activity.isLocal) //Local
+                        {
+
+                        }
+                        else //XC
+                        {
+
+                        }
+                    }
+                    else //Night
+                    {
+                        if (D_Syllabus_Activity.isLocal) //Local
+                        {
+
+                        }
+                        else //XC
+                        {
+
+                        }
+                    }
+                }
+            };
+
         }
     }
 }

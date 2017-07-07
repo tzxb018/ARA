@@ -12,7 +12,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtQuestion1" />
+        android:id="@+id/txt2Question1" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -24,19 +24,19 @@
             android:text="Choice 1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btnQ1C1"
+            android:id="@+id/btn2Q1C1"
             android:layout_weight="1" />
         <Button
             android:text="Choice 2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btnQ1C2"
+            android:id="@+id/btn2Q1C2"
             android:layout_weight="1" />
         <Button
             android:text="Choice 3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btnQ1C3"
+            android:id="@+id/btn2Q1C3"
             android:layout_weight="1" />
     </LinearLayout>
     <TextView
@@ -44,14 +44,14 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtAnswer1"
+        android:id="@+id/txt2Answer1"
         android:layout_marginTop="5dp" />
     <TextView
         android:text="Question 2"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtQuestion2" />
+        android:id="@+id/txt2Question2" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -63,19 +63,19 @@
             android:text="Choice 1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btnQ2C1"
+            android:id="@+id/btn2Q2C1"
             android:layout_weight="1" />
         <Button
             android:text="Choice 2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btnQ2C2"
+            android:id="@+id/btn2Q2C2"
             android:layout_weight="1" />
         <Button
             android:text="Choice 3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btnQ2C3"
+            android:id="@+id/btn2Q2C3"
             android:layout_weight="1" />
     </LinearLayout>
     <TextView
@@ -83,16 +83,23 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtAnswer2"
+        android:id="@+id/txt2Answer2"
         android:layout_marginTop="5dp" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtRiskText2"
+        android:id="@+id/txt2RiskText2"
         android:layout_marginTop="35.5dp"
-        android:text="OKAY - Home Airfield Risk = 0"
+        android:text="OKAY - Home Airfield Risk"
         android:textColor="@android:color/holo_green_dark" />
+    <TextView
+        android:text="Risk = 0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt2RiskNum"
+        android:layout_marginTop="3dp" />
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"

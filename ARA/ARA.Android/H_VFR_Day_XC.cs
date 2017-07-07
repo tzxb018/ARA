@@ -12,8 +12,8 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Departure Info - 1 of 2",  MainLauncher = true)]
-    public class K_VFR_Day_XC : Activity
+    [Activity(Label = "Departure Info - 1 of 2")]
+    public class H_VFR_Day_XC : Activity
     {
         public static int wind;
         public static int xwind;
@@ -56,7 +56,7 @@ namespace ARA.Droid
             btn11to15.Text = "11 - 15 kts";
             txtDepartureXwind.Text = "You have selected the '" + btn0to5.Text + "' choice.";
 
-            DepartureRisk = wind + xwind + L_VFR_Day_XC2.ceiling + L_VFR_Day_XC2.vis;
+            DepartureRisk = wind + xwind + I_VFR_Day_XC2.ceiling + I_VFR_Day_XC2.vis;
             if (DepartureRisk < 7)
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Green);
@@ -197,7 +197,7 @@ namespace ARA.Droid
 
                 wind = 1;
 
-                DepartureRisk = wind + xwind + L_VFR_Day_XC2.ceiling + L_VFR_Day_XC2.vis;
+                DepartureRisk = wind + xwind + I_VFR_Day_XC2.ceiling + I_VFR_Day_XC2.vis;
                 if (DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
@@ -246,7 +246,7 @@ namespace ARA.Droid
 
                 wind = 3;
 
-                DepartureRisk = wind + xwind + L_VFR_Day_XC2.ceiling + L_VFR_Day_XC2.vis;
+                DepartureRisk = wind + xwind + I_VFR_Day_XC2.ceiling + I_VFR_Day_XC2.vis;
                 if (DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
@@ -296,7 +296,7 @@ namespace ARA.Droid
 
                 xwind = 0;
 
-                DepartureRisk = wind + xwind + L_VFR_Day_XC2.ceiling + L_VFR_Day_XC2.vis;
+                DepartureRisk = wind + xwind + I_VFR_Day_XC2.ceiling + I_VFR_Day_XC2.vis;
                 if (DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
@@ -345,7 +345,7 @@ namespace ARA.Droid
 
                 xwind = 1;
 
-                DepartureRisk = wind + xwind + L_VFR_Day_XC2.ceiling + L_VFR_Day_XC2.vis;
+                DepartureRisk = wind + xwind + I_VFR_Day_XC2.ceiling + I_VFR_Day_XC2.vis;
                 if (DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
@@ -394,7 +394,7 @@ namespace ARA.Droid
 
                 xwind = 3;
 
-                DepartureRisk = wind + xwind + L_VFR_Day_XC2.ceiling + L_VFR_Day_XC2.vis;
+                DepartureRisk = wind + xwind + I_VFR_Day_XC2.ceiling + I_VFR_Day_XC2.vis;
                 if (DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
@@ -423,7 +423,7 @@ namespace ARA.Droid
             //Navigation
             btnNext.Click += delegate
             {
-                StartActivity(typeof(L_VFR_Day_XC2));
+                StartActivity(typeof(I_VFR_Day_XC2));
             };
 
             btnBack.Click += delegate

@@ -13,7 +13,7 @@ using Android.Widget;
 namespace ARA.Droid
 {
     [Activity(Label = "Enroute or Practice Area - 1 of 2")]
-    public class M_VFR_Day_XC3 : Activity
+    public class J_VFR_Day_XC3 : Activity
     {
         public static int ceiling;
         public static int vis;
@@ -130,7 +130,7 @@ namespace ARA.Droid
                 txtXWindSolo.Text = "You have selected the '3 or more' option";
             }
 
-            enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+            enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
             if (enrouteRisk< 7)
             {
@@ -178,7 +178,7 @@ namespace ARA.Droid
                 txtCeiling.Text = "You have selected the '4000 ft' option.";
                 ceiling = 0;
 
-                enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -225,7 +225,7 @@ namespace ARA.Droid
                 txtCeiling.Text = "You have selected the 3500 - 3999 ft' option";
                 ceiling = 1;
 
-                enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -273,7 +273,7 @@ namespace ARA.Droid
 
                 ceiling = 3;
 
-                enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -322,7 +322,7 @@ namespace ARA.Droid
 
                 vis = 0;
 
-                enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -370,7 +370,7 @@ namespace ARA.Droid
 
                 vis = 1;
 
-                enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -418,7 +418,7 @@ namespace ARA.Droid
 
                 vis = 3;
 
-                enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -467,7 +467,7 @@ namespace ARA.Droid
 
                 manu = 0;
 
-                enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -515,7 +515,7 @@ namespace ARA.Droid
 
                 manu = 1;
 
-                enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -563,7 +563,7 @@ namespace ARA.Droid
 
                 manu = 3;
 
-                enrouteRisk = vis + ceiling + manu + N_VFR_Day_XC4.checkpoints + N_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -593,12 +593,12 @@ namespace ARA.Droid
 
             btnNext.Click += delegate
             {
-                StartActivity(typeof(N_VFR_Day_XC4));
+                StartActivity(typeof(K_VFR_Day_XC4));
             };
 
             btnBack.Click += delegate
             {
-                StartActivity(typeof(L_VFR_Day_XC2));
+                StartActivity(typeof(I_VFR_Day_XC2));
             };
         }
     }

@@ -13,7 +13,7 @@ using Android.Widget;
 namespace ARA.Droid
 {
     [Activity(Label = "Enroute or Practice Area - 2 of 2")]
-    public class K_VFR_Day_XC4 : Activity
+    public class I_VFR_Day_XC4 : Activity
     {
         public static int checkpoints;
         public static int timeEnroute;
@@ -55,27 +55,27 @@ namespace ARA.Droid
             btn120Plus.Text = "> 120 min";
             txtTime.Text = "You have selected the '" + btnLessThan60.Text + "' choice.";
 
-            J_VFR_Day_XC3.enrouteRisk = J_VFR_Day_XC3.ceiling + J_VFR_Day_XC3.vis + J_VFR_Day_XC3.manu + checkpoints + timeEnroute;
-            if (J_VFR_Day_XC3.enrouteRisk < 7)
+            I_VFR_Day_XC3.enrouteRisk = I_VFR_Day_XC3.ceiling + I_VFR_Day_XC3.vis + I_VFR_Day_XC3.manu + checkpoints + timeEnroute;
+            if (I_VFR_Day_XC3.enrouteRisk < 7)
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Green);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                 txtRisk.Text = "Enroute or Practice Area Risk - OKAY";
-                txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
             }
-            else if (J_VFR_Day_XC3.enrouteRisk < 9 && J_VFR_Day_XC3.enrouteRisk  > 6)
+            else if (I_VFR_Day_XC3.enrouteRisk < 9 && I_VFR_Day_XC3.enrouteRisk  > 6)
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                 txtRisk.Text = "Enroute or Practice Area Risk - CAUTION";
-                txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
             }
             else
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Red);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                 txtRisk.Text = "Enroute or Practice Area Risk - NO GO!";
-                txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
             }
 
             //default values 
@@ -149,27 +149,27 @@ namespace ARA.Droid
 
                 checkpoints = 0;
 
-                J_VFR_Day_XC3.enrouteRisk = J_VFR_Day_XC3.ceiling + J_VFR_Day_XC3.vis + J_VFR_Day_XC3.manu + checkpoints + timeEnroute;
-                if (J_VFR_Day_XC3.enrouteRisk < 7)
+                I_VFR_Day_XC3.enrouteRisk = I_VFR_Day_XC3.ceiling + I_VFR_Day_XC3.vis + I_VFR_Day_XC3.manu + checkpoints + timeEnroute;
+                if (I_VFR_Day_XC3.enrouteRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Enroute or Practice Area Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
-                else if (J_VFR_Day_XC3.enrouteRisk < 9 && J_VFR_Day_XC3.enrouteRisk > 6)
+                else if (I_VFR_Day_XC3.enrouteRisk < 9 && I_VFR_Day_XC3.enrouteRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Enroute or Practice Area Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Enroute or Practice Area Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
 
             };
@@ -198,27 +198,27 @@ namespace ARA.Droid
 
                 checkpoints = 1;
 
-                J_VFR_Day_XC3.enrouteRisk = J_VFR_Day_XC3.ceiling + J_VFR_Day_XC3.vis + J_VFR_Day_XC3.manu + checkpoints + timeEnroute;
-                if (J_VFR_Day_XC3.enrouteRisk < 7)
+                I_VFR_Day_XC3.enrouteRisk = I_VFR_Day_XC3.ceiling + I_VFR_Day_XC3.vis + I_VFR_Day_XC3.manu + checkpoints + timeEnroute;
+                if (I_VFR_Day_XC3.enrouteRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Enroute or Practice Area Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
-                else if (J_VFR_Day_XC3.enrouteRisk < 9 && J_VFR_Day_XC3.enrouteRisk > 6)
+                else if (I_VFR_Day_XC3.enrouteRisk < 9 && I_VFR_Day_XC3.enrouteRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Enroute or Practice Area Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Enroute or Practice Area Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
 
             };
@@ -247,27 +247,27 @@ namespace ARA.Droid
 
                 checkpoints = 3;
 
-                J_VFR_Day_XC3.enrouteRisk = J_VFR_Day_XC3.ceiling + J_VFR_Day_XC3.vis + J_VFR_Day_XC3.manu + checkpoints + timeEnroute;
-                if (J_VFR_Day_XC3.enrouteRisk < 7)
+                I_VFR_Day_XC3.enrouteRisk = I_VFR_Day_XC3.ceiling + I_VFR_Day_XC3.vis + I_VFR_Day_XC3.manu + checkpoints + timeEnroute;
+                if (I_VFR_Day_XC3.enrouteRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Enroute or Practice Area Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
-                else if (J_VFR_Day_XC3.enrouteRisk < 9 && J_VFR_Day_XC3.enrouteRisk > 6)
+                else if (I_VFR_Day_XC3.enrouteRisk < 9 && I_VFR_Day_XC3.enrouteRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Enroute or Practice Area Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Enroute or Practice Area Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
             };
 
@@ -296,27 +296,27 @@ namespace ARA.Droid
 
                 timeEnroute = 0;
 
-                J_VFR_Day_XC3.enrouteRisk = J_VFR_Day_XC3.ceiling + J_VFR_Day_XC3.vis + J_VFR_Day_XC3.manu + checkpoints + timeEnroute;
-                if (J_VFR_Day_XC3.enrouteRisk < 7)
+                I_VFR_Day_XC3.enrouteRisk = I_VFR_Day_XC3.ceiling + I_VFR_Day_XC3.vis + I_VFR_Day_XC3.manu + checkpoints + timeEnroute;
+                if (I_VFR_Day_XC3.enrouteRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Enroute or Practice Area Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
-                else if (J_VFR_Day_XC3.enrouteRisk < 9 && J_VFR_Day_XC3.enrouteRisk > 6)
+                else if (I_VFR_Day_XC3.enrouteRisk < 9 && I_VFR_Day_XC3.enrouteRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Enroute or Practice Area Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Enroute or Practice Area Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
             };
             btn60to120.Touch += (s, e) =>
@@ -344,27 +344,27 @@ namespace ARA.Droid
 
                 timeEnroute = 1;
 
-                J_VFR_Day_XC3.enrouteRisk = J_VFR_Day_XC3.ceiling + J_VFR_Day_XC3.vis + J_VFR_Day_XC3.manu + checkpoints + timeEnroute;
-                if (J_VFR_Day_XC3.enrouteRisk < 7)
+                I_VFR_Day_XC3.enrouteRisk = I_VFR_Day_XC3.ceiling + I_VFR_Day_XC3.vis + I_VFR_Day_XC3.manu + checkpoints + timeEnroute;
+                if (I_VFR_Day_XC3.enrouteRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Enroute or Practice Area Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
-                else if (J_VFR_Day_XC3.enrouteRisk < 9 && J_VFR_Day_XC3.enrouteRisk > 6)
+                else if (I_VFR_Day_XC3.enrouteRisk < 9 && I_VFR_Day_XC3.enrouteRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Enroute or Practice Area Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Enroute or Practice Area Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
             };
             btn120Plus.Touch += (s, e) =>
@@ -392,27 +392,27 @@ namespace ARA.Droid
 
                 timeEnroute = 3;
 
-                J_VFR_Day_XC3.enrouteRisk = J_VFR_Day_XC3.ceiling + J_VFR_Day_XC3.vis + J_VFR_Day_XC3.manu + checkpoints + timeEnroute;
-                if (J_VFR_Day_XC3.enrouteRisk < 7)
+                I_VFR_Day_XC3.enrouteRisk = I_VFR_Day_XC3.ceiling + I_VFR_Day_XC3.vis + I_VFR_Day_XC3.manu + checkpoints + timeEnroute;
+                if (I_VFR_Day_XC3.enrouteRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Enroute or Practice Area Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
-                else if (J_VFR_Day_XC3.enrouteRisk < 9 && J_VFR_Day_XC3.enrouteRisk > 6)
+                else if (I_VFR_Day_XC3.enrouteRisk < 9 && I_VFR_Day_XC3.enrouteRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Enroute or Practice Area Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Enroute or Practice Area Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + J_VFR_Day_XC3.enrouteRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC3.enrouteRisk;
                 }
             };
 
@@ -420,9 +420,9 @@ namespace ARA.Droid
             //Navigation
             btnNext.Click += delegate
             {
-                if (J_VFR_Day_XC3.enrouteRisk < 9)
+                if (I_VFR_Day_XC3.enrouteRisk < 9)
                 {
-
+                    StartActivity(typeof(I_VFR_Day_XC5));
                 }
                 else
                 {
@@ -434,13 +434,57 @@ namespace ARA.Droid
                         alert.Dispose();
                     });
                     alert.Show();
+
+                    if (checkpoints == 0)
+                    {
+                        btnMult.Pressed = true;
+                        btnMod.Pressed = false;
+                        btnFew.Pressed = false;
+                        txtCheckpoints.Text = "You have selected the '" + btnMult.Text + "' choice.";
+                    }
+                    else if (checkpoints == 1)
+                    {
+                        btnMult.Pressed = false;
+                        btnMod.Pressed = true;
+                        btnFew.Pressed = false;
+                        txtCheckpoints.Text = "You have selected the '" + btnMod.Text + "' choice.";
+                    }
+                    else
+                    {
+                        btnMult.Pressed = false;
+                        btnMod.Pressed = false;
+                        btnFew.Pressed = true;
+                        txtCheckpoints.Text = "You have selected the '" + btnFew.Text + "' choice.";
+                    }
+
+                    if (timeEnroute == 0)
+                    {
+                        btnLessThan60.Pressed = true;
+                        btn60to120.Pressed = false;
+                        btn120Plus.Pressed = false;
+                        txtTime.Text = "You have selected the '" + btnLessThan60.Text + "' choice.";
+                    }
+                    else if (timeEnroute == 1)
+                    {
+                        btnLessThan60.Pressed = false;
+                        btn60to120.Pressed = true;
+                        btn120Plus.Pressed = false;
+                        txtTime.Text = "You have selected the '" + btn60to120.Text + "' choice.";
+                    }
+                    else
+                    {
+                        btnLessThan60.Pressed = false;
+                        btn60to120.Pressed = false;
+                        btn120Plus.Pressed = true;
+                        txtTime.Text = "You have selected the '" + btn120Plus.Text + "' choice.";
+                    }
                 }
 
             };
 
             btnBack.Click += delegate
             {
-                StartActivity(typeof(J_VFR_Day_XC3));
+                StartActivity(typeof(I_VFR_Day_XC3));
             };
         }
     }

@@ -12,14 +12,11 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Destination or Aux Field - 1 of 2", MainLauncher =true)]
-    public class L_VFR_Day_XC5 : Activity
+    [Activity(Label = "Alternate - 1 of 2")]
+    public class I_VFR_Day_XC7 : Activity
     {
-        public static int wind;
-        public static int xwind;
-        public static int ceiling;
-
-        public static int DestinationRisk;
+        public static int wind, xwind, ceiling;
+        public static int altRisk = 0;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -67,66 +64,66 @@ namespace ARA.Droid
             class1.defaultVals(btn0to5, btn6to10, btn11to15, txtxWind, xwind);
             class1.defaultVals(btn4000, btn3500, btn3000, txtCieling, ceiling);
 
-            DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-            class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+            altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+            class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
 
             btn0to15.Touch += (s, e) =>
             {
                 wind = class1.button1Pressed(btn0to15, btn16to20, btn21to25, txtWInd);
-                DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+                altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
             };
             btn16to20.Touch += (s, e) =>
             {
                 wind = class1.button2Pressed(btn0to15, btn16to20, btn21to25, txtWInd);
-                DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+                altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
             };
             btn21to25.Touch += (s, e) =>
             {
                 wind = class1.button3Pressed(btn0to15, btn16to20, btn21to25, txtWInd);
-                DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+                altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
 
             };
 
             btn0to5.Touch += (s, e) =>
             {
                 xwind = class1.button1Pressed(btn0to5, btn6to10, btn11to15, txtxWind);
-                DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+                altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
             };
             btn6to10.Touch += (s, e) =>
             {
                 xwind = class1.button2Pressed(btn0to5, btn6to10, btn11to15, txtxWind);
-                DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+                altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
             };
             btn11to15.Touch += (s, e) =>
             {
                 xwind = class1.button3Pressed(btn0to5, btn6to10, btn11to15, txtxWind);
-                DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+                altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
             };
 
             btn4000.Touch += (s, e) =>
             {
                 ceiling = class1.button1Pressed(btn4000, btn3500, btn3000, txtCieling);
-                DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+                altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
             };
             btn3500.Touch += (s, e) =>
             {
 
                 ceiling = class1.button2Pressed(btn4000, btn3500, btn3000, txtCieling);
-                DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+                altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
             };
             btn3000.Touch += (s, e) =>
             {
                 ceiling = class1.button3Pressed(btn4000, btn3500, btn3000, txtCieling);
-                DestinationRisk = wind + xwind + ceiling + M_VFR_Day_XC6.fuel + M_VFR_Day_XC6.vis;
-                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", DestinationRisk, 8, 10);
+                altRisk = wind + xwind + ceiling + I_VFR_Day_XC8.fuel + I_VFR_Day_XC8.vis;
+                class1.riskShow(txtRisk, txtRiskNum, "Destination or Aux Field Risk", altRisk, 8, 10);
             };
 
             var btnNext = FindViewById<ImageButton>(Resource.Id.btnContinueFrom3);
@@ -134,12 +131,12 @@ namespace ARA.Droid
 
             btnNext.Click += delegate
             {
-                StartActivity(typeof(M_VFR_Day_XC6));
+                StartActivity(typeof(I_VFR_Day_XC8));
             };
 
             btnBack.Click += delegate
             {
-                StartActivity(typeof(K_VFR_Day_XC4));
+                StartActivity(typeof(I_VFR_Day_XC6));
             };
         }
     }

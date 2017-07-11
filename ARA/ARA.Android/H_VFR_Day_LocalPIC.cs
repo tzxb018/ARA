@@ -13,7 +13,7 @@ using Android.Widget;
 namespace ARA.Droid
 {
     [Activity(Label = "PIC - 1 of 1")]
-    public class I_VFR_Day_Local_PIC : Activity
+    public class H_VFR_Day_LocalPIC : Activity
     {
         public static int CFI_Landing;
         public static int Other_Landing;

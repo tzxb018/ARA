@@ -55,27 +55,27 @@ namespace ARA.Droid
             btn5.Text = "5 SM";
             txtVis.Text = "You have selected the '" + btn7.Text + "' choice.";
 
-            H_VFR_Day_XC.DepartureRisk = H_VFR_Day_XC.wind + H_VFR_Day_XC.xwind + ceiling + vis;
-            if (H_VFR_Day_XC.DepartureRisk < 7)
+            I_VFR_Day_XC.DepartureRisk = I_VFR_Day_XC.wind + I_VFR_Day_XC.xwind + ceiling + vis;
+            if (I_VFR_Day_XC.DepartureRisk < 7)
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Green);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                 txtRisk.Text = "Departure Airfield Risk - OKAY";
-                txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
             }
-            else if (H_VFR_Day_XC.DepartureRisk < 9 && H_VFR_Day_XC.DepartureRisk > 6)
+            else if (I_VFR_Day_XC.DepartureRisk < 9 && I_VFR_Day_XC.DepartureRisk > 6)
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                 txtRisk.Text = "Departure Airfield Risk - CAUTION";
-                txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
             }
             else
             {
                 txtRisk.SetTextColor(Android.Graphics.Color.Red);
                 txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                 txtRisk.Text = "Departure Airfield Risk - NO GO!";
-                txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
             }
 
             //default values 
@@ -149,27 +149,27 @@ namespace ARA.Droid
 
                 ceiling = 0;
 
-                H_VFR_Day_XC.DepartureRisk = H_VFR_Day_XC.wind + H_VFR_Day_XC.xwind + ceiling + vis;
-                if (H_VFR_Day_XC.DepartureRisk < 7)
+                I_VFR_Day_XC.DepartureRisk = I_VFR_Day_XC.wind + I_VFR_Day_XC.xwind + ceiling + vis;
+                if (I_VFR_Day_XC.DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Departure Airfield Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
-                else if (H_VFR_Day_XC.DepartureRisk < 9 && H_VFR_Day_XC.DepartureRisk > 6)
+                else if (I_VFR_Day_XC.DepartureRisk < 9 && I_VFR_Day_XC.DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Departure Airfield Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Departure Airfield Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
 
             };
@@ -198,27 +198,27 @@ namespace ARA.Droid
 
                 ceiling = 1;
 
-                H_VFR_Day_XC.DepartureRisk = H_VFR_Day_XC.wind + H_VFR_Day_XC.xwind + ceiling + vis;
-                if (H_VFR_Day_XC.DepartureRisk < 7)
+                I_VFR_Day_XC.DepartureRisk = I_VFR_Day_XC.wind + I_VFR_Day_XC.xwind + ceiling + vis;
+                if (I_VFR_Day_XC.DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Departure Airfield Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
-                else if (H_VFR_Day_XC.DepartureRisk < 9 && H_VFR_Day_XC.DepartureRisk > 6)
+                else if (I_VFR_Day_XC.DepartureRisk < 9 && I_VFR_Day_XC.DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Departure Airfield Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Departure Airfield Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
 
             };
@@ -247,27 +247,27 @@ namespace ARA.Droid
 
                 ceiling = 3;
 
-                H_VFR_Day_XC.DepartureRisk = H_VFR_Day_XC.wind + H_VFR_Day_XC.xwind + ceiling + vis;
-                if (H_VFR_Day_XC.DepartureRisk < 7)
+                I_VFR_Day_XC.DepartureRisk = I_VFR_Day_XC.wind + I_VFR_Day_XC.xwind + ceiling + vis;
+                if (I_VFR_Day_XC.DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Departure Airfield Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
-                else if (H_VFR_Day_XC.DepartureRisk < 9 && H_VFR_Day_XC.DepartureRisk > 6)
+                else if (I_VFR_Day_XC.DepartureRisk < 9 && I_VFR_Day_XC.DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Departure Airfield Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Departure Airfield Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
 
             };
@@ -297,27 +297,27 @@ namespace ARA.Droid
 
                 vis = 0;
 
-                H_VFR_Day_XC.DepartureRisk = H_VFR_Day_XC.wind + H_VFR_Day_XC.xwind + ceiling + vis;
-                if (H_VFR_Day_XC.DepartureRisk < 7)
+                I_VFR_Day_XC.DepartureRisk = I_VFR_Day_XC.wind + I_VFR_Day_XC.xwind + ceiling + vis;
+                if (I_VFR_Day_XC.DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Departure Airfield Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
-                else if (H_VFR_Day_XC.DepartureRisk < 9 && H_VFR_Day_XC.DepartureRisk > 6)
+                else if (I_VFR_Day_XC.DepartureRisk < 9 && I_VFR_Day_XC.DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Departure Airfield Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Departure Airfield Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
 
             };
@@ -346,27 +346,27 @@ namespace ARA.Droid
 
                 vis = 1;
 
-                H_VFR_Day_XC.DepartureRisk = H_VFR_Day_XC.wind + H_VFR_Day_XC.xwind + ceiling + vis;
-                if (H_VFR_Day_XC.DepartureRisk < 7)
+                I_VFR_Day_XC.DepartureRisk = I_VFR_Day_XC.wind + I_VFR_Day_XC.xwind + ceiling + vis;
+                if (I_VFR_Day_XC.DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Departure Airfield Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
-                else if (H_VFR_Day_XC.DepartureRisk < 9 && H_VFR_Day_XC.DepartureRisk > 6)
+                else if (I_VFR_Day_XC.DepartureRisk < 9 && I_VFR_Day_XC.DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Departure Airfield Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Departure Airfield Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
 
             };
@@ -395,27 +395,27 @@ namespace ARA.Droid
 
                 vis = 3;
 
-                H_VFR_Day_XC.DepartureRisk = H_VFR_Day_XC.wind + H_VFR_Day_XC.xwind + ceiling + vis;
-                if (H_VFR_Day_XC.DepartureRisk < 7)
+                I_VFR_Day_XC.DepartureRisk = I_VFR_Day_XC.wind + I_VFR_Day_XC.xwind + ceiling + vis;
+                if (I_VFR_Day_XC.DepartureRisk < 7)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Green);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Green);
                     txtRisk.Text = "Departure Airfield Risk - OKAY";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
-                else if (H_VFR_Day_XC.DepartureRisk < 9 && H_VFR_Day_XC.DepartureRisk > 6)
+                else if (I_VFR_Day_XC.DepartureRisk < 9 && I_VFR_Day_XC.DepartureRisk > 6)
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Yellow);
                     txtRisk.Text = "Departure Airfield Risk - CAUTION";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
                 else
                 {
                     txtRisk.SetTextColor(Android.Graphics.Color.Red);
                     txtRiskNum.SetTextColor(Android.Graphics.Color.Red);
                     txtRisk.Text = "Departure Airfield Risk - NO GO!";
-                    txtRiskNum.Text = "Risk = " + H_VFR_Day_XC.DepartureRisk;
+                    txtRiskNum.Text = "Risk = " + I_VFR_Day_XC.DepartureRisk;
                 }
 
             };
@@ -424,9 +424,9 @@ namespace ARA.Droid
             //Navigation
             btnNext.Click += delegate
             {
-                if (H_VFR_Day_XC.DepartureRisk < 9)
+                if (I_VFR_Day_XC.DepartureRisk < 9)
                 {
-                    StartActivity(typeof(J_VFR_Day_XC3));
+                    StartActivity(typeof(I_VFR_Day_XC3));
                 }
                 else
                 {
@@ -438,13 +438,58 @@ namespace ARA.Droid
                         alert.Dispose();
                     });
                     alert.Show();
+
+                    //default values (pressed disapperas)
+                    if (ceiling == 0)
+                    {
+                        btn4000.Pressed = true;
+                        btn3500to3999.Pressed = false;
+                        btn3000to3499.Pressed = false;
+                        txtCeiling.Text = "You have selected the '" + btn4000.Text + "' choice.";
+                    }
+                    else if (ceiling == 1)
+                    {
+                        btn4000.Pressed = false;
+                        btn3500to3999.Pressed = true;
+                        btn3000to3499.Pressed = false;
+                        txtCeiling.Text = "You have selected the '" + btn3500to3999.Text + "' choice.";
+                    }
+                    else
+                    {
+                        btn4000.Pressed = false;
+                        btn3500to3999.Pressed = false;
+                        btn3000to3499.Pressed = true;
+                        txtCeiling.Text = "You have selected the '" + btn3000to3499.Text + "' choice.";
+                    }
+
+                    if (vis == 0)
+                    {
+                        btn7.Pressed = true;
+                        bnt6.Pressed = false;
+                        btn5.Pressed = false;
+                        txtVis.Text = "You have selected the '" + btn7.Text + "' choice.";
+                    }
+                    else if (vis == 1)
+                    {
+                        btn7.Pressed = false;
+                        bnt6.Pressed = true;
+                        btn5.Pressed = false;
+                        txtVis.Text = "You have selected the '" + bnt6.Text + "' choice.";
+                    }
+                    else
+                    {
+                        btn7.Pressed = false;
+                        bnt6.Pressed = false;
+                        btn5.Pressed = true;
+                        txtVis.Text = "You have selected the '" + btn5.Text + "' choice.";
+                    }
                 }
 
             };
 
             btnBack.Click += delegate
             {
-                StartActivity(typeof(H_VFR_Day_XC));
+                StartActivity(typeof(I_VFR_Day_XC));
             };
         }
     }

@@ -14,7 +14,7 @@ namespace ARA.Droid
 {
     [Activity(Label = "Home Airfield - 2 of 2")]
 
-    public class J_VFR_Day_Local2 : Activity
+    public class H_VFR_Day_Local2 : Activity
     {
         public static int OtherXWind;
         public static int Ceiling;
@@ -577,7 +577,7 @@ namespace ARA.Droid
             {
                 if (H_VFR_Day_Local1.otherWind + H_VFR_Day_Local1.soloWind + H_VFR_Day_Local1.soloXWind + OtherXWind + vis + Ceiling < 9)
                 {
-                    StartActivity(typeof(I_VFR_Day_Local_PIC));
+                    StartActivity(typeof(H_VFR_Day_LocalPIC));
                 }
                 else
                 {

@@ -13,7 +13,7 @@ using Android.Widget;
 namespace ARA.Droid
 {
     [Activity(Label = "Enroute or Practice Area - 1 of 2")]
-    public class J_VFR_Day_XC3 : Activity
+    public class I_VFR_Day_XC3 : Activity
     {
         public static int ceiling;
         public static int vis;
@@ -51,7 +51,7 @@ namespace ARA.Droid
             lblCeiling.Text = "Ceiling";
             btn4000.Text = "4000+ ft";
             btn3500to3999.Text = "3500 - 3999 ft";
-            btn3000to3499.Text = "3000 - 3499";
+            btn3000to3499.Text = "3000 - 3499 ft";
 
             lblVis.Text = "Visibility";
             btn7.Text = "7+ SM";
@@ -83,7 +83,7 @@ namespace ARA.Droid
                 btn4000.Pressed = false;
                 btn3500to3999.Pressed = false;
                 btn3000to3499.Pressed = true;
-                txtCeiling.Text = "You have selected the '3000 - 3499' option";
+                txtCeiling.Text = "You have selected the '3000 - 3499 ft' option";
             }
 
             if (vis == 0)
@@ -130,7 +130,7 @@ namespace ARA.Droid
                 txtXWindSolo.Text = "You have selected the '3 or more' option";
             }
 
-            enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+            enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
             if (enrouteRisk< 7)
             {
@@ -178,7 +178,7 @@ namespace ARA.Droid
                 txtCeiling.Text = "You have selected the '4000 ft' option.";
                 ceiling = 0;
 
-                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -225,7 +225,7 @@ namespace ARA.Droid
                 txtCeiling.Text = "You have selected the 3500 - 3999 ft' option";
                 ceiling = 1;
 
-                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -269,11 +269,11 @@ namespace ARA.Droid
                 btn4000.Pressed = false;
 
                 e.Handled = true;
-                txtCeiling.Text = "You have selected the '3000 - 3499' option";
+                txtCeiling.Text = "You have selected the '3000 - 3499 ft' option";
 
                 ceiling = 3;
 
-                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -322,7 +322,7 @@ namespace ARA.Droid
 
                 vis = 0;
 
-                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -370,7 +370,7 @@ namespace ARA.Droid
 
                 vis = 1;
 
-                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -418,7 +418,7 @@ namespace ARA.Droid
 
                 vis = 3;
 
-                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -467,7 +467,7 @@ namespace ARA.Droid
 
                 manu = 0;
 
-                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -515,7 +515,7 @@ namespace ARA.Droid
 
                 manu = 1;
 
-                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -563,7 +563,7 @@ namespace ARA.Droid
 
                 manu = 3;
 
-                enrouteRisk = vis + ceiling + manu + K_VFR_Day_XC4.checkpoints + K_VFR_Day_XC4.timeEnroute;
+                enrouteRisk = vis + ceiling + manu + I_VFR_Day_XC4.checkpoints + I_VFR_Day_XC4.timeEnroute;
 
                 if (enrouteRisk < 7)
                 {
@@ -593,7 +593,7 @@ namespace ARA.Droid
 
             btnNext.Click += delegate
             {
-                StartActivity(typeof(K_VFR_Day_XC4));
+                StartActivity(typeof(I_VFR_Day_XC4));
             };
 
             btnBack.Click += delegate

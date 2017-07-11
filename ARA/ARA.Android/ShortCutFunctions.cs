@@ -154,5 +154,7 @@ namespace ARA.Droid
                 riskNum.Text = "Risk = " + risk;
             }
         }
+
+       
     }
 }

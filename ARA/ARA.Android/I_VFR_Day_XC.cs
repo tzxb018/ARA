@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Departure Info - 1 of 2", MainLauncher = true)]
+    [Activity(Label = "Departure Info - 1 of 2")]
     public class I_VFR_Day_XC : Activity
     {
         public static int wind;

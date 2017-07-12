@@ -106,7 +106,7 @@ namespace ARA.Droid
                 StartActivity(typeof(K_VFR_Dual_XC9));
             };
 
-            btnNext.Touch += (s, e) =>
+            btnNext.Click += delegate
             {
                 if (K_VFR_Dual_XC8.altRisk > 9)
                 {

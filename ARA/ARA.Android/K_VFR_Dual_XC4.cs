@@ -100,12 +100,12 @@ namespace ARA.Droid
                 sc.riskShow(txtRisk, txtRiskNum, "Enroute or Practice Area Risk", K_VFR_Dual_XC3.enrouteRisk, 7, 9);
             };
 
-            btnBack.Touch += (s, e) =>
+            btnBack.Click += delegate
             {
                 StartActivity(typeof(K_VFR_Dual_XC3));
             };
 
-            btnNext.Touch += (s, e) =>
+            btnNext.Click += delegate
             {
                 if (K_VFR_Dual_XC3.enrouteRisk > 8)
                 {

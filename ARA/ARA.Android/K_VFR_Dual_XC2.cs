@@ -127,12 +127,12 @@ namespace ARA.Droid
                 class1.riskShow(txtRisk, txtRiskNum, "Departure Risk", K_VFR_Dual_XC1.DepartureRisk, 7, 9);
             };
 
-            btnBack.Touch += (s, e) =>
+            btnBack.Click += delegate
             {
                 StartActivity(typeof(K_VFR_Dual_XC1));
             };
 
-            btnNext.Touch += (s, e) =>
+            btnNext.Click += delegate
             {
                 if (K_VFR_Dual_XC1.DepartureRisk > 8)
                 {

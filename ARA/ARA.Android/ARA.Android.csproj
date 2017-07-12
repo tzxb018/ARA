@@ -158,6 +158,16 @@
     <Compile Include="L_VFR_Night_Local2.cs" />
     <Compile Include="L_VFR_Night_Local3.cs" />
     <Compile Include="L_VFR_Night_Local4.cs" />
+    <Compile Include="M_VFR_Night_XC1.cs" />
+    <Compile Include="M_VFR_Night_XC2.cs" />
+    <Compile Include="M_VFR_Night_XC3.cs" />
+    <Compile Include="M_VFR_Night_XC4.cs" />
+    <Compile Include="M_VFR_Night_XC5.cs" />
+    <Compile Include="M_VFR_Night_XC6.cs" />
+    <Compile Include="M_VFR_Night_XC7.cs" />
+    <Compile Include="M_VFR_Night_XC8.cs" />
+    <Compile Include="M_VFR_Night_XC9.cs" />
+    <Compile Include="M_VFR_Night_XCA10.cs" />
     <Compile Include="ShortCutFunctions.cs" />
     <Compile Include="F_Student_Human_Factors.cs" />
     <Compile Include="G_Student_Human_Factors_2.cs" />

@@ -29,7 +29,6 @@
             p1:layout_marginTop="8dp"
             p1:textOff="No"
             p1:textOn="Yes" />
-        
         <TextView
             p1:text="Checked out with FBO?"
             p1:textAppearance="?android:attr/textAppearanceLarge"

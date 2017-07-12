@@ -68,7 +68,7 @@ namespace ARA.Droid
             {
                 J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + J_VFR_Dual_Local2.xwind + nightVis + nightCeiling;
             }
-            class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+            class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
 
             btn4000.Touch += (s,e) =>
             {
@@ -81,7 +81,7 @@ namespace ARA.Droid
                 {
                     J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + J_VFR_Dual_Local2.xwind + nightVis + nightCeiling;
                 }
-                class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+                class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
             };
             btn3500.Touch += (s,e) =>
             {
@@ -94,7 +94,7 @@ namespace ARA.Droid
                 {
                     J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + J_VFR_Dual_Local2.xwind + nightVis + nightCeiling;
                 }
-                class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+                class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
             };
             btn3000.Touch += (s,e) =>
             {
@@ -107,7 +107,7 @@ namespace ARA.Droid
                 {
                     J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + J_VFR_Dual_Local2.xwind + nightVis + nightCeiling;
                 }
-                class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+                class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
             };
 
             btn7.Touch += (s,e) =>
@@ -121,7 +121,7 @@ namespace ARA.Droid
                 {
                     J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + J_VFR_Dual_Local2.xwind + nightVis + nightCeiling;
                 }
-                class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+                class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
             };
             btn6.Touch += (s,e) =>
             {
@@ -134,7 +134,7 @@ namespace ARA.Droid
                 {
                     J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + J_VFR_Dual_Local2.xwind + nightVis + nightCeiling;
                 }
-                class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+                class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
 
             };
             btn5.Touch += (s,e) =>
@@ -148,12 +148,22 @@ namespace ARA.Droid
                 {
                     J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + J_VFR_Dual_Local2.xwind + nightVis + nightCeiling;
                 }
-                class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+                class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
             };
 
             btnNext.Touch += (s,e) =>
             {
-
+                if (J_VFR_Dual_Local1.homeRisk > 9)
+                {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                    alert.SetTitle("Alert");
+                    alert.SetMessage("Your " + "Home Airfield Risk" + " is too high!");
+                    alert.SetNeutralButton("OK", delegate
+                    {
+                        alert.Dispose();
+                    });
+                    alert.Show();
+                }
             };
 
             btnBack.Touch += (s,e) =>

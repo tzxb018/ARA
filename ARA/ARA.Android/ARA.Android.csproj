@@ -144,6 +144,16 @@
     <Compile Include="J_VFR_Dual_Local2.cs" />
     <Compile Include="J_VFR_Dual_Local3Day.cs" />
     <Compile Include="J_VFR_Dual_Local4Night.cs" />
+    <Compile Include="K_VFR_Dual_XC1.cs" />
+    <Compile Include="K_VFR_Dual_XC10.cs" />
+    <Compile Include="K_VFR_Dual_XC2.cs" />
+    <Compile Include="K_VFR_Dual_XC3.cs" />
+    <Compile Include="K_VFR_Dual_XC4.cs" />
+    <Compile Include="K_VFR_Dual_XC5.cs" />
+    <Compile Include="K_VFR_Dual_XC6.cs" />
+    <Compile Include="K_VFR_Dual_XC7.cs" />
+    <Compile Include="K_VFR_Dual_XC8.cs" />
+    <Compile Include="K_VFR_Dual_XC9.cs" />
     <Compile Include="ShortCutFunctions.cs" />
     <Compile Include="F_Student_Human_Factors.cs" />
     <Compile Include="G_Student_Human_Factors_2.cs" />

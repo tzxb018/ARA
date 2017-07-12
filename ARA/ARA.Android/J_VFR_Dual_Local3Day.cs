@@ -166,7 +166,17 @@ namespace ARA.Droid
                 }
                 else
                 {
-
+                    if (J_VFR_Dual_Local1.homeRisk > 9)
+                    {
+                        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                        alert.SetTitle("Alert");
+                        alert.SetMessage("Your home airfield risk is too high!");
+                        alert.SetNeutralButton("OK", delegate
+                        {
+                            alert.Dispose();
+                        });
+                        alert.Show();
+                    }
                 }
             };
 

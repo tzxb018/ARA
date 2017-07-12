@@ -156,7 +156,17 @@ namespace ARA.Droid
         }
 
         
-
+        public void alertShow(string risk, Context context)
+        {
+            AlertDialog.Builder alert = new AlertDialog.Builder(context);
+            alert.SetTitle("Alert");
+            alert.SetMessage("Your " + risk  + " is too high!");
+            alert.SetNeutralButton("OK", delegate
+            {
+                alert.Dispose();
+            });
+            alert.Show();
+        }
        
     }
 }

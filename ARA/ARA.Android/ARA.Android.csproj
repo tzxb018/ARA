@@ -154,6 +154,10 @@
     <Compile Include="K_VFR_Dual_XC7.cs" />
     <Compile Include="K_VFR_Dual_XC8.cs" />
     <Compile Include="K_VFR_Dual_XC9.cs" />
+    <Compile Include="L_VFR_Night_Local1.cs" />
+    <Compile Include="L_VFR_Night_Local2.cs" />
+    <Compile Include="L_VFR_Night_Local3.cs" />
+    <Compile Include="L_VFR_Night_Local4.cs" />
     <Compile Include="ShortCutFunctions.cs" />
     <Compile Include="F_Student_Human_Factors.cs" />
     <Compile Include="G_Student_Human_Factors_2.cs" />

@@ -106,7 +106,7 @@ namespace ARA.Droid
 
             btnNext.Click += delegate
             {
-                if (I_VFR_Day_XC5.DestinationRisk > 9)
+                if (M_VFR_Night_XC1.departureRisk > 9)
                 {
                     class1.alertShow("Departure Risk", this);
 

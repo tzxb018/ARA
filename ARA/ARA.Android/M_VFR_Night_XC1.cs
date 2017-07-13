@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Departure Airfield - 1 of 2")]
+    [Activity(Label = "Departure Airfield - 1 of 2", MainLauncher = true)]
     public class M_VFR_Night_XC1 : Activity
     {
         public static int departureRisk, wind, ceiling, xwind;
@@ -130,12 +130,12 @@ namespace ARA.Droid
 
             btnNext.Click += delegate
             {
-                StartActivity(typeof(I_VFR_Day_XC8));
+                StartActivity(typeof(M_VFR_Night_XC2));
             };
 
             btnBack.Click += delegate
             {
-                StartActivity(typeof(I_VFR_Day_XC6));
+                StartActivity(typeof(G_Student_Human_Factors_2));
             };
         }
     }

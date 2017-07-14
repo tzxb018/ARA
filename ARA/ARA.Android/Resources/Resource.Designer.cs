@@ -2437,23 +2437,23 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700ad
 			public const int btn2PrevFlights = 2131165357;
 			
-			// aapt resource value: 0x7f0700c5
-			public const int btn2Q1C1 = 2131165381;
-			
-			// aapt resource value: 0x7f0700c6
-			public const int btn2Q1C2 = 2131165382;
-			
 			// aapt resource value: 0x7f0700c7
-			public const int btn2Q1C3 = 2131165383;
+			public const int btn2Q1C1 = 2131165383;
 			
-			// aapt resource value: 0x7f0700ca
-			public const int btn2Q2C1 = 2131165386;
+			// aapt resource value: 0x7f0700c8
+			public const int btn2Q1C2 = 2131165384;
 			
-			// aapt resource value: 0x7f0700cb
-			public const int btn2Q2C2 = 2131165387;
+			// aapt resource value: 0x7f0700c9
+			public const int btn2Q1C3 = 2131165385;
 			
 			// aapt resource value: 0x7f0700cc
-			public const int btn2Q2C3 = 2131165388;
+			public const int btn2Q2C1 = 2131165388;
+			
+			// aapt resource value: 0x7f0700cd
+			public const int btn2Q2C2 = 2131165389;
+			
+			// aapt resource value: 0x7f0700ce
+			public const int btn2Q2C3 = 2131165390;
 			
 			// aapt resource value: 0x7f0700a9
 			public const int btnBackFromPersonalInfo = 2131165353;
@@ -2464,11 +2464,11 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07008b
 			public const int btnBackFromVFRTime = 2131165323;
 			
-			// aapt resource value: 0x7f0700d0
-			public const int btnBackfrom2 = 2131165392;
+			// aapt resource value: 0x7f0700d2
+			public const int btnBackfrom2 = 2131165394;
 			
-			// aapt resource value: 0x7f0700e3
-			public const int btnBackfrom3 = 2131165411;
+			// aapt resource value: 0x7f0700b7
+			public const int btnBackfrom3 = 2131165367;
 			
 			// aapt resource value: 0x7f07007f
 			public const int btnBackfromFilingCriteria = 2131165311;
@@ -2479,8 +2479,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700b4
 			public const int btnBackfromSHF1 = 2131165364;
 			
-			// aapt resource value: 0x7f0700c2
-			public const int btnBackfromSHF2 = 2131165378;
+			// aapt resource value: 0x7f0700c4
+			public const int btnBackfromSHF2 = 2131165380;
 			
 			// aapt resource value: 0x7f0700ee
 			public const int btnBackfromVFR_Dual_Local_Day = 2131165422;
@@ -2488,11 +2488,11 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700f9
 			public const int btnBackfromVFR_Dual_Local_Night = 2131165433;
 			
-			// aapt resource value: 0x7f0700d1
-			public const int btnContinueFrom2 = 2131165393;
+			// aapt resource value: 0x7f0700d3
+			public const int btnContinueFrom2 = 2131165395;
 			
-			// aapt resource value: 0x7f0700e4
-			public const int btnContinueFrom3 = 2131165412;
+			// aapt resource value: 0x7f0700b8
+			public const int btnContinueFrom3 = 2131165368;
 			
 			// aapt resource value: 0x7f070081
 			public const int btnContinueFromFilingCriteria = 2131165313;
@@ -2506,8 +2506,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700b5
 			public const int btnContinueFromSHF1 = 2131165365;
 			
-			// aapt resource value: 0x7f0700c3
-			public const int btnContinueFromSHF2 = 2131165379;
+			// aapt resource value: 0x7f0700c5
+			public const int btnContinueFromSHF2 = 2131165381;
 			
 			// aapt resource value: 0x7f070093
 			public const int btnContinueFromSyllabus = 2131165331;
@@ -2557,59 +2557,59 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700ab
 			public const int btnNoPreviousFlights = 2131165355;
 			
-			// aapt resource value: 0x7f0700d3
-			public const int btnQ1C1 = 2131165395;
-			
-			// aapt resource value: 0x7f0700d4
-			public const int btnQ1C2 = 2131165396;
-			
 			// aapt resource value: 0x7f0700d5
-			public const int btnQ1C3 = 2131165397;
+			public const int btnQ1C1 = 2131165397;
 			
-			// aapt resource value: 0x7f0700d8
-			public const int btnQ2C1 = 2131165400;
+			// aapt resource value: 0x7f0700d6
+			public const int btnQ1C2 = 2131165398;
 			
-			// aapt resource value: 0x7f0700d9
-			public const int btnQ2C2 = 2131165401;
+			// aapt resource value: 0x7f0700d7
+			public const int btnQ1C3 = 2131165399;
 			
 			// aapt resource value: 0x7f0700da
-			public const int btnQ2C3 = 2131165402;
+			public const int btnQ2C1 = 2131165402;
 			
-			// aapt resource value: 0x7f0700dd
-			public const int btnQ3C1 = 2131165405;
+			// aapt resource value: 0x7f0700db
+			public const int btnQ2C2 = 2131165403;
 			
-			// aapt resource value: 0x7f0700de
-			public const int btnQ3C2 = 2131165406;
+			// aapt resource value: 0x7f0700dc
+			public const int btnQ2C3 = 2131165404;
 			
 			// aapt resource value: 0x7f0700df
-			public const int btnQ3C3 = 2131165407;
+			public const int btnQ3C1 = 2131165407;
+			
+			// aapt resource value: 0x7f0700e0
+			public const int btnQ3C2 = 2131165408;
+			
+			// aapt resource value: 0x7f0700e1
+			public const int btnQ3C3 = 2131165409;
 			
 			// aapt resource value: 0x7f07009e
 			public const int btnSelectDate = 2131165342;
 			
-			// aapt resource value: 0x7f0700b9
-			public const int btnSyllabusFlightFAA = 2131165369;
-			
-			// aapt resource value: 0x7f0700b7
-			public const int btnSyllabusFlightNormal = 2131165367;
-			
-			// aapt resource value: 0x7f0700b8
-			public const int btnSyllabusFlightStageCheck = 2131165368;
-			
 			// aapt resource value: 0x7f0700bb
-			public const int btnTemp0 = 2131165371;
+			public const int btnSyllabusFlightFAA = 2131165371;
 			
-			// aapt resource value: 0x7f0700bc
-			public const int btnTemp30 = 2131165372;
+			// aapt resource value: 0x7f0700b9
+			public const int btnSyllabusFlightNormal = 2131165369;
+			
+			// aapt resource value: 0x7f0700ba
+			public const int btnSyllabusFlightStageCheck = 2131165370;
 			
 			// aapt resource value: 0x7f0700bd
-			public const int btnTemp55 = 2131165373;
+			public const int btnTemp0 = 2131165373;
 			
 			// aapt resource value: 0x7f0700be
-			public const int btnTemp76 = 2131165374;
+			public const int btnTemp30 = 2131165374;
 			
 			// aapt resource value: 0x7f0700bf
-			public const int btnTemp90 = 2131165375;
+			public const int btnTemp55 = 2131165375;
+			
+			// aapt resource value: 0x7f0700c0
+			public const int btnTemp76 = 2131165376;
+			
+			// aapt resource value: 0x7f0700c1
+			public const int btnTemp90 = 2131165377;
 			
 			// aapt resource value: 0x7f0700e5
 			public const int btnVFR_Dual_Day_Ceiling0 = 2131165413;
@@ -3109,32 +3109,32 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070094
 			public const int touch_outside = 2131165332;
 			
-			// aapt resource value: 0x7f0700c8
-			public const int txt2Answer1 = 2131165384;
-			
-			// aapt resource value: 0x7f0700cd
-			public const int txt2Answer2 = 2131165389;
-			
-			// aapt resource value: 0x7f0700c4
-			public const int txt2Question1 = 2131165380;
-			
-			// aapt resource value: 0x7f0700c9
-			public const int txt2Question2 = 2131165385;
+			// aapt resource value: 0x7f0700ca
+			public const int txt2Answer1 = 2131165386;
 			
 			// aapt resource value: 0x7f0700cf
-			public const int txt2RiskNum = 2131165391;
+			public const int txt2Answer2 = 2131165391;
 			
-			// aapt resource value: 0x7f0700ce
-			public const int txt2RiskText2 = 2131165390;
+			// aapt resource value: 0x7f0700c6
+			public const int txt2Question1 = 2131165382;
 			
-			// aapt resource value: 0x7f0700d6
-			public const int txtAnswer1 = 2131165398;
+			// aapt resource value: 0x7f0700cb
+			public const int txt2Question2 = 2131165387;
 			
-			// aapt resource value: 0x7f0700db
-			public const int txtAnswer2 = 2131165403;
+			// aapt resource value: 0x7f0700d1
+			public const int txt2RiskNum = 2131165393;
 			
-			// aapt resource value: 0x7f0700e0
-			public const int txtAnswer3 = 2131165408;
+			// aapt resource value: 0x7f0700d0
+			public const int txt2RiskText2 = 2131165392;
+			
+			// aapt resource value: 0x7f0700d8
+			public const int txtAnswer1 = 2131165400;
+			
+			// aapt resource value: 0x7f0700dd
+			public const int txtAnswer2 = 2131165405;
+			
+			// aapt resource value: 0x7f0700e2
+			public const int txtAnswer3 = 2131165410;
 			
 			// aapt resource value: 0x7f070090
 			public const int txtAreaChoice = 2131165328;
@@ -3166,35 +3166,35 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700ae
 			public const int txtPrevFlightChoice = 2131165358;
 			
-			// aapt resource value: 0x7f0700d2
-			public const int txtQuestion1 = 2131165394;
+			// aapt resource value: 0x7f0700d4
+			public const int txtQuestion1 = 2131165396;
 			
-			// aapt resource value: 0x7f0700d7
-			public const int txtQuestion2 = 2131165399;
+			// aapt resource value: 0x7f0700d9
+			public const int txtQuestion2 = 2131165401;
 			
-			// aapt resource value: 0x7f0700dc
-			public const int txtQuestion3 = 2131165404;
+			// aapt resource value: 0x7f0700de
+			public const int txtQuestion3 = 2131165406;
 			
 			// aapt resource value: 0x7f070091
 			public const int txtRisk = 2131165329;
 			
-			// aapt resource value: 0x7f0700e2
-			public const int txtRiskNum = 2131165410;
+			// aapt resource value: 0x7f0700e4
+			public const int txtRiskNum = 2131165412;
 			
-			// aapt resource value: 0x7f0700e1
-			public const int txtRiskText = 2131165409;
+			// aapt resource value: 0x7f0700e3
+			public const int txtRiskText = 2131165411;
 			
 			// aapt resource value: 0x7f0700b3
 			public const int txtSHFRisk1 = 2131165363;
 			
-			// aapt resource value: 0x7f0700c1
-			public const int txtSHFRisk2 = 2131165377;
+			// aapt resource value: 0x7f0700c3
+			public const int txtSHFRisk2 = 2131165379;
 			
-			// aapt resource value: 0x7f0700ba
-			public const int txtSyllabusFlight = 2131165370;
+			// aapt resource value: 0x7f0700bc
+			public const int txtSyllabusFlight = 2131165372;
 			
-			// aapt resource value: 0x7f0700c0
-			public const int txtTemp = 2131165376;
+			// aapt resource value: 0x7f0700c2
+			public const int txtTemp = 2131165378;
 			
 			// aapt resource value: 0x7f07008a
 			public const int txtVFRTime = 2131165322;
@@ -3446,7 +3446,7 @@ namespace ARA.Droid
 			public const int f_Student_Human_Factors = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int FragHolder = 2130903084;
+			public const int fragmentHolder = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
 			public const int g_Student_Human_Factors2 = 2130903085;

@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace ARA.Droid.Fragments
 {
-    public class Fragment3 : Fragment
+    public class Fragment3 : Android.Support.V4.App.Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,7 +27,6 @@ namespace ARA.Droid.Fragments
             View view = inflater.Inflate(Resource.Layout.h_Layout_3, container, false);
 
             return view;
-
         }
     }
 }

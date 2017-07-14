@@ -17,4 +17,38 @@
         android:layout_height="30dp"
         android:id="@+id/fragButton"
         android:layout_weight="0.2" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/relativeLayout1">
+            <ImageButton
+                android:src="@android:drawable/ic_media_previous"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:id="@+id/btnBackFragment" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/relativeLayout2">
+            <ImageButton
+                android:src="@android:drawable/ic_media_next"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:id="@+id/btnContinueFragment"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

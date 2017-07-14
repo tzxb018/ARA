@@ -22,7 +22,8 @@ namespace ARA.Droid
         private Fragment2 mFragment2;
         private Fragment3 mFragment3;
         private Stack<SupportFragment> mStackFragment;
-        private Button fragButton;
+        private ImageButton btnNext;
+        private ImageButton btnBack;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,7 +31,8 @@ namespace ARA.Droid
 
             SetContentView(Resource.Layout.fragmentHolder);
 
-            fragButton = FindViewById<Button>(Resource.Id.fragButton);
+            btnNext = FindViewById<ImageButton>(Resource.Id.btnContinueFragment);
+            btnBack = FindViewById<ImageButton>(Resource.Id.btnBackFragment);
 
             mFragment2 = new Fragment2();
             mFragment3 = new Fragment3();
@@ -40,7 +42,7 @@ namespace ARA.Droid
             trans.Add(Resource.Id.frameLayout1, mFragment2);
             trans.Commit();
 
-            fragButton.Click += (s, e) =>
+            btnNext.Click += (s, e) =>
             {
                 replace();
             };

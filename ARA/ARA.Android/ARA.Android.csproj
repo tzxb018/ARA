@@ -137,6 +137,7 @@
     <Compile Include="C_Time_VFR_Activity.cs" />
     <Compile Include="D_Syllabus_Activity.cs" />
     <Compile Include="E_Personal_Information.cs" />
+    <Compile Include="FragmentAct.cs" />
     <Compile Include="Fragments\Fragment3.cs" />
     <Compile Include="Fragments\Fragment2.cs" />
     <Compile Include="I_VFR_Day_XC7.cs" />

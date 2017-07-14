@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Departure Airfield - 1 of 2", MainLauncher = true)]
+    [Activity(Label = "Departure Airfield - 1 of 2")]
     public class M_VFR_Night_XC1 : Activity
     {
         public static int departureRisk, wind, ceiling, xwind;

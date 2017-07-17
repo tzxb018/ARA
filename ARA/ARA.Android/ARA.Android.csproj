@@ -138,8 +138,10 @@
     <Compile Include="D_Syllabus_Activity.cs" />
     <Compile Include="E_Personal_Information.cs" />
     <Compile Include="FragmentAct.cs" />
+    <Compile Include="Fragments\N_IFR_Day_Local1.cs" />
     <Compile Include="Fragments\Fragment3.cs" />
     <Compile Include="Fragments\Fragment2.cs" />
+    <Compile Include="IFR_Day_Local_Questions.cs" />
     <Compile Include="I_VFR_Day_XC7.cs" />
     <Compile Include="I_VFR_Day_XC8.cs" />
     <Compile Include="I_VFR_Day_XCPIC.cs" />
@@ -187,6 +189,10 @@
     <Compile Include="H_VFR_Day_Local2.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="JSON\IFR_Day_Local.json" />
+    <None Include="JSON\IFR_Day_XC.json" />
+    <None Include="JSON\IFR_Dual_Local.json" />
+    <None Include="JSON\IFR_Dual_XC.json" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -229,6 +235,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\fragmentHolder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Layoutfragment2.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LayoutFragment3.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

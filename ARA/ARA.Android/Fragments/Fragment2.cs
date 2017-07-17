@@ -15,8 +15,25 @@ namespace ARA.Droid.Fragments
 {
     public class Fragment2 : Android.Support.V4.App.Fragment
     {
-        private Fragment2 mFrag2;
-        private Fragment3 mFrag3;
+        private ImageButton btnNext;
+        private ImageButton btnBack;
+        private TextView q1;
+        private TextView q2;
+        private TextView q3;
+        private Button ans11;
+        private Button ans12;
+        private Button ans13;
+        private Button ans21;
+        private Button ans22;
+        private Button ans23;
+        private Button ans31;
+        private Button ans32;
+        private Button ans33;
+        private TextView ans1;
+        private TextView ans2;
+        private TextView ans3;
+        private TextView risk;
+        private TextView riskNum;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,29 +44,27 @@ namespace ARA.Droid.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View view = inflater.Inflate(Resource.Layout.h_Layout2, container, false);
-            var next = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom2);
+            View view = inflater.Inflate(Resource.Layout.Layoutfragment2, container, false);
 
-            var trans = Activity.SupportFragmentManager.BeginTransaction();
-            FragmentAct frg = new FragmentAct();
+            q1 = view.FindViewById<TextView>(Resource.Id.txt2Question1);
+            ans11 = view.FindViewById<Button>(Resource.Id.btn2Q1C1);
+            ans12 = view.FindViewById<Button>(Resource.Id.btn2Q1C2);
+            ans13 = view.FindViewById<Button>(Resource.Id.btn2Q1C3);
+            ans1 = view.FindViewById<TextView>(Resource.Id.txt2Answer1);
 
-            mFrag3 = new Fragment3();
+            q2 = view.FindViewById<TextView>(Resource.Id.txt2Question2);
+            ans21 = view.FindViewById<Button>(Resource.Id.btn2Q2C1);
+            ans22 = view.FindViewById<Button>(Resource.Id.btn2Q2C2);
+            ans23 = view.FindViewById<Button>(Resource.Id.btn2Q2C3);
+            ans2 = view.FindViewById<TextView>(Resource.Id.txt2Answer2);
 
-            next.Click += delegate
-            {
-                //frg.replace(mFrag3, this);
-                replace();
-            };
+            risk = view.FindViewById<TextView>(Resource.Id.txt2RiskText2);
+            riskNum = view.FindViewById<TextView>(Resource.Id.txt2RiskNum);
+            btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom2);
+            btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom2);
+
             return view;
         }
 
-        public void replace()
-        {
-           
-            var ft = this.Activity.SupportFragmentManager.BeginTransaction();
-            ft.Replace(Resource.Id.frameLayout1, new Fragment3());
-            ft.AddToBackStack(null);
-            ft.Commit();
-        }
     }
 }

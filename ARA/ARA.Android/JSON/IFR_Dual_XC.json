@@ -1,0 +1,37 @@
+{
+  "Departure Airfield": {
+    "What time of day are you flying?": [ "Day", "Night", "Both Day and Night" ],
+    "Ceiling (Day)": [ "> 1000 ft", "800 - 999 ft", "600 - 799 ft" ],
+    "Ceiling (Night)": ["1500 ft", "1200 - 1499 ft", "1000 - 1199 ft"],
+    "Visibility": [ "4+ SM", "3 SM", "2 SM" ],
+    "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
+    "Wind": [ "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
+    "Xwind": [ "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ]
+  },
+  "Enroute": {
+    "Ceiling (Day)": [ "> 1000 ft", "800 - 999 ft", "600 - 799 ft" ],
+    "Ceiling (Night)": [ "1500 ft", "1200 - 1499 ft", "1000 - 1199 ft" ],
+    "Visibility": [ "4+ SM", "3 SM", "2 SM" ],
+    "Time Enroute": [ "< 45 min", "45 - 90 min", "> 90 min" ],
+    "Thunderstorm Probability": [ "0 - 10%", "11 - 29%", "30% or more" ],
+    "Fuel at Alternate": [ "> 90 min", "76- 90 min", "60 - 75 min" ],
+    "Alternate Airfields": ["3+", "2", "1"]
+  },
+  "Destination": {
+    "Ceiling (Day)": [ "> 1000 ft", "800 - 999 ft", "600 - 799 ft" ],
+    "Ceiling (Night)": [ "1500 ft", "1200 - 1499 ft", "1000 - 1199 ft" ],
+    "Visibility": [ "4+ SM", "3 SM", "2 SM" ],
+    "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
+    "Wind": [ "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
+    "Xwind": [ "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ]
+  },
+  "Alternate": {
+    "Ceiling (Day)": [ "> 1000 ft", "800 - 999 ft", "600 - 799 ft" ],
+    "Ceiling (Night)": [ "1500 ft", "1200 - 1499 ft", "1000 - 1199 ft" ],
+    "Visibility": [ "4+ SM", "3 SM", "2 SM" ],
+    "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
+    "Wind": [ "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
+    "Xwind": [ "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ],
+    "Fuel Remaining": [ "> 75 min", "60 - 75 min", "45 - 60 min" ]
+  }
+}

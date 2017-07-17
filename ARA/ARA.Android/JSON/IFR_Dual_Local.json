@@ -1,0 +1,20 @@
+{
+  "Home Airport": {
+    "What time of day are you flying?":  ["Day", "Night", "Both Day and Night"],
+    "Ceiling (Day)": [ "> 1000 ft", "800-999 ft", "600-799 ft" ],
+    "Ceiling (Night)": ["> 1500 ft", "1200 - 1499 ft", "1000-1199 ft"],
+    "Visibility": [ "4+ SM", "3 SM", "2 SM" ],
+    "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
+    "Wind": [ "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
+    "Xwind": [ "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ]
+  },
+  "Alternate": {
+    "Ceiling (Day)": [ "> 3000 ft", "2501-3000 ft", "2000-2500 ft" ],
+    "Ceiling (Night)":  ["> 1500 ft", "1200 - 1499 ft", "1000 - 1199 ft"],
+    "Visibility": [ "4+ SM", "3 SM", "2 SM" ],
+    "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
+    "Wind": [ "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
+    "Xwind": [ "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ],
+    "Fuel Remaining": [ "> 75 min", "60 - 75 min", "45 - 60 min" ]
+  }
+}

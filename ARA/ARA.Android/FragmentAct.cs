@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using SupportFragment = Android.Support.V4.App.Fragment;
 using Android.Support.V4.App;
 using ARA.Droid.Fragments;
+using Newtonsoft.Json;
 
 namespace ARA.Droid
 {
@@ -25,11 +26,23 @@ namespace ARA.Droid
         private ImageButton btnNext;
         private ImageButton btnBack;
 
+        private int sectionNum; //int to keep track of which section
+        private int questionNum; //int to keep track of which number question of the section
+        private int answer; //1,2,3 -> 0 , 1 ,3 (risk)
+
+        public static int HomeRisk, AltRisk, PICRisk; //indivdual risks for IFR day local
+
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.fragmentHolder);
+
+            IFR_Day_Local_Questions DayLocalQuestions = JsonConvert.DeserializeObject<IFR_Day_Local_Questions>("IFR_Day_Local.json");
+
+
+
 
             btnNext = FindViewById<ImageButton>(Resource.Id.btnContinueFragment);
             btnBack = FindViewById<ImageButton>(Resource.Id.btnBackFragment);

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp"
+    android:id="@+id/linearLayout3">
+    <TextView
+        android:text="Question 1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt2Question1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:weightSum="3"
+        android:layout_marginTop="5dp">
+        <Button
+            android:text="Choice 1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn2Q1C1"
+            android:layout_weight="1" />
+        <Button
+            android:text="Choice 2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn2Q1C2"
+            android:layout_weight="1" />
+        <Button
+            android:text="Choice 3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn2Q1C3"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <TextView
+        android:text="Answer 1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt2Answer1"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:text="Question 2"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt2Question2"
+        android:layout_marginTop="6.5dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:weightSum="3"
+        android:layout_marginTop="5dp">
+        <Button
+            android:text="Choice 1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn2Q2C1"
+            android:layout_weight="1" />
+        <Button
+            android:text="Choice 2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn2Q2C2"
+            android:layout_weight="1" />
+        <Button
+            android:text="Choice 3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn2Q2C3"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <TextView
+        android:text="Answer 2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt2Answer2"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt2RiskText2"
+        android:layout_marginTop="35.5dp"
+        android:text="OKAY - Home Airfield Risk"
+        android:textColor="@android:color/holo_green_dark" />
+    <TextView
+        android:text="Risk = 0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt2RiskNum"
+        android:layout_marginTop="3dp" />
+</LinearLayout>

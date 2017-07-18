@@ -1,5 +1,5 @@
 {
-  "Home Airport": {
+  "HomeAirport": {
     "Ceiling (Day)": [ "> 3000 ft", "2501-3000 ft", "2000-2500 ft" ],
     "Visibility (Day)": [ "5+ SM", "4 SM", "3 SM" ],
     "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
@@ -17,6 +17,6 @@
   "PIC": {
     "Last Dual Landing": [ "< 30 days", "30 - 45 days", "> 45 days" ],
     "Dual Instrument Approach": [ "< 30 days", "30 - 45 days", "> 45 days" ],
-    "IFR Current": ["Yes", "No"]
+    "IFR Current": [ "Yes", "No" ]
   }
 }

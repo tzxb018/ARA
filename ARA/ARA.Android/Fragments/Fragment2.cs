@@ -38,7 +38,7 @@ namespace ARA.Droid.Fragments
         private TextView risk;
         private TextView riskNum;
 
-        IFR_Day_Local_Questions DayLocalQuestions = new IFR_Day_Local_Questions();
+        //IFR_Day_Local_Questions DayLocalQuestions = new IFR_Day_Local_Questions();
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -60,8 +60,9 @@ namespace ARA.Droid.Fragments
             StreamReader sr = new StreamReader(stream);
             string jsonText = sr.ReadToEnd();
 
-            var json = JsonConvert.DeserializeObject<IFR_Day_Local_Questions>(jsonText);
-            
+            RootObject result = JsonConvert.DeserializeObject<RootObject>(jsonText);
+
+            Console.WriteLine("JSON : " + result.HomeAirport.Ceiling.ElementAt(0));
 
             q1 = view.FindViewById<TextView>(Resource.Id.txt2Question1);
             ans11 = view.FindViewById<Button>(Resource.Id.btn2Q1C1);
@@ -80,6 +81,9 @@ namespace ARA.Droid.Fragments
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom2);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom2);
 
+            q1.Text = result.HomeAirport.Ceiling.ToString();
+            ans11.Text = result.HomeAirport.Ceiling[0];
+            
 
 
             return view;

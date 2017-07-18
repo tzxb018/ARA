@@ -1,22 +1,22 @@
 {
   "HomeAirport": {
-    "Ceiling (Day)": [ "> 3000 ft", "2501-3000 ft", "2000-2500 ft" ],
-    "Visibility (Day)": [ "5+ SM", "4 SM", "3 SM" ],
-    "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
-    "Wind": [ "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
-    "Xwind": [ "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ]
+    "Ceiling (Day)": [ "Home Airport", "Ceiling (Day)", "> 3000 ft", "2501-3000 ft", "2000-2500 ft" ],
+    "Visibility (Day)": ["Home Airport", "Visibility (Day)", "5+ SM", "4 SM", "3 SM" ],
+    "Best IAP Available": ["Home Airport", "Best IAP Available", "Precision", "Non-Precision", "Circling" ],
+    "Wind": ["Home Airport", "Wind", "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
+    "Xwind": [ "Home Airport", "Xwind","0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ]
   },
   "Alternate": {
-    "Ceiling (Day)": [ "> 3000 ft", "2501-3000 ft", "2000-2500 ft" ],
-    "Visibility (Day)": [ "5+ SM", "4 SM", "3 SM" ],
-    "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
-    "Wind": [ "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
-    "Xwind": [ "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ],
-    "Fuel Remaining": [ "> 75 min", "60 - 75 min", "45 - 60 min" ]
+    "Ceiling (Day)": ["Alternate", "Ceiling (Day)", "> 3000 ft", "2501-3000 ft", "2000-2500 ft" ],
+    "Visibility (Day)": ["Alternate", "Visibility (Day)", "5+ SM", "4 SM", "3 SM" ],
+    "Best IAP Available": ["Alternate", "Best IAP Available", "Precision", "Non-Precision", "Circling" ],
+    "Wind": ["Alternate", "Wind", "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
+    "Xwind": ["Alternate", "Xwind", "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ],
+    "Fuel Remaining": ["Alternate", "Fuel Remaining", "> 75 min", "60 - 75 min", "45 - 60 min" ]
   },
   "PIC": {
-    "Last Dual Landing": [ "< 30 days", "30 - 45 days", "> 45 days" ],
-    "Dual Instrument Approach": [ "< 30 days", "30 - 45 days", "> 45 days" ],
-    "IFR Current": [ "Yes", "No" ]
+    "Last Dual Landing": ["PIC", "Last Dual Landing", "< 30 days", "30 - 45 days", "> 45 days" ],
+    "Dual Instrument Approach": [ "PIC", "Dual Instrument Approach", "< 30 days", "30 - 45 days", "> 45 days" ],
+    "IFR Current": ["PIC", "IFR Current", "Yes", "No" ]
   }
 }

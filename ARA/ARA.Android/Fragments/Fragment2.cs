@@ -55,14 +55,14 @@ namespace ARA.Droid.Fragments
            
             FragmentAct frg = (FragmentAct)Activity;
 
-            var stream = Android.App.Application.Context.Assets.Open("IFR_Day_Local.json");
+            var stream = Android.App.Application.Context.Assets.Open("IFR_Day_Local2.json");
 
             StreamReader sr = new StreamReader(stream);
             string jsonText = sr.ReadToEnd();
 
-            RootObject result = JsonConvert.DeserializeObject<RootObject>(jsonText);
+            Root result = JsonConvert.DeserializeObject<Root>(jsonText);
 
-            Console.WriteLine("JSON : " + result.HomeAirport.Ceiling.ElementAt(0));
+            //Console.WriteLine("JSON : " + result.HomeAirport.Ceiling.ElementAt(0));
 
             q1 = view.FindViewById<TextView>(Resource.Id.txt2Question1);
             ans11 = view.FindViewById<Button>(Resource.Id.btn2Q1C1);
@@ -81,8 +81,6 @@ namespace ARA.Droid.Fragments
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom2);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom2);
 
-            q1.Text = result.HomeAirport.Ceiling.ToString();
-            ans11.Text = result.HomeAirport.Ceiling[0];
             
 
 

@@ -142,6 +142,7 @@
     <Compile Include="Fragments\Fragment3.cs" />
     <Compile Include="Fragments\Fragment2.cs" />
     <Compile Include="IFR_Day_Local_Questions.cs" />
+    <Compile Include="IFR_Day_Local_Questions2.cs" />
     <Compile Include="I_VFR_Day_XC7.cs" />
     <Compile Include="I_VFR_Day_XC8.cs" />
     <Compile Include="I_VFR_Day_XCPIC.cs" />
@@ -190,6 +191,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\IFR_Day_Local.json" />
+    <AndroidAsset Include="Assets\IFR_Day_Local2.json" />
     <None Include="Assets\IFR_Day_XC.json" />
     <None Include="Assets\IFR_Dual_Local.json" />
     <None Include="Assets\IFR_Dual_XC.json" />

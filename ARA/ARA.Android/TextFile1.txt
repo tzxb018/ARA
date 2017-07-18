@@ -1,0 +1,22 @@
+﻿{
+  "Home Airport": {
+    "Ceiling (Day)": [ "> 3000 ft", "2501-3000 ft", "2000-2500 ft" ],
+    "Visibility (Day)": [ "5+ SM", "4 SM", "3 SM" ],
+    "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
+    "Wind": [ "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
+    "Xwind": [ "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ]
+  },
+  "Alternate": {
+    "Ceiling (Day)": [ "> 3000 ft", "2501-3000 ft", "2000-2500 ft" ],
+    "Visibility (Day)": [ "5+ SM", "4 SM", "3 SM" ],
+    "Best IAP Available": [ "Precision", "Non-Precision", "Circling" ],
+    "Wind": [ "0 - 15 kts", "16 - 20 kts", "21 - 25 kts" ],
+    "Xwind": [ "0 - 5 kts", "6 - 10 kts", "11 - 15 kts" ],
+    "Fuel Remaining": [ "> 75 min", "60 - 75 min", "45 - 60 min" ]
+  },
+  "PIC": {
+    "Last Dual Landing": [ "< 30 days", "30 - 45 days", "> 45 days" ],
+    "Dual Instrument Approach": [ "< 30 days", "30 - 45 days", "> 45 days" ],
+    "IFR Current": ["Yes", "No"]
+  }
+}

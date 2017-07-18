@@ -10,6 +10,9 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
+using System.IO;
+using Android.Content.Res;
 
 namespace ARA.Droid.Fragments
 {
@@ -35,16 +38,30 @@ namespace ARA.Droid.Fragments
         private TextView risk;
         private TextView riskNum;
 
+        IFR_Day_Local_Questions DayLocalQuestions = new IFR_Day_Local_Questions();
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
+            
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.Layoutfragment2, container, false);
+
+           
+            FragmentAct frg = (FragmentAct)Activity;
+
+            var stream = Android.App.Application.Context.Assets.Open("IFR_Day_Local.json");
+
+            StreamReader sr = new StreamReader(stream);
+            string jsonText = sr.ReadToEnd();
+
+            var json = JsonConvert.DeserializeObject<IFR_Day_Local_Questions>(jsonText);
+            
 
             q1 = view.FindViewById<TextView>(Resource.Id.txt2Question1);
             ans11 = view.FindViewById<Button>(Resource.Id.btn2Q1C1);
@@ -63,8 +80,14 @@ namespace ARA.Droid.Fragments
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom2);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom2);
 
-            return view;
-        }
 
+
+            return view;
+
+            
+
+            //setting ui elements using the json array
+            
+        }
     }
 }

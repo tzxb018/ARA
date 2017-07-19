@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Destination - 2 of 2")]
+    [Activity(Label = "Destination - 2 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class M_VFR_Night_XC6 : Activity
     {
         public static int vis, fuel, iap;

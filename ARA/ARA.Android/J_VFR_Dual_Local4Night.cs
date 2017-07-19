@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Night Info")]
+    [Activity(Label = "Night Info", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class J_VFR_Dual_Local4Night : Activity
     {
         public static int nightCeiling;

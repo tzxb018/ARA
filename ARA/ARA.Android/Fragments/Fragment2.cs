@@ -52,8 +52,7 @@ namespace ARA.Droid.Fragments
         {
             View view = inflater.Inflate(Resource.Layout.Layoutfragment2, container, false);
 
-           
-            FragmentAct frg = (FragmentAct)Activity;
+            N_IFR_Day_Local frg = (N_IFR_Day_Local)Activity;
 
             var stream = Android.App.Application.Context.Assets.Open("IFR_Day_Local2.json");
 
@@ -81,7 +80,7 @@ namespace ARA.Droid.Fragments
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom2);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom2);
 
-            
+            q1.Text = result.IFR_Day_Local_Questions[frg.sectionNum][frg.questionNum][1];
 
 
             return view;

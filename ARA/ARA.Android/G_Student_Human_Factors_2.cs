@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Student Human Factors - 2 of 2")]
+    [Activity(Label = "Student Human Factors - 2 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class G_Student_Human_Factors_2 : Activity
     {
         public static int syllabusFlight = 0;
@@ -525,29 +525,99 @@ namespace ARA.Droid
                         }
                         else //XC
                         {
-
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(I_VFR_Day_XC));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
                         }
                     }
                     else if (C_Time_VFR_Activity.VFRisDual) //Dual
                     {
                         if (D_Syllabus_Activity.isLocal) //Local
                         {
-
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(J_VFR_Dual_Local1));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
                         }
                         else //XC
                         {
-
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(K_VFR_Dual_XC1));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
                         }
                     }
                     else //Night
                     {
                         if (D_Syllabus_Activity.isLocal) //Local
                         {
-
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(L_VFR_Night_Local1));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
                         }
                         else //XC
                         {
-
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(M_VFR_Night_XC1));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
                         }
                     }
                 }
@@ -557,7 +627,21 @@ namespace ARA.Droid
                     {
                         if (D_Syllabus_Activity.isLocal) //Local
                         {
-
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(N_IFR_Day_Local));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
                         }
                         else //XC
                         {

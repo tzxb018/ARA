@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace ARA.Droid.Fragments
 {
@@ -46,6 +48,15 @@ namespace ARA.Droid.Fragments
         {
             View view = inflater.Inflate(Resource.Layout.LayoutFragment3, container, false);
 
+            N_IFR_Day_Local frg = (N_IFR_Day_Local)Activity;
+
+            var stream = Android.App.Application.Context.Assets.Open("IFR_Day_Local2.json");
+
+            StreamReader sr = new StreamReader(stream);
+            string jsonText = sr.ReadToEnd();
+
+            Root result = JsonConvert.DeserializeObject<Root>(jsonText);
+
             q1 = view.FindViewById<TextView>(Resource.Id.txtQuestion1);
             ans11 = view.FindViewById<Button>(Resource.Id.btnQ1C1);
             ans12 = view.FindViewById<Button>(Resource.Id.btnQ1C2);
@@ -68,6 +79,8 @@ namespace ARA.Droid.Fragments
             riskNum = view.FindViewById<TextView>(Resource.Id.txtRiskNum);
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom3);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom3);
+
+            q1.Text = result.IFR_Day_Local_Questions[frg.sectionNum][frg.questionNum][1];
 
             return view;
         }

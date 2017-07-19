@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Enroute - 1 of 2")]
+    [Activity(Label = "Enroute - 1 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class M_VFR_Night_XC3 : Activity
     {
         public static int enrouteRisk, ceiling, vis;

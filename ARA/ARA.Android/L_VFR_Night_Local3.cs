@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "PIC - 1 of 2")]
+    [Activity(Label = "PIC - 1 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class L_VFR_Night_Local3 : Activity
     {
         public static int PIC_Risk, Night3, Last;

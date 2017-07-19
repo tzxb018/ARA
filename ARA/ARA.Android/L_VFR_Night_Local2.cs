@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Departure Airfield - 2 of 2")]
+    [Activity(Label = "Departure Airfield - 2 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class L_VFR_Night_Local2 : Activity
     {
         public static int ceiling, vis;

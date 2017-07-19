@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "PIC - 1 of 1")]
+    [Activity(Label = "PIC - 1 of 1", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class H_VFR_Day_LocalPIC : Activity
     {
         public static int CFI_Landing;

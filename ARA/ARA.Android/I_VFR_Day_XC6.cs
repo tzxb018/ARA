@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Destination or Aux Field - 2 of 2")]
+    [Activity(Label = "Destination or Aux Field - 2 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class I_VFR_Day_XC6 : Activity
     {
         public static int vis;

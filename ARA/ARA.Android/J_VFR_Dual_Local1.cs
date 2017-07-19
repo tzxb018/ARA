@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Home Airfield - 1 of 2")]
+    [Activity(Label = "Home Airfield - 1 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class J_VFR_Dual_Local1 : Activity
     {
         public static int windPime;

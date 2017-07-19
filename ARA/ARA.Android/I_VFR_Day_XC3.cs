@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Enroute or Practice Area - 1 of 2")]
+    [Activity(Label = "Enroute or Practice Area - 1 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class I_VFR_Day_XC3 : Activity
     {
         public static int ceiling;

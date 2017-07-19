@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Alternate Risk - 3 of 3")]
+    [Activity(Label = "Alternate Risk - 3 of 3", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class K_VFR_Dual_XC10 : Activity
     {
         public static int vis, fuel;

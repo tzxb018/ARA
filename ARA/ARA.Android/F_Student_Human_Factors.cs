@@ -14,7 +14,7 @@ using Android.Graphics;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Student Human Factors - 1 of 2")]
+    [Activity(Label = "Student Human Factors - 1 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class F_Student_Human_Factors : Activity
     {
         public static int previousFlights = 0; //each variable represents risk value for section depending on question

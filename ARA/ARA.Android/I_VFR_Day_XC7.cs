@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Alternate - 1 of 2")]
+    [Activity(Label = "Alternate - 1 of 2", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class I_VFR_Day_XC7 : Activity
     {
         public static int wind, xwind, ceiling;

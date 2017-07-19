@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Daytime Info")]
+    [Activity(Label = "Daytime Info", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class J_VFR_Dual_Local3Day : Activity
     {
         public static int ceilingDay;

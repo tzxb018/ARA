@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Destination or Aux Field - 3 of 3")]
+    [Activity(Label = "Destination or Aux Field - 3 of 3", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class K_VFR_Dual_XC7 : Activity
     {
         public static int fuel, vis;

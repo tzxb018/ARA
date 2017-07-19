@@ -1,0 +1,2 @@
+Email selection from spinner.
+Local storage.

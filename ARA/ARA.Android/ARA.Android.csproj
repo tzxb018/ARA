@@ -188,6 +188,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="H_VFR_Day_Local1.cs" />
     <Compile Include="H_VFR_Day_Local2.cs" />
+    <Compile Include="Y_Aircraft_and_Instructor.cs" />
+    <Compile Include="Z_Risk_Summary.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\IFR_Day_Local.json" />
@@ -245,6 +247,12 @@
     <AndroidResource Include="Resources\layout\LayoutFragment3.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\y_Aircraft_and_Instructor.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\z_risk_summary.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
@@ -273,6 +281,7 @@
     <AndroidResource Include="Resources\Drawable\Button_Light_Grey.xml" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
     <Content Include="TextFile1.txt" />
   </ItemGroup>
   <Import Project="..\ARA\ARA.projitems" Label="Shared" Condition="Exists('..\ARA\ARA.projitems')" />

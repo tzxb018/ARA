@@ -164,6 +164,10 @@ namespace ARA.Droid
                     });
                     alert.Show();
                 }
+                else
+                {
+                    StartActivity(typeof(Y_Aircraft_and_Instructor));
+                }
             };
 
             btnBack.Touch += (s,e) =>

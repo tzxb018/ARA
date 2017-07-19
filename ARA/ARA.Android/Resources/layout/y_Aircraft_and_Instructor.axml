@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp">
+    <TextView
+        android:text="Aircraft Number"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtQuestion1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:weightSum="3"
+        android:layout_marginTop="5dp"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtAircraft"
+            android:hint="Enter Aircraft Number" />
+    </LinearLayout>
+    <TextView
+        android:text="CFI Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtQuestion2" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:weightSum="3"
+        android:layout_marginTop="5dp"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/spinnerInstructor" />
+    </LinearLayout>
+    <TextView
+        android:text="Select the instructor who will be sent your risk assessment results."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginTop="7.0dp" />
+    <TextView
+        android:text="Email"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtQuestion3"
+        android:layout_marginTop="5dp" />
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtYourEmail"
+        android:hint="Enter Your Email" />
+    <TextView
+        android:text="Enter your email if you wish to recieve a copy of the assessment results. Leave blank if you do not wish to receive a copy."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_marginTop="5dp" />
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout4">
+                <ImageButton
+                    android:src="@android:drawable/ic_media_previous"
+                    android:id="@+id/btnBackfromAandI"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout3"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+                <ImageButton
+                    android:src="@android:drawable/ic_media_next"
+                    android:id="@+id/btnContinueFromAandI"
+                    android:clickable="true"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:text="Wind (Other)"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

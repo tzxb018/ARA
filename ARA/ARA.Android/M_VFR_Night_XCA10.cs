@@ -99,6 +99,7 @@ namespace ARA.Droid
             {
                 if (M_VFR_Night_XC9.pic < 3)
                 {
+                    StartActivity(typeof(Y_Aircraft_and_Instructor));
 
                 }
                 else

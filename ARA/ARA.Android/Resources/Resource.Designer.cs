@@ -92,6 +92,22 @@ namespace ARA.Droid
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0d0000
+			public const int name_array = 2131558400;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -2473,11 +2489,17 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700e7
 			public const int btnBackfrom3 = 2131165415;
 			
+			// aapt resource value: 0x7f07012a
+			public const int btnBackfromAandI = 2131165482;
+			
 			// aapt resource value: 0x7f07007f
 			public const int btnBackfromFilingCriteria = 2131165311;
 			
 			// aapt resource value: 0x7f070085
 			public const int btnBackfromIFRTime = 2131165317;
+			
+			// aapt resource value: 0x7f070133
+			public const int btnBackfromRisk = 2131165491;
 			
 			// aapt resource value: 0x7f0700b4
 			public const int btnBackfromSHF1 = 2131165364;
@@ -2500,6 +2522,9 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700e8
 			public const int btnContinueFrom3 = 2131165416;
 			
+			// aapt resource value: 0x7f07012b
+			public const int btnContinueFromAandI = 2131165483;
+			
 			// aapt resource value: 0x7f070081
 			public const int btnContinueFromFilingCriteria = 2131165313;
 			
@@ -2508,6 +2533,9 @@ namespace ARA.Droid
 			
 			// aapt resource value: 0x7f0700aa
 			public const int btnContinueFromPersonalInfo = 2131165354;
+			
+			// aapt resource value: 0x7f070134
+			public const int btnContinueFromRisk = 2131165492;
 			
 			// aapt resource value: 0x7f0700b5
 			public const int btnContinueFromSHF1 = 2131165365;
@@ -3028,6 +3056,9 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070058
 			public const int spacer = 2131165272;
 			
+			// aapt resource value: 0x7f070128
+			public const int spinnerInstructor = 2131165480;
+			
 			// aapt resource value: 0x7f070008
 			public const int split_action_bar = 2131165192;
 			
@@ -3139,6 +3170,9 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700d2
 			public const int txt2RiskText2 = 2131165394;
 			
+			// aapt resource value: 0x7f070127
+			public const int txtAircraft = 2131165479;
+			
 			// aapt resource value: 0x7f0700da
 			public const int txtAnswer1 = 2131165402;
 			
@@ -3162,6 +3196,9 @@ namespace ARA.Droid
 			
 			// aapt resource value: 0x7f07008d
 			public const int txtFlightInfo = 2131165325;
+			
+			// aapt resource value: 0x7f07012c
+			public const int txtFlightRiskStuff = 2131165484;
 			
 			// aapt resource value: 0x7f0700a3
 			public const int txtHour = 2131165347;
@@ -3190,11 +3227,29 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070091
 			public const int txtRisk = 2131165329;
 			
+			// aapt resource value: 0x7f07012e
+			public const int txtRisk1 = 2131165486;
+			
+			// aapt resource value: 0x7f07012f
+			public const int txtRisk2 = 2131165487;
+			
+			// aapt resource value: 0x7f070130
+			public const int txtRisk3 = 2131165488;
+			
+			// aapt resource value: 0x7f070131
+			public const int txtRisk4 = 2131165489;
+			
+			// aapt resource value: 0x7f070132
+			public const int txtRisk5 = 2131165490;
+			
 			// aapt resource value: 0x7f0700e6
 			public const int txtRiskNum = 2131165414;
 			
 			// aapt resource value: 0x7f0700e5
 			public const int txtRiskText = 2131165413;
+			
+			// aapt resource value: 0x7f07012d
+			public const int txtSHF = 2131165485;
 			
 			// aapt resource value: 0x7f0700b3
 			public const int txtSHFRisk1 = 2131165363;
@@ -3222,6 +3277,9 @@ namespace ARA.Droid
 			
 			// aapt resource value: 0x7f0700fb
 			public const int txtVFR_Dual_Night_Vis = 2131165435;
+			
+			// aapt resource value: 0x7f070129
+			public const int txtYourEmail = 2131165481;
 			
 			// aapt resource value: 0x7f0700fc
 			public const int txt_VFR_Dual_HomeRisk3 = 2131165436;
@@ -3541,6 +3599,12 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f030047
 			public const int Toolbar = 2130903111;
 			
+			// aapt resource value: 0x7f030048
+			public const int y_Aircraft_and_Instructor = 2130903112;
+			
+			// aapt resource value: 0x7f030049
+			public const int z_risk_summary = 2130903113;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -3670,6 +3734,9 @@ namespace ARA.Droid
 			
 			// aapt resource value: 0x7f08000e
 			public const int mr_user_route_category_name = 2131230734;
+			
+			// aapt resource value: 0x7f080028
+			public const int name_prompt = 2131230760;
 			
 			// aapt resource value: 0x7f080022
 			public const int status_bar_notification_info_overflow = 2131230754;

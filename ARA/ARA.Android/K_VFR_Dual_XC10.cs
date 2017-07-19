@@ -121,6 +121,7 @@ namespace ARA.Droid
                 }
                 else
                 {
+                    StartActivity(typeof(Y_Aircraft_and_Instructor));
 
                 }
             };

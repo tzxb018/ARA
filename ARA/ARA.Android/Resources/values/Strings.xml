@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="name_prompt">Instructor Name</string>
+  <string-array name="name_array">
+    <item value="tarington@unomaha.edu">Tom Arington</item>
+    <item value="jimbeyer34@gmail.com">Jim Beyers</item>
+    <item value="bolandernb@gmail.com">Nick Bolander</item>
+    <item value="ebusskohl23@gmail.com">Eric Busskohl</item>
+    <item value="thchristoffersen@gmai.com">Thomas Christoffersen</item>
+    <item value="benjicunningham05@gmail.com">Benji Cunningham</item>
+    <item value="sdethlefs22@gmail.com">Steve Dethlefs</item>
+    <item value="ksgreen54@yahoo.com">Ken Green</item>
+    <item value="joeaugustafson68112@gmail.com">Joe Gustafson</item>
+    <item value="David.Haller@airmethods.com">David Haller</item>
+    <item value="ajiliston08@gmail.com">Adam Liston</item>
+    <item value="nlynam94@gmail.com">Nick Lynam</item>
+    <item value="dmanning@unomaha.edu">Dan Manning</item>
+    <item value="tmanos@unomaha.edu">Ted Manos</item>
+    <item value="sbmichael@cox.net">Steve Michael</item>
+    <item value="bperkins@unomaha.edu">Brandon Perkins</item>
+    <item value="willpowers77@gmail.com">Will Powers</item>
+    <item value="anthonyreedy@msn.com">Tony Reedy</item>
+    <item value="breher865@gmail.com">Ben Reher</item>
+    <item value="rourke.joel@gmail.com">Joel Rourke</item>
+    <item value="johnrued@gmail.com">John Rued</item>
+    <item value="tiernansiems@hotmail.com">Tiernan Siems</item>
+    <item value="imvp@cox.net">Mark Van Pelt</item>
+    <item value="brycevezner44@gmail.com">Bryce Vezner</item>
+    <item value="johnglenweaver@gmail.com">Glen Weaver</item>
+    <item value="jmwendl@gmail.com">Joe Wendl</item>
+    <item value="williams.ryan073@gmail.com">Ryan Williams</item>
+    <item value="mark1derlich@gmail.com">Mark Wunderlich</item>
+  </string-array>
+</resources>

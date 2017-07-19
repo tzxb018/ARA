@@ -99,7 +99,7 @@ namespace ARA.Droid
             {
                 if (L_VFR_Night_Local3.PIC_Risk < 3)
                 {
-
+                    StartActivity(typeof(Y_Aircraft_and_Instructor));
                 }
                 else
                 {

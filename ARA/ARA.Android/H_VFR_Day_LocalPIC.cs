@@ -413,7 +413,7 @@ namespace ARA.Droid
             {
                 if (CFI_Landing + Other_Landing < 3)
                 {
-                    
+                    StartActivity(typeof(Y_Aircraft_and_Instructor));
                 }
                 else
                 {

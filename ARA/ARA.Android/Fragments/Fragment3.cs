@@ -48,14 +48,15 @@ namespace ARA.Droid.Fragments
         {
             View view = inflater.Inflate(Resource.Layout.LayoutFragment3, container, false);
 
-            N_IFR_Day_Local frg = (N_IFR_Day_Local)Activity;
+            String stringData = this.Arguments.GetString("JSON Location");
+            int questionNum = this.Arguments.GetInt("Question Start");
 
-            var stream = Android.App.Application.Context.Assets.Open("IFR_Day_Local2.json");
+            var stream = Application.Context.Assets.Open(stringData);
 
             StreamReader sr = new StreamReader(stream);
             string jsonText = sr.ReadToEnd();
 
-            Root result = JsonConvert.DeserializeObject<Root>(jsonText);
+            RootObject result = JsonConvert.DeserializeObject<RootObject>(jsonText);
 
             q1 = view.FindViewById<TextView>(Resource.Id.txtQuestion1);
             ans11 = view.FindViewById<Button>(Resource.Id.btnQ1C1);
@@ -80,7 +81,23 @@ namespace ARA.Droid.Fragments
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom3);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom3);
 
-            q1.Text = result.IFR_Day_Local_Questions[frg.sectionNum][frg.questionNum][1];
+            q1.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][0];
+            ans11.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][1];
+            ans12.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][2];
+            ans13.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][3];
+            ans1.Text = "You have selected the '" + ans11.Text + "' option";
+
+            q2.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 1][0];
+            ans21.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 1][1];
+            ans22.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 1][2];
+            ans23.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 1][3];
+            ans2.Text = "You have selected the '" + ans21.Text + "' option";
+
+            q3.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 2][0];
+            ans31.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 2][1];
+            ans32.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 2][2];
+            ans33.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 2][3];
+            ans3.Text = "You have selected the '" + ans31.Text + "' option";
 
             return view;
         }

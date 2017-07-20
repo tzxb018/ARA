@@ -93,14 +93,16 @@
         android:id="@+id/txt2RiskText2"
         android:layout_marginTop="35.5dp"
         android:text="OKAY - Home Airfield Risk"
-        android:textColor="@android:color/holo_green_dark" />
+        android:textColor="@android:color/holo_green_dark"
+        android:gravity="center_horizontal" />
     <TextView
         android:text="Risk = 0"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt2RiskNum"
-        android:layout_marginTop="3dp" />
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal" />
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"

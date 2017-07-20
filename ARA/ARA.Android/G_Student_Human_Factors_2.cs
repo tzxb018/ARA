@@ -629,7 +629,7 @@ namespace ARA.Droid
                         {
                             if (F_Student_Human_Factors.SHFRisk < 9)
                             {
-                                StartActivity(typeof(N_IFR_Day_Local));
+                                StartActivity(typeof(N_IFR_Day_Local_Home));
                             }
                             else
                             {

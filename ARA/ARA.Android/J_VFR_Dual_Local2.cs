@@ -73,7 +73,7 @@ namespace ARA.Droid
                 J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + xwind + J_VFR_Dual_Local4Night.nightVis + J_VFR_Dual_Local4Night.nightCeiling + J_VFR_Dual_Local3Day.visDay + J_VFR_Dual_Local3Day.ceilingDay;
             }
             
-            class1.riskShow(txtRisk, txtRiskNum, "PIC Risk",  J_VFR_Dual_Local1.homeRisk, 7, 9);
+            class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk",  J_VFR_Dual_Local1.homeRisk, 7, 9);
 
             btn0to5.Touch += (s,e) =>
             {
@@ -91,7 +91,7 @@ namespace ARA.Droid
                 {
                     J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + xwind + J_VFR_Dual_Local4Night.nightVis + J_VFR_Dual_Local4Night.nightCeiling + J_VFR_Dual_Local3Day.visDay + J_VFR_Dual_Local3Day.ceilingDay;
                 }
-                class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+                class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
             };
             btn6to10.Touch += (s,e) =>
             {
@@ -109,7 +109,7 @@ namespace ARA.Droid
                 {
                     J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + xwind + J_VFR_Dual_Local4Night.nightVis + J_VFR_Dual_Local4Night.nightCeiling + J_VFR_Dual_Local3Day.visDay + J_VFR_Dual_Local3Day.ceilingDay;
                 }
-                class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+                class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
             };
             btn11to15.Touch += (s,e) =>
             {
@@ -127,7 +127,7 @@ namespace ARA.Droid
                 {
                     J_VFR_Dual_Local1.homeRisk = J_VFR_Dual_Local1.windCFI + J_VFR_Dual_Local1.windComm + J_VFR_Dual_Local1.windPime + xwind + J_VFR_Dual_Local4Night.nightVis + J_VFR_Dual_Local4Night.nightCeiling + J_VFR_Dual_Local3Day.visDay + J_VFR_Dual_Local3Day.ceilingDay;
                 }
-                class1.riskShow(txtRisk, txtRiskNum, "PIC Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
+                class1.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", J_VFR_Dual_Local1.homeRisk, 7, 9);
             };
 
             btnDay.Touch += (s,e) =>

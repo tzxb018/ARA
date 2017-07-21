@@ -16,7 +16,7 @@ using Android.Content.Res;
 
 namespace ARA.Droid.Fragments
 {
-    public class Fragment2 : Android.Support.V4.App.Fragment
+    public class Fragment2 : Android.Support.V4.App.Fragment, OnFragmentInteractionListener
     {
         private ImageButton btnNext;
         private ImageButton btnBack;
@@ -108,56 +108,38 @@ namespace ARA.Droid.Fragments
             ans11.Touch += (s, e) =>
             {
                 risk1 = 0;
-                if (mListener != null)
-                {
-                    mListener.onFragmentInteraction(risk1, risk2);
-                }
+                mListener.onFragmentInteraction(risk1, risk2);
                 sc.button1Pressed(ans11, ans12, ans13, ans1);
             };
             ans12.Touch += (s, e) =>
             {
                 risk1 = 1;
-                if (mListener != null)
-                {
-                    mListener.onFragmentInteraction(risk1, risk2);
-                }
+                mListener.onFragmentInteraction(risk1, risk2);
                 sc.button2Pressed(ans11, ans12, ans13, ans1);
             };
             ans13.Touch += (s, e) =>
             {
                 risk1 = 3;
-                if (mListener != null)
-                {
-                    mListener.onFragmentInteraction(risk1, risk2);
-                }
+                mListener.onFragmentInteraction(risk1, risk2);
                 sc.button3Pressed(ans11, ans12, ans13, ans1);
             };
 
             ans21.Touch += (s, e) =>
             {
                 risk2 = 0;
-                if (mListener != null)
-                {
-                    mListener.onFragmentInteraction(risk1, risk2);
-                }
+                mListener.onFragmentInteraction(risk1, risk2);
                 sc.button1Pressed(ans21, ans22, ans23, ans2);
             };
             ans22.Touch += (s, e) =>
             {
                 risk2 = 1;
-                if (mListener != null)
-                {
-                    mListener.onFragmentInteraction(risk1, risk2);
-                }
+                mListener.onFragmentInteraction(risk1, risk2);
                 sc.button2Pressed(ans21, ans22, ans23, ans2);
             };
             ans23.Touch += (s, e) =>
             {
                 risk2 = 3;
-                if (mListener != null)
-                {
-                    mListener.onFragmentInteraction(risk1, risk2);
-                }
+                mListener.onFragmentInteraction(risk1, risk2);
                 sc.button3Pressed(ans21, ans22, ans23, ans2);
             };
         }
@@ -173,9 +155,13 @@ namespace ARA.Droid.Fragments
             catch (Exception ex) { }
         }
 
-        public interface OnFragmentInteractionListener
+        public void onFragmentInteraction(int riskOut, int riskOut2)
         {
-            void onFragmentInteraction(int riskOut, int riskOut2);
+
+        }
+
+        public void onFragmentInteraction(int riskOut, int riskOut2, int r3)
+        {
         }
     }
 }

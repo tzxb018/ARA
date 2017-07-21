@@ -19,7 +19,7 @@ using System.IO;
 namespace ARA.Droid
 {
     [Activity(Label = "FragmentAct", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, MainLauncher = true)]
-    public class N_IFR_Day_Local_Home : FragmentActivity, Fragment2.OnFragmentInteractionListener 
+    public class N_IFR_Day_Local_Home : FragmentActivity, OnFragmentInteractionListener 
     {
         private Fragment2 mFragment2;
         private Fragment3 mFragment3;
@@ -32,7 +32,7 @@ namespace ARA.Droid
         public int questionNum; //int to keep track of which number question of the section
         public int answer; //1,2,3 -> 0 , 1 ,3 (risk)
 
-        public static int HomeRisk; //indivdual risks for IFR day local       
+        public static int HomeRisk, r1, r2; //indivdual risks for IFR day local       
 
         public static string JSON_ARRAY = "IFR_Day_Local_Home.json";
         public static string RISK_TYPE = "Home Airfield Risk";
@@ -75,8 +75,8 @@ namespace ARA.Droid
             var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
             var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
 
-            txtRisk.Text = "Home Airfield Risk";
-            txtRiskNum.Text = "Risk: " + HomeRisk;
+            ShortCutFunctions sc = new ShortCutFunctions();
+            sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 7, 9);
 
 
             btnNext.Click += (s, e) =>
@@ -157,11 +157,32 @@ namespace ARA.Droid
 
         public void onFragmentInteraction(int riskOut, int riskOut2)
         {
+            ShortCutFunctions sc = new ShortCutFunctions();
             try
             {
-                HomeRisk = riskOut + riskOut2;
+                r1 = riskOut + riskOut2;
+                var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
-                txtRiskNum.Text = "Risk: " + HomeRisk;
+                HomeRisk = r1 + r2;
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 7, 9);
+            }
+            catch (Exception e)
+            {
+                throw new NotImplementedException();
+
+            }
+        }
+
+        public void onFragmentInteraction(int riskOut, int riskOut2, int r3)
+        {
+            ShortCutFunctions sc = new ShortCutFunctions();
+            try
+            {
+                r2 = riskOut + riskOut2 + r3;
+                var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
+                var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
+                HomeRisk = r1 + r2;
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 7, 9);
             }
             catch (Exception e)
             {

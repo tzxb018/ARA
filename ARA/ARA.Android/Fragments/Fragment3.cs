@@ -34,10 +34,10 @@ namespace ARA.Droid.Fragments
         private TextView ans1;
         private TextView ans2;
         private TextView ans3;
-        private TextView risk;
-        private TextView riskNum;
 
+        public int risk1, risk2, risk3;
 
+        private OnFragmentInteractionListener mListener;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -100,9 +100,92 @@ namespace ARA.Droid.Fragments
             ans33.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 2][3];
             ans3.Text = "You have selected the '" + ans31.Text + "' option";
 
-            
-
             return view;
+        }
+
+        public override void OnActivityCreated(Bundle savedInstanceState)
+        {
+            base.OnActivityCreated(savedInstanceState);
+
+            ShortCutFunctions sc = new ShortCutFunctions();
+
+            ans11.Touch += (s, e) =>
+            {
+                risk1 = 0;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button1Pressed(ans11, ans12, ans13, ans1);
+            };
+            ans12.Touch += (s, e) =>
+            {
+                risk1 = 1;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button2Pressed(ans11, ans12, ans13, ans1);
+            };
+            ans13.Touch += (s, e) =>
+            {
+                risk1 = 3;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button3Pressed(ans11, ans12, ans13, ans1);
+            };
+
+            ans21.Touch += (s, e) =>
+            {
+                risk2 = 0;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button1Pressed(ans21, ans22, ans23, ans2);
+            };
+            ans22.Touch += (s, e) =>
+            {
+                risk2 = 1;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button2Pressed(ans21, ans22, ans23, ans2);
+            };
+            ans23.Touch += (s, e) =>
+            {
+                risk2 = 3;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button3Pressed(ans21, ans22, ans23, ans2);
+            };
+
+            ans31.Touch += (s, e) =>
+            {
+                risk3 = 0;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button1Pressed(ans31, ans32, ans33, ans3);
+            };
+            ans32.Touch += (s, e) =>
+            {
+                risk3 = 1;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button2Pressed(ans31, ans32, ans33, ans3);
+            };
+            ans33.Touch += (s, e) =>
+            {
+                risk3 = 3;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button3Pressed(ans31, ans32, ans33, ans3);
+            };
+        }
+
+        public override void OnAttach(Context context)
+        {
+            base.OnAttach(context);
+
+            try
+            {
+                mListener = (OnFragmentInteractionListener)Activity;
+            }
+            catch (Exception ex) { }
+        }
+
+
+        public void onFragmentInteraction(int riskOut, int riskOut2)
+        {
+
+        }
+
+        public void onFragmentInteraction(int riskOut, int riskOut2, int r3)
+        {
         }
     }
 }

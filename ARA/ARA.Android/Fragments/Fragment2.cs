@@ -103,30 +103,62 @@ namespace ARA.Droid.Fragments
         {
             base.OnActivityCreated(savedInstanceState);
 
+            ShortCutFunctions sc = new ShortCutFunctions();
+
             ans11.Touch += (s, e) =>
             {
                 risk1 = 0;
                 if (mListener != null)
                 {
-                    mListener.onFragmentInteraction(risk1);
+                    mListener.onFragmentInteraction(risk1, risk2);
                 }
-
+                sc.button1Pressed(ans11, ans12, ans13, ans1);
             };
             ans12.Touch += (s, e) =>
             {
                 risk1 = 1;
                 if (mListener != null)
                 {
-                    mListener.onFragmentInteraction(risk1);
+                    mListener.onFragmentInteraction(risk1, risk2);
                 }
+                sc.button2Pressed(ans11, ans12, ans13, ans1);
             };
             ans13.Touch += (s, e) =>
             {
                 risk1 = 3;
                 if (mListener != null)
                 {
-                    mListener.onFragmentInteraction(risk1);
+                    mListener.onFragmentInteraction(risk1, risk2);
                 }
+                sc.button3Pressed(ans11, ans12, ans13, ans1);
+            };
+
+            ans21.Touch += (s, e) =>
+            {
+                risk2 = 0;
+                if (mListener != null)
+                {
+                    mListener.onFragmentInteraction(risk1, risk2);
+                }
+                sc.button1Pressed(ans21, ans22, ans23, ans2);
+            };
+            ans22.Touch += (s, e) =>
+            {
+                risk2 = 1;
+                if (mListener != null)
+                {
+                    mListener.onFragmentInteraction(risk1, risk2);
+                }
+                sc.button2Pressed(ans21, ans22, ans23, ans2);
+            };
+            ans23.Touch += (s, e) =>
+            {
+                risk2 = 3;
+                if (mListener != null)
+                {
+                    mListener.onFragmentInteraction(risk1, risk2);
+                }
+                sc.button3Pressed(ans21, ans22, ans23, ans2);
             };
         }
 
@@ -143,7 +175,7 @@ namespace ARA.Droid.Fragments
 
         public interface OnFragmentInteractionListener
         {
-            void onFragmentInteraction(int riskOut);
+            void onFragmentInteraction(int riskOut, int riskOut2);
         }
     }
 }

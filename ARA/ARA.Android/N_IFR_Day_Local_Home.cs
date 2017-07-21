@@ -155,14 +155,12 @@ namespace ARA.Droid
             ft.Commit();
         }
 
-        public void onFragmentInteraction(int riskOut)
+        public void onFragmentInteraction(int riskOut, int riskOut2)
         {
             try
             {
-                HomeRisk += riskOut;
-
+                HomeRisk = riskOut + riskOut2;
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
-
                 txtRiskNum.Text = "Risk: " + HomeRisk;
             }
             catch (Exception e)

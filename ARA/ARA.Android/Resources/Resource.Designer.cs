@@ -2381,8 +2381,8 @@ namespace ARA.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070118
-			public const int action0 = 2131165464;
+			// aapt resource value: 0x7f07011a
+			public const int action0 = 2131165466;
 			
 			// aapt resource value: 0x7f07006d
 			public const int action_bar = 2131165293;
@@ -2408,8 +2408,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07006e
 			public const int action_context_bar = 2131165294;
 			
-			// aapt resource value: 0x7f07011c
-			public const int action_divider = 2131165468;
+			// aapt resource value: 0x7f07011e
+			public const int action_divider = 2131165470;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -2453,26 +2453,26 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700ad
 			public const int btn2PrevFlights = 2131165357;
 			
-			// aapt resource value: 0x7f0700c9
-			public const int btn2Q1C1 = 2131165385;
-			
-			// aapt resource value: 0x7f0700ca
-			public const int btn2Q1C2 = 2131165386;
-			
 			// aapt resource value: 0x7f0700cb
-			public const int btn2Q1C3 = 2131165387;
+			public const int btn2Q1C1 = 2131165387;
 			
-			// aapt resource value: 0x7f0700ce
-			public const int btn2Q2C1 = 2131165390;
+			// aapt resource value: 0x7f0700cc
+			public const int btn2Q1C2 = 2131165388;
 			
-			// aapt resource value: 0x7f0700cf
-			public const int btn2Q2C2 = 2131165391;
+			// aapt resource value: 0x7f0700cd
+			public const int btn2Q1C3 = 2131165389;
 			
 			// aapt resource value: 0x7f0700d0
-			public const int btn2Q2C3 = 2131165392;
+			public const int btn2Q2C1 = 2131165392;
 			
-			// aapt resource value: 0x7f0700b9
-			public const int btnBackFragment = 2131165369;
+			// aapt resource value: 0x7f0700d1
+			public const int btn2Q2C2 = 2131165393;
+			
+			// aapt resource value: 0x7f0700d2
+			public const int btn2Q2C3 = 2131165394;
+			
+			// aapt resource value: 0x7f0700bb
+			public const int btnBackFragment = 2131165371;
 			
 			// aapt resource value: 0x7f0700a9
 			public const int btnBackFromPersonalInfo = 2131165353;
@@ -2483,14 +2483,14 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07008b
 			public const int btnBackFromVFRTime = 2131165323;
 			
-			// aapt resource value: 0x7f0700d4
-			public const int btnBackfrom2 = 2131165396;
+			// aapt resource value: 0x7f0700d6
+			public const int btnBackfrom2 = 2131165398;
 			
-			// aapt resource value: 0x7f0700e7
-			public const int btnBackfrom3 = 2131165415;
+			// aapt resource value: 0x7f0700e9
+			public const int btnBackfrom3 = 2131165417;
 			
-			// aapt resource value: 0x7f07012a
-			public const int btnBackfromAandI = 2131165482;
+			// aapt resource value: 0x7f07012c
+			public const int btnBackfromAandI = 2131165484;
 			
 			// aapt resource value: 0x7f07007f
 			public const int btnBackfromFilingCriteria = 2131165311;
@@ -2498,32 +2498,32 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070085
 			public const int btnBackfromIFRTime = 2131165317;
 			
-			// aapt resource value: 0x7f070133
-			public const int btnBackfromRisk = 2131165491;
+			// aapt resource value: 0x7f070135
+			public const int btnBackfromRisk = 2131165493;
 			
 			// aapt resource value: 0x7f0700b4
 			public const int btnBackfromSHF1 = 2131165364;
 			
-			// aapt resource value: 0x7f0700c6
-			public const int btnBackfromSHF2 = 2131165382;
+			// aapt resource value: 0x7f0700c8
+			public const int btnBackfromSHF2 = 2131165384;
 			
-			// aapt resource value: 0x7f0700f2
-			public const int btnBackfromVFR_Dual_Local_Day = 2131165426;
+			// aapt resource value: 0x7f0700f4
+			public const int btnBackfromVFR_Dual_Local_Day = 2131165428;
 			
-			// aapt resource value: 0x7f0700fd
-			public const int btnBackfromVFR_Dual_Local_Night = 2131165437;
+			// aapt resource value: 0x7f0700ff
+			public const int btnBackfromVFR_Dual_Local_Night = 2131165439;
 			
-			// aapt resource value: 0x7f0700ba
-			public const int btnContinueFragment = 2131165370;
+			// aapt resource value: 0x7f0700bc
+			public const int btnContinueFragment = 2131165372;
 			
-			// aapt resource value: 0x7f0700d5
-			public const int btnContinueFrom2 = 2131165397;
+			// aapt resource value: 0x7f0700d7
+			public const int btnContinueFrom2 = 2131165399;
 			
-			// aapt resource value: 0x7f0700e8
-			public const int btnContinueFrom3 = 2131165416;
+			// aapt resource value: 0x7f0700ea
+			public const int btnContinueFrom3 = 2131165418;
 			
-			// aapt resource value: 0x7f07012b
-			public const int btnContinueFromAandI = 2131165483;
+			// aapt resource value: 0x7f07012d
+			public const int btnContinueFromAandI = 2131165485;
 			
 			// aapt resource value: 0x7f070081
 			public const int btnContinueFromFilingCriteria = 2131165313;
@@ -2534,23 +2534,23 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700aa
 			public const int btnContinueFromPersonalInfo = 2131165354;
 			
-			// aapt resource value: 0x7f070134
-			public const int btnContinueFromRisk = 2131165492;
+			// aapt resource value: 0x7f070136
+			public const int btnContinueFromRisk = 2131165494;
 			
 			// aapt resource value: 0x7f0700b5
 			public const int btnContinueFromSHF1 = 2131165365;
 			
-			// aapt resource value: 0x7f0700c7
-			public const int btnContinueFromSHF2 = 2131165383;
+			// aapt resource value: 0x7f0700c9
+			public const int btnContinueFromSHF2 = 2131165385;
 			
 			// aapt resource value: 0x7f070093
 			public const int btnContinueFromSyllabus = 2131165331;
 			
-			// aapt resource value: 0x7f0700f3
-			public const int btnContinueFromVFR_Dual_Day = 2131165427;
+			// aapt resource value: 0x7f0700f5
+			public const int btnContinueFromVFR_Dual_Day = 2131165429;
 			
-			// aapt resource value: 0x7f0700fe
-			public const int btnContinueFromVFR_Dual_Night = 2131165438;
+			// aapt resource value: 0x7f070100
+			public const int btnContinueFromVFR_Dual_Night = 2131165440;
 			
 			// aapt resource value: 0x7f070086
 			public const int btnContinuefromIFRTime = 2131165318;
@@ -2591,101 +2591,101 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700ab
 			public const int btnNoPreviousFlights = 2131165355;
 			
-			// aapt resource value: 0x7f0700d7
-			public const int btnQ1C1 = 2131165399;
-			
-			// aapt resource value: 0x7f0700d8
-			public const int btnQ1C2 = 2131165400;
-			
 			// aapt resource value: 0x7f0700d9
-			public const int btnQ1C3 = 2131165401;
+			public const int btnQ1C1 = 2131165401;
 			
-			// aapt resource value: 0x7f0700dc
-			public const int btnQ2C1 = 2131165404;
+			// aapt resource value: 0x7f0700da
+			public const int btnQ1C2 = 2131165402;
 			
-			// aapt resource value: 0x7f0700dd
-			public const int btnQ2C2 = 2131165405;
+			// aapt resource value: 0x7f0700db
+			public const int btnQ1C3 = 2131165403;
 			
 			// aapt resource value: 0x7f0700de
-			public const int btnQ2C3 = 2131165406;
+			public const int btnQ2C1 = 2131165406;
 			
-			// aapt resource value: 0x7f0700e1
-			public const int btnQ3C1 = 2131165409;
+			// aapt resource value: 0x7f0700df
+			public const int btnQ2C2 = 2131165407;
 			
-			// aapt resource value: 0x7f0700e2
-			public const int btnQ3C2 = 2131165410;
+			// aapt resource value: 0x7f0700e0
+			public const int btnQ2C3 = 2131165408;
 			
 			// aapt resource value: 0x7f0700e3
-			public const int btnQ3C3 = 2131165411;
+			public const int btnQ3C1 = 2131165411;
+			
+			// aapt resource value: 0x7f0700e4
+			public const int btnQ3C2 = 2131165412;
+			
+			// aapt resource value: 0x7f0700e5
+			public const int btnQ3C3 = 2131165413;
 			
 			// aapt resource value: 0x7f07009e
 			public const int btnSelectDate = 2131165342;
 			
-			// aapt resource value: 0x7f0700bd
-			public const int btnSyllabusFlightFAA = 2131165373;
-			
-			// aapt resource value: 0x7f0700bb
-			public const int btnSyllabusFlightNormal = 2131165371;
-			
-			// aapt resource value: 0x7f0700bc
-			public const int btnSyllabusFlightStageCheck = 2131165372;
-			
 			// aapt resource value: 0x7f0700bf
-			public const int btnTemp0 = 2131165375;
+			public const int btnSyllabusFlightFAA = 2131165375;
 			
-			// aapt resource value: 0x7f0700c0
-			public const int btnTemp30 = 2131165376;
+			// aapt resource value: 0x7f0700bd
+			public const int btnSyllabusFlightNormal = 2131165373;
+			
+			// aapt resource value: 0x7f0700be
+			public const int btnSyllabusFlightStageCheck = 2131165374;
 			
 			// aapt resource value: 0x7f0700c1
-			public const int btnTemp55 = 2131165377;
+			public const int btnTemp0 = 2131165377;
 			
 			// aapt resource value: 0x7f0700c2
-			public const int btnTemp76 = 2131165378;
+			public const int btnTemp30 = 2131165378;
 			
 			// aapt resource value: 0x7f0700c3
-			public const int btnTemp90 = 2131165379;
+			public const int btnTemp55 = 2131165379;
 			
-			// aapt resource value: 0x7f0700e9
-			public const int btnVFR_Dual_Day_Ceiling0 = 2131165417;
+			// aapt resource value: 0x7f0700c4
+			public const int btnTemp76 = 2131165380;
 			
-			// aapt resource value: 0x7f0700ea
-			public const int btnVFR_Dual_Day_Ceiling1 = 2131165418;
+			// aapt resource value: 0x7f0700c5
+			public const int btnTemp90 = 2131165381;
 			
 			// aapt resource value: 0x7f0700eb
-			public const int btnVFR_Dual_Day_Ceiling3 = 2131165419;
+			public const int btnVFR_Dual_Day_Ceiling0 = 2131165419;
+			
+			// aapt resource value: 0x7f0700ec
+			public const int btnVFR_Dual_Day_Ceiling1 = 2131165420;
 			
 			// aapt resource value: 0x7f0700ed
-			public const int btnVFR_Dual_Day_Vis0 = 2131165421;
-			
-			// aapt resource value: 0x7f0700ee
-			public const int btnVFR_Dual_Day_Vis1 = 2131165422;
+			public const int btnVFR_Dual_Day_Ceiling3 = 2131165421;
 			
 			// aapt resource value: 0x7f0700ef
-			public const int btnVFR_Dual_Day_Vis3 = 2131165423;
+			public const int btnVFR_Dual_Day_Vis0 = 2131165423;
 			
-			// aapt resource value: 0x7f0700f4
-			public const int btnVFR_Dual_Night_Ceiling0 = 2131165428;
+			// aapt resource value: 0x7f0700f0
+			public const int btnVFR_Dual_Day_Vis1 = 2131165424;
 			
-			// aapt resource value: 0x7f0700f5
-			public const int btnVFR_Dual_Night_Ceiling1 = 2131165429;
+			// aapt resource value: 0x7f0700f1
+			public const int btnVFR_Dual_Day_Vis3 = 2131165425;
 			
 			// aapt resource value: 0x7f0700f6
-			public const int btnVFR_Dual_Night_Ceiling3 = 2131165430;
+			public const int btnVFR_Dual_Night_Ceiling0 = 2131165430;
+			
+			// aapt resource value: 0x7f0700f7
+			public const int btnVFR_Dual_Night_Ceiling1 = 2131165431;
 			
 			// aapt resource value: 0x7f0700f8
-			public const int btnVFR_Dual_Night_Vis0 = 2131165432;
-			
-			// aapt resource value: 0x7f0700f9
-			public const int btnVFR_Dual_Night_Vis1 = 2131165433;
+			public const int btnVFR_Dual_Night_Ceiling3 = 2131165432;
 			
 			// aapt resource value: 0x7f0700fa
-			public const int btnVFR_Dual_Night_Vis3 = 2131165434;
+			public const int btnVFR_Dual_Night_Vis0 = 2131165434;
+			
+			// aapt resource value: 0x7f0700fb
+			public const int btnVFR_Dual_Night_Vis1 = 2131165435;
+			
+			// aapt resource value: 0x7f0700fc
+			public const int btnVFR_Dual_Night_Vis3 = 2131165436;
 			
 			// aapt resource value: 0x7f070057
 			public const int buttonPanel = 2131165271;
 			
-			// aapt resource value: 0x7f070119
-			public const int cancel_action = 2131165465;
+			// aapt resource value: 0x7f07011b
+			public const int cancel_action = 2131165467;
 			
 			// aapt resource value: 0x7f07002b
 			public const int center = 2131165227;
@@ -2702,8 +2702,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070065
 			public const int checkbox = 2131165285;
 			
-			// aapt resource value: 0x7f07011f
-			public const int chronometer = 2131165471;
+			// aapt resource value: 0x7f070121
+			public const int chronometer = 2131165473;
 			
 			// aapt resource value: 0x7f070033
 			public const int clip_horizontal = 2131165235;
@@ -2753,8 +2753,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07001c
 			public const int end = 2131165212;
 			
-			// aapt resource value: 0x7f070124
-			public const int end_padder = 2131165476;
+			// aapt resource value: 0x7f070126
+			public const int end_padder = 2131165478;
 			
 			// aapt resource value: 0x7f070023
 			public const int enterAlways = 2131165219;
@@ -2783,8 +2783,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070038
 			public const int @fixed = 2131165240;
 			
-			// aapt resource value: 0x7f0700b7
-			public const int fragButton = 2131165367;
+			// aapt resource value: 0x7f0700b9
+			public const int fragButton = 2131165369;
 			
 			// aapt resource value: 0x7f0700b6
 			public const int frameLayout1 = 2131165366;
@@ -2804,8 +2804,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070052
 			public const int image = 2131165266;
 			
-			// aapt resource value: 0x7f070123
-			public const int info = 2131165475;
+			// aapt resource value: 0x7f070125
+			public const int info = 2131165477;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
@@ -2813,11 +2813,11 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07002f
 			public const int left = 2131165231;
 			
-			// aapt resource value: 0x7f07011d
-			public const int line1 = 2131165469;
+			// aapt resource value: 0x7f07011f
+			public const int line1 = 2131165471;
 			
-			// aapt resource value: 0x7f070121
-			public const int line3 = 2131165473;
+			// aapt resource value: 0x7f070123
+			public const int line3 = 2131165475;
 			
 			// aapt resource value: 0x7f070042
 			public const int linearLayout1 = 2131165250;
@@ -2840,8 +2840,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070054
 			public const int list_item = 2131165268;
 			
-			// aapt resource value: 0x7f07011b
-			public const int media_actions = 2131165467;
+			// aapt resource value: 0x7f07011d
+			public const int media_actions = 2131165469;
 			
 			// aapt resource value: 0x7f07001d
 			public const int middle = 2131165213;
@@ -2849,77 +2849,77 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070037
 			public const int mini = 2131165239;
 			
-			// aapt resource value: 0x7f07010a
-			public const int mr_art = 2131165450;
-			
-			// aapt resource value: 0x7f0700ff
-			public const int mr_chooser_list = 2131165439;
-			
-			// aapt resource value: 0x7f070102
-			public const int mr_chooser_route_desc = 2131165442;
-			
-			// aapt resource value: 0x7f070100
-			public const int mr_chooser_route_icon = 2131165440;
+			// aapt resource value: 0x7f07010c
+			public const int mr_art = 2131165452;
 			
 			// aapt resource value: 0x7f070101
-			public const int mr_chooser_route_name = 2131165441;
-			
-			// aapt resource value: 0x7f070107
-			public const int mr_close = 2131165447;
-			
-			// aapt resource value: 0x7f07010d
-			public const int mr_control_divider = 2131165453;
-			
-			// aapt resource value: 0x7f070113
-			public const int mr_control_play_pause = 2131165459;
-			
-			// aapt resource value: 0x7f070116
-			public const int mr_control_subtitle = 2131165462;
-			
-			// aapt resource value: 0x7f070115
-			public const int mr_control_title = 2131165461;
-			
-			// aapt resource value: 0x7f070114
-			public const int mr_control_title_container = 2131165460;
-			
-			// aapt resource value: 0x7f070108
-			public const int mr_custom_control = 2131165448;
-			
-			// aapt resource value: 0x7f070109
-			public const int mr_default_control = 2131165449;
+			public const int mr_chooser_list = 2131165441;
 			
 			// aapt resource value: 0x7f070104
-			public const int mr_dialog_area = 2131165444;
+			public const int mr_chooser_route_desc = 2131165444;
+			
+			// aapt resource value: 0x7f070102
+			public const int mr_chooser_route_icon = 2131165442;
 			
 			// aapt resource value: 0x7f070103
-			public const int mr_expandable_area = 2131165443;
+			public const int mr_chooser_route_name = 2131165443;
 			
-			// aapt resource value: 0x7f070117
-			public const int mr_group_expand_collapse = 2131165463;
-			
-			// aapt resource value: 0x7f07010b
-			public const int mr_media_main_control = 2131165451;
-			
-			// aapt resource value: 0x7f070106
-			public const int mr_name = 2131165446;
-			
-			// aapt resource value: 0x7f07010c
-			public const int mr_playback_control = 2131165452;
-			
-			// aapt resource value: 0x7f070105
-			public const int mr_title_bar = 2131165445;
-			
-			// aapt resource value: 0x7f07010e
-			public const int mr_volume_control = 2131165454;
+			// aapt resource value: 0x7f070109
+			public const int mr_close = 2131165449;
 			
 			// aapt resource value: 0x7f07010f
-			public const int mr_volume_group_list = 2131165455;
+			public const int mr_control_divider = 2131165455;
+			
+			// aapt resource value: 0x7f070115
+			public const int mr_control_play_pause = 2131165461;
+			
+			// aapt resource value: 0x7f070118
+			public const int mr_control_subtitle = 2131165464;
+			
+			// aapt resource value: 0x7f070117
+			public const int mr_control_title = 2131165463;
+			
+			// aapt resource value: 0x7f070116
+			public const int mr_control_title_container = 2131165462;
+			
+			// aapt resource value: 0x7f07010a
+			public const int mr_custom_control = 2131165450;
+			
+			// aapt resource value: 0x7f07010b
+			public const int mr_default_control = 2131165451;
+			
+			// aapt resource value: 0x7f070106
+			public const int mr_dialog_area = 2131165446;
+			
+			// aapt resource value: 0x7f070105
+			public const int mr_expandable_area = 2131165445;
+			
+			// aapt resource value: 0x7f070119
+			public const int mr_group_expand_collapse = 2131165465;
+			
+			// aapt resource value: 0x7f07010d
+			public const int mr_media_main_control = 2131165453;
+			
+			// aapt resource value: 0x7f070108
+			public const int mr_name = 2131165448;
+			
+			// aapt resource value: 0x7f07010e
+			public const int mr_playback_control = 2131165454;
+			
+			// aapt resource value: 0x7f070107
+			public const int mr_title_bar = 2131165447;
+			
+			// aapt resource value: 0x7f070110
+			public const int mr_volume_control = 2131165456;
 			
 			// aapt resource value: 0x7f070111
-			public const int mr_volume_item_icon = 2131165457;
+			public const int mr_volume_group_list = 2131165457;
 			
-			// aapt resource value: 0x7f070112
-			public const int mr_volume_slider = 2131165458;
+			// aapt resource value: 0x7f070113
+			public const int mr_volume_item_icon = 2131165459;
+			
+			// aapt resource value: 0x7f070114
+			public const int mr_volume_slider = 2131165460;
 			
 			// aapt resource value: 0x7f070016
 			public const int multiply = 2131165206;
@@ -2963,8 +2963,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070067
 			public const int radio = 2131165287;
 			
-			// aapt resource value: 0x7f0700b8
-			public const int relativeLayout1 = 2131165368;
+			// aapt resource value: 0x7f0700ba
+			public const int relativeLayout1 = 2131165370;
 			
 			// aapt resource value: 0x7f07004a
 			public const int relativeLayout2 = 2131165258;
@@ -3041,8 +3041,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070013
 			public const int showTitle = 2131165203;
 			
-			// aapt resource value: 0x7f070125
-			public const int sliding_tabs = 2131165477;
+			// aapt resource value: 0x7f070127
+			public const int sliding_tabs = 2131165479;
 			
 			// aapt resource value: 0x7f070097
 			public const int snackbar_action = 2131165335;
@@ -3056,8 +3056,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070058
 			public const int spacer = 2131165272;
 			
-			// aapt resource value: 0x7f070128
-			public const int spinnerInstructor = 2131165480;
+			// aapt resource value: 0x7f07012a
+			public const int spinnerInstructor = 2131165482;
 			
 			// aapt resource value: 0x7f070008
 			public const int split_action_bar = 2131165192;
@@ -3080,8 +3080,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070031
 			public const int start = 2131165233;
 			
-			// aapt resource value: 0x7f07011a
-			public const int status_bar_latest_event_content = 2131165466;
+			// aapt resource value: 0x7f07011c
+			public const int status_bar_latest_event_content = 2131165468;
 			
 			// aapt resource value: 0x7f070078
 			public const int submit_area = 2131165304;
@@ -3089,11 +3089,11 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
-			// aapt resource value: 0x7f070122
-			public const int text = 2131165474;
+			// aapt resource value: 0x7f070124
+			public const int text = 2131165476;
 			
-			// aapt resource value: 0x7f070120
-			public const int text2 = 2131165472;
+			// aapt resource value: 0x7f070122
+			public const int text2 = 2131165474;
 			
 			// aapt resource value: 0x7f070060
 			public const int textSpacerNoButtons = 2131165280;
@@ -3131,8 +3131,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070045
 			public const int tglNOTMAS = 2131165253;
 			
-			// aapt resource value: 0x7f07011e
-			public const int time = 2131165470;
+			// aapt resource value: 0x7f070120
+			public const int time = 2131165472;
 			
 			// aapt resource value: 0x7f070056
 			public const int title = 2131165270;
@@ -3140,8 +3140,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07005b
 			public const int title_template = 2131165275;
 			
-			// aapt resource value: 0x7f070126
-			public const int toolbar = 2131165478;
+			// aapt resource value: 0x7f070128
+			public const int toolbar = 2131165480;
 			
 			// aapt resource value: 0x7f070032
 			public const int top = 2131165234;
@@ -3152,35 +3152,35 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f070094
 			public const int touch_outside = 2131165332;
 			
-			// aapt resource value: 0x7f0700cc
-			public const int txt2Answer1 = 2131165388;
-			
-			// aapt resource value: 0x7f0700d1
-			public const int txt2Answer2 = 2131165393;
-			
-			// aapt resource value: 0x7f0700c8
-			public const int txt2Question1 = 2131165384;
-			
-			// aapt resource value: 0x7f0700cd
-			public const int txt2Question2 = 2131165389;
+			// aapt resource value: 0x7f0700ce
+			public const int txt2Answer1 = 2131165390;
 			
 			// aapt resource value: 0x7f0700d3
-			public const int txt2RiskNum = 2131165395;
+			public const int txt2Answer2 = 2131165395;
 			
-			// aapt resource value: 0x7f0700d2
-			public const int txt2RiskText2 = 2131165394;
+			// aapt resource value: 0x7f0700ca
+			public const int txt2Question1 = 2131165386;
 			
-			// aapt resource value: 0x7f070127
-			public const int txtAircraft = 2131165479;
+			// aapt resource value: 0x7f0700cf
+			public const int txt2Question2 = 2131165391;
 			
-			// aapt resource value: 0x7f0700da
-			public const int txtAnswer1 = 2131165402;
+			// aapt resource value: 0x7f0700d5
+			public const int txt2RiskNum = 2131165397;
 			
-			// aapt resource value: 0x7f0700df
-			public const int txtAnswer2 = 2131165407;
+			// aapt resource value: 0x7f0700d4
+			public const int txt2RiskText2 = 2131165396;
 			
-			// aapt resource value: 0x7f0700e4
-			public const int txtAnswer3 = 2131165412;
+			// aapt resource value: 0x7f070129
+			public const int txtAircraft = 2131165481;
+			
+			// aapt resource value: 0x7f0700dc
+			public const int txtAnswer1 = 2131165404;
+			
+			// aapt resource value: 0x7f0700e1
+			public const int txtAnswer2 = 2131165409;
+			
+			// aapt resource value: 0x7f0700e6
+			public const int txtAnswer3 = 2131165414;
 			
 			// aapt resource value: 0x7f070090
 			public const int txtAreaChoice = 2131165328;
@@ -3197,8 +3197,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07008d
 			public const int txtFlightInfo = 2131165325;
 			
-			// aapt resource value: 0x7f07012c
-			public const int txtFlightRiskStuff = 2131165484;
+			// aapt resource value: 0x7f07012e
+			public const int txtFlightRiskStuff = 2131165486;
 			
 			// aapt resource value: 0x7f0700a3
 			public const int txtHour = 2131165347;
@@ -3215,77 +3215,83 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f0700ae
 			public const int txtPrevFlightChoice = 2131165358;
 			
-			// aapt resource value: 0x7f0700d6
-			public const int txtQuestion1 = 2131165398;
+			// aapt resource value: 0x7f0700d8
+			public const int txtQuestion1 = 2131165400;
 			
-			// aapt resource value: 0x7f0700db
-			public const int txtQuestion2 = 2131165403;
+			// aapt resource value: 0x7f0700dd
+			public const int txtQuestion2 = 2131165405;
 			
-			// aapt resource value: 0x7f0700e0
-			public const int txtQuestion3 = 2131165408;
+			// aapt resource value: 0x7f0700e2
+			public const int txtQuestion3 = 2131165410;
 			
 			// aapt resource value: 0x7f070091
 			public const int txtRisk = 2131165329;
 			
-			// aapt resource value: 0x7f07012e
-			public const int txtRisk1 = 2131165486;
-			
-			// aapt resource value: 0x7f07012f
-			public const int txtRisk2 = 2131165487;
-			
 			// aapt resource value: 0x7f070130
-			public const int txtRisk3 = 2131165488;
+			public const int txtRisk1 = 2131165488;
 			
 			// aapt resource value: 0x7f070131
-			public const int txtRisk4 = 2131165489;
+			public const int txtRisk2 = 2131165489;
 			
 			// aapt resource value: 0x7f070132
-			public const int txtRisk5 = 2131165490;
+			public const int txtRisk3 = 2131165490;
 			
-			// aapt resource value: 0x7f0700e6
-			public const int txtRiskNum = 2131165414;
+			// aapt resource value: 0x7f070133
+			public const int txtRisk4 = 2131165491;
 			
-			// aapt resource value: 0x7f0700e5
-			public const int txtRiskText = 2131165413;
+			// aapt resource value: 0x7f070134
+			public const int txtRisk5 = 2131165492;
 			
-			// aapt resource value: 0x7f07012d
-			public const int txtSHF = 2131165485;
+			// aapt resource value: 0x7f0700b7
+			public const int txtRiskFragment = 2131165367;
+			
+			// aapt resource value: 0x7f0700e8
+			public const int txtRiskNum = 2131165416;
+			
+			// aapt resource value: 0x7f0700b8
+			public const int txtRiskNumFragment = 2131165368;
+			
+			// aapt resource value: 0x7f0700e7
+			public const int txtRiskText = 2131165415;
+			
+			// aapt resource value: 0x7f07012f
+			public const int txtSHF = 2131165487;
 			
 			// aapt resource value: 0x7f0700b3
 			public const int txtSHFRisk1 = 2131165363;
 			
-			// aapt resource value: 0x7f0700c5
-			public const int txtSHFRisk2 = 2131165381;
+			// aapt resource value: 0x7f0700c7
+			public const int txtSHFRisk2 = 2131165383;
 			
-			// aapt resource value: 0x7f0700be
-			public const int txtSyllabusFlight = 2131165374;
+			// aapt resource value: 0x7f0700c0
+			public const int txtSyllabusFlight = 2131165376;
 			
-			// aapt resource value: 0x7f0700c4
-			public const int txtTemp = 2131165380;
+			// aapt resource value: 0x7f0700c6
+			public const int txtTemp = 2131165382;
 			
 			// aapt resource value: 0x7f07008a
 			public const int txtVFRTime = 2131165322;
 			
-			// aapt resource value: 0x7f0700ec
-			public const int txtVFR_Dual_Day_Ceiling = 2131165420;
+			// aapt resource value: 0x7f0700ee
+			public const int txtVFR_Dual_Day_Ceiling = 2131165422;
 			
-			// aapt resource value: 0x7f0700f0
-			public const int txtVFR_Dual_Day_Vis = 2131165424;
+			// aapt resource value: 0x7f0700f2
+			public const int txtVFR_Dual_Day_Vis = 2131165426;
 			
-			// aapt resource value: 0x7f0700f7
-			public const int txtVFR_Dual_Night_Ceiling = 2131165431;
+			// aapt resource value: 0x7f0700f9
+			public const int txtVFR_Dual_Night_Ceiling = 2131165433;
 			
-			// aapt resource value: 0x7f0700fb
-			public const int txtVFR_Dual_Night_Vis = 2131165435;
+			// aapt resource value: 0x7f0700fd
+			public const int txtVFR_Dual_Night_Vis = 2131165437;
 			
-			// aapt resource value: 0x7f070129
-			public const int txtYourEmail = 2131165481;
+			// aapt resource value: 0x7f07012b
+			public const int txtYourEmail = 2131165483;
 			
-			// aapt resource value: 0x7f0700fc
-			public const int txt_VFR_Dual_HomeRisk3 = 2131165436;
+			// aapt resource value: 0x7f0700fe
+			public const int txt_VFR_Dual_HomeRisk3 = 2131165438;
 			
-			// aapt resource value: 0x7f0700f1
-			public const int txt_VFR_Dual_HomeRisk4 = 2131165425;
+			// aapt resource value: 0x7f0700f3
+			public const int txt_VFR_Dual_HomeRisk4 = 2131165427;
 			
 			// aapt resource value: 0x7f070009
 			public const int up = 2131165193;
@@ -3296,8 +3302,8 @@ namespace ARA.Droid
 			// aapt resource value: 0x7f07000a
 			public const int view_offset_helper = 2131165194;
 			
-			// aapt resource value: 0x7f070110
-			public const int volume_item_container = 2131165456;
+			// aapt resource value: 0x7f070112
+			public const int volume_item_container = 2131165458;
 			
 			// aapt resource value: 0x7f070022
 			public const int withText = 2131165218;

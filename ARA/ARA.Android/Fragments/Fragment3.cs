@@ -37,6 +37,8 @@ namespace ARA.Droid.Fragments
         private TextView risk;
         private TextView riskNum;
 
+
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -50,6 +52,7 @@ namespace ARA.Droid.Fragments
 
             String stringData = this.Arguments.GetString("JSON Location");
             int questionNum = this.Arguments.GetInt("Question Start");
+            string riskType = this.Arguments.GetString("Risk");
 
             var stream = Application.Context.Assets.Open(stringData);
 
@@ -76,8 +79,6 @@ namespace ARA.Droid.Fragments
             ans33 = view.FindViewById<Button>(Resource.Id.btnQ3C3);
             ans3 = view.FindViewById<TextView>(Resource.Id.txtAnswer3);
 
-            risk = view.FindViewById<TextView>(Resource.Id.txtRiskText);
-            riskNum = view.FindViewById<TextView>(Resource.Id.txtRiskNum);
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom3);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom3);
 
@@ -98,6 +99,8 @@ namespace ARA.Droid.Fragments
             ans32.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 2][2];
             ans33.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 2][3];
             ans3.Text = "You have selected the '" + ans31.Text + "' option";
+
+            
 
             return view;
         }

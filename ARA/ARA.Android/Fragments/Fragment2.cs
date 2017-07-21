@@ -22,7 +22,6 @@ namespace ARA.Droid.Fragments
         private ImageButton btnBack;
         private TextView q1;
         private TextView q2;
-        private TextView q3;
         private Button ans11;
         private Button ans12;
         private Button ans13;
@@ -31,16 +30,24 @@ namespace ARA.Droid.Fragments
         private Button ans23;
         private TextView ans1;
         private TextView ans2;
-        private TextView risk;
-        private TextView riskNum;
 
-        //IFR_Day_Local_Questions DayLocalQuestions = new IFR_Day_Local_Questions();
+        public static int risk1, risk2;
+
+        private OnFragmentInteractionListener mListener;
+
+        public Fragment2()
+        {
+
+        }
+
+        public override void OnViewCreated(View view, Bundle savedInstanceState)
+        {
+            base.OnViewCreated(view, savedInstanceState);
+        }
 
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
 
         }
 
@@ -50,6 +57,10 @@ namespace ARA.Droid.Fragments
 
             String stringData = this.Arguments.GetString("JSON Location");
             int questionNum = this.Arguments.GetInt("Question Start");
+            string riskType = this.Arguments.GetString("Risk");
+            int currRisk = Arguments.GetInt("Current Risk");
+            int low = Arguments.GetInt("low");
+            int med = Arguments.GetInt("med");
 
             var stream = Application.Context.Assets.Open(stringData);
 
@@ -57,7 +68,6 @@ namespace ARA.Droid.Fragments
             string jsonText = sr.ReadToEnd();
 
             RootObject result = JsonConvert.DeserializeObject<RootObject>(jsonText);
-
 
             q1 = view.FindViewById<TextView>(Resource.Id.txt2Question1);
             ans11 = view.FindViewById<Button>(Resource.Id.btn2Q1C1);
@@ -71,8 +81,6 @@ namespace ARA.Droid.Fragments
             ans23 = view.FindViewById<Button>(Resource.Id.btn2Q2C3);
             ans2 = view.FindViewById<TextView>(Resource.Id.txt2Answer2);
 
-            risk = view.FindViewById<TextView>(Resource.Id.txt2RiskText2);
-            riskNum = view.FindViewById<TextView>(Resource.Id.txt2RiskNum);
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom2);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom2);
 
@@ -89,11 +97,53 @@ namespace ARA.Droid.Fragments
             ans2.Text = "You have selected the '" + ans21.Text + "' option";
 
             return view;
+        }
 
-            
+        public override void OnActivityCreated(Bundle savedInstanceState)
+        {
+            base.OnActivityCreated(savedInstanceState);
 
-            //setting ui elements using the json array
-            
+            ans11.Touch += (s, e) =>
+            {
+                risk1 = 0;
+                if (mListener != null)
+                {
+                    mListener.onFragmentInteraction(risk1);
+                }
+
+            };
+            ans12.Touch += (s, e) =>
+            {
+                risk1 = 1;
+                if (mListener != null)
+                {
+                    mListener.onFragmentInteraction(risk1);
+                }
+            };
+            ans13.Touch += (s, e) =>
+            {
+                risk1 = 3;
+                if (mListener != null)
+                {
+                    mListener.onFragmentInteraction(risk1);
+                }
+            };
+        }
+
+        public override void OnAttach(Context context)
+        {
+            base.OnAttach(context);
+
+            try
+            {
+                mListener = (OnFragmentInteractionListener)Activity;
+            }
+            catch (Exception ex) { }
+        }
+
+        public interface OnFragmentInteractionListener
+        {
+            void onFragmentInteraction(int riskOut);
         }
     }
 }

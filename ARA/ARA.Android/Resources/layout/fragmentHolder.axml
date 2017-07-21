@@ -12,6 +12,23 @@
         android:layout_height="match_parent"
         android:id="@+id/frameLayout1"
         android:layout_weight="0.8" />
+    <TextView
+        android:text="Risk Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRiskFragment"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:text="Risk: 0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRiskNumFragment"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal" />
     <Button
         android:layout_width="30dp"
         android:layout_height="30dp"

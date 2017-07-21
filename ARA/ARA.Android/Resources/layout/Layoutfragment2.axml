@@ -86,19 +86,4 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt2Answer2"
         android:layout_marginTop="5dp" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt2RiskText2"
-        android:layout_marginTop="35.5dp"
-        android:text="OKAY - Home Airfield Risk"
-        android:textColor="@android:color/holo_green_dark" />
-    <TextView
-        android:text="Risk = 0"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt2RiskNum"
-        android:layout_marginTop="3dp" />
 </LinearLayout>

@@ -19,7 +19,7 @@ using System.IO;
 namespace ARA.Droid
 {
     [Activity(Label = "FragmentAct", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, MainLauncher = true)]
-    public class N_IFR_Day_Local_Home : FragmentActivity
+    public class N_IFR_Day_Local_Home : FragmentActivity, Fragment2.OnFragmentInteractionListener 
     {
         private Fragment2 mFragment2;
         private Fragment3 mFragment3;
@@ -31,11 +31,11 @@ namespace ARA.Droid
         public int nav; //naviagates through fragments
         public int questionNum; //int to keep track of which number question of the section
         public int answer; //1,2,3 -> 0 , 1 ,3 (risk)
-        private int interval; //amount of how many questoins were
 
         public static int HomeRisk; //indivdual risks for IFR day local       
 
         public static string JSON_ARRAY = "IFR_Day_Local_Home.json";
+        public static string RISK_TYPE = "Home Airfield Risk";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -59,10 +59,26 @@ namespace ARA.Droid
             Bundle bundle = new Bundle();
             bundle.PutString("JSON Location", JSON_ARRAY);
             bundle.PutInt("Question Start", questionNum);
+            bundle.PutString("Risk", RISK_TYPE);
+            bundle.PutInt("Current Risk", HomeRisk);
+            bundle.PutInt("low",7);
+            bundle.PutInt("med",9);
+
 
             Android.App.FragmentTransaction fragmentTransaction = FragmentManager.BeginTransaction();
             mFragment3.Arguments = bundle;
             mFragment2.Arguments = bundle;
+
+            //HomeRisk += Intent.GetIntExtra("Risk Data 1");
+            
+
+            var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
+            var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
+
+            txtRisk.Text = "Home Airfield Risk";
+            txtRiskNum.Text = "Risk: " + HomeRisk;
+
+
             btnNext.Click += (s, e) =>
             {
                 nav++;
@@ -120,6 +136,7 @@ namespace ARA.Droid
             };
         }
 
+        
         public void replace3()
         {
             var ft = SupportFragmentManager.BeginTransaction();
@@ -137,7 +154,22 @@ namespace ARA.Droid
            mCurrent = mFragment2;
             ft.Commit();
         }
-        
-        
+
+        public void onFragmentInteraction(int riskOut)
+        {
+            try
+            {
+                HomeRisk += riskOut;
+
+                var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
+
+                txtRiskNum.Text = "Risk: " + HomeRisk;
+            }
+            catch (Exception e)
+            {
+                throw new NotImplementedException();
+
+            }
+        }
     }
 }

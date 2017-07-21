@@ -37,6 +37,8 @@ namespace ARA.Droid
         public static string JSON_ARRAY = "IFR_Day_Local_Home.json";
         public static string RISK_TYPE = "Home Airfield Risk";
 
+        public int[] questionArray = { 0, 0, 0, 0, 0 };
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -63,7 +65,7 @@ namespace ARA.Droid
             bundle.PutInt("Current Risk", HomeRisk);
             bundle.PutInt("low",7);
             bundle.PutInt("med",9);
-
+            bundle.PutIntArray("Question Array", questionArray);
 
             Android.App.FragmentTransaction fragmentTransaction = FragmentManager.BeginTransaction();
             mFragment3.Arguments = bundle;
@@ -91,6 +93,8 @@ namespace ARA.Droid
                     bundle = new Bundle();
                     bundle.PutString("JSON Location", JSON_ARRAY);
                     bundle.PutInt("Question Start", questionNum);
+                    bundle.PutIntArray("Question Array", questionArray);
+
 
                     fragmentTransaction = FragmentManager.BeginTransaction();
                 }
@@ -99,9 +103,11 @@ namespace ARA.Droid
                     questionNum += 3;
                     replace2();
 
-                     bundle = new Bundle();
+                    bundle = new Bundle();
                     bundle.PutString("JSON Location", JSON_ARRAY);
                     bundle.PutInt("Question Start", questionNum);
+                    bundle.PutIntArray("Question Array", questionArray);
+
 
                     fragmentTransaction = FragmentManager.BeginTransaction();
                 }
@@ -123,11 +129,12 @@ namespace ARA.Droid
                 {
                     replace3();
 
-                    questionNum -= 2;
+                    questionNum -= 3;
 
                     bundle = new Bundle();
                     bundle.PutString("JSON Location", JSON_ARRAY);
                     bundle.PutInt("Question Start", questionNum);
+                    bundle.PutIntArray("Question Array", questionArray);
 
                     fragmentTransaction = FragmentManager.BeginTransaction();
                 }
@@ -165,6 +172,8 @@ namespace ARA.Droid
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
                 HomeRisk = r1 + r2;
                 sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 7, 9);
+                questionArray[questionNum] = riskOut;
+                questionArray[questionNum + 1] = riskOut2;
             }
             catch (Exception e)
             {
@@ -183,6 +192,9 @@ namespace ARA.Droid
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
                 HomeRisk = r1 + r2;
                 sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 7, 9);
+                questionArray[questionNum] = riskOut;
+                questionArray[questionNum + 1] = riskOut2;
+                questionArray[questionNum + 2] = r3;
             }
             catch (Exception e)
             {

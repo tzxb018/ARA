@@ -53,6 +53,7 @@ namespace ARA.Droid.Fragments
             String stringData = this.Arguments.GetString("JSON Location");
             int questionNum = this.Arguments.GetInt("Question Start");
             string riskType = this.Arguments.GetString("Risk");
+            int[] qArray = Arguments.GetIntArray("Question Array");
 
             var stream = Application.Context.Assets.Open(stringData);
 
@@ -81,6 +82,12 @@ namespace ARA.Droid.Fragments
 
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom3);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom3);
+
+            ShortCutFunctions sc = new ShortCutFunctions();
+
+            sc.defaultVals(ans11, ans12, ans13, ans1, qArray[questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, qArray[questionNum + 1]);
+            sc.defaultVals(ans31, ans32, ans33, ans3, qArray[questionNum + 2]);
 
             q1.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][0];
             ans11.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][1];

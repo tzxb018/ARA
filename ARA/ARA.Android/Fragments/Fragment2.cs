@@ -61,6 +61,7 @@ namespace ARA.Droid.Fragments
             int currRisk = Arguments.GetInt("Current Risk");
             int low = Arguments.GetInt("low");
             int med = Arguments.GetInt("med");
+            int[] qArray = Arguments.GetIntArray("Question Array"); 
 
             var stream = Application.Context.Assets.Open(stringData);
 
@@ -83,6 +84,11 @@ namespace ARA.Droid.Fragments
 
             btnBack = view.FindViewById<ImageButton>(Resource.Id.btnBackfrom2);
             btnNext = view.FindViewById<ImageButton>(Resource.Id.btnContinueFrom2);
+
+            ShortCutFunctions sc = new ShortCutFunctions();
+
+            sc.defaultVals(ans11, ans12, ans13, ans1, qArray[questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, qArray[questionNum + 1]);
 
             q1.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][0];
             ans11.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][1];

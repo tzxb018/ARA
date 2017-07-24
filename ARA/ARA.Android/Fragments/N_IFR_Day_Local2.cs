@@ -16,7 +16,7 @@ using Android.Content.Res;
 
 namespace ARA.Droid.Fragments
 {
-    public class Fragment2 : Android.Support.V4.App.Fragment, OnFragmentInteractionListener
+    public class N_IFR_Day_Local2 : Android.Support.V4.App.Fragment, OnFragmentInteractionListener
     {
         private ImageButton btnNext;
         private ImageButton btnBack;
@@ -35,7 +35,7 @@ namespace ARA.Droid.Fragments
 
         private OnFragmentInteractionListener mListener;
 
-        public Fragment2()
+        public N_IFR_Day_Local2()
         {
 
         }
@@ -56,9 +56,7 @@ namespace ARA.Droid.Fragments
             View view = inflater.Inflate(Resource.Layout.Layoutfragment2, container, false);
 
             String stringData = this.Arguments.GetString("JSON Location");
-            int questionNum = this.Arguments.GetInt("Question Start");
             string riskType = this.Arguments.GetString("Risk");
-            int[] qArray2 = Arguments.GetIntArray("Question Array"); 
 
             var stream = Application.Context.Assets.Open(stringData);
 
@@ -84,19 +82,19 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
-            sc.defaultVals(ans11, ans12, ans13, ans1, qArray2[questionNum]);
-            sc.defaultVals(ans21, ans22, ans23, ans2, qArray2[questionNum + 1]);
+            sc.defaultVals(ans11, ans12, ans13, ans1, N_IFR_Day_Local_Home.questionArray[N_IFR_Day_Local_Home.questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, N_IFR_Day_Local_Home.questionArray[N_IFR_Day_Local_Home.questionNum + 1]);
 
-            q1.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][0];
-            ans11.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][1];
-            ans12.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][2];
-            ans13.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum][3];
+            q1.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][0];
+            ans11.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][1];
+            ans12.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][2];
+            ans13.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][3];
             ans1.Text = "You have selected the '" + ans11.Text + "' option";
 
-            q2.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 1][0];
-            ans21.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 1][1];
-            ans22.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 1][2];
-            ans23.Text = result.IFR_Day_Local_Questions_Home_Airfield[questionNum + 1][3];
+            q2.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][0];
+            ans21.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][1];
+            ans22.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][2];
+            ans23.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][3];
             ans2.Text = "You have selected the '" + ans21.Text + "' option";
 
             return view;

@@ -69,10 +69,7 @@ namespace ARA.Droid
 
             Android.App.FragmentTransaction fragmentTransaction = FragmentManager.BeginTransaction();
             mFragment3.Arguments = bundle;
-            mFragment2.Arguments = bundle;
-
-            //HomeRisk += Intent.GetIntExtra("Risk Data 1");
-            
+            mFragment2.Arguments = bundle;            
 
             var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
             var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);

@@ -39,7 +39,7 @@ namespace ARA.Droid
 
                 txt1.Text = "You have selected the '" + btn1.Text + "' option.";
 
-                
+               
             };
 
             return 0;

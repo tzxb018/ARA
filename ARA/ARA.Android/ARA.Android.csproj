@@ -141,6 +141,7 @@
     <Compile Include="Fragments\N_IFR_Day_Local4.cs" />
     <Compile Include="N_Alternate.cs" />
     <Compile Include="N_IFR_Day_Local_Alternate.cs" />
+    <Compile Include="N_IFR_Day_Local_PIC.cs" />
     <Compile Include="OnFragmentInteractionListener.cs" />
     <Compile Include="N_Home_Airfield.cs" />
     <Compile Include="N_IFR_Day_Local_Home.cs" />

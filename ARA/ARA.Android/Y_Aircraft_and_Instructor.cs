@@ -104,7 +104,7 @@ namespace ARA.Droid
                     {
                         if (D_Syllabus_Activity.isLocal) //Local
                         {
-
+                            StartActivity(typeof(N_IFR_Day_Local_PIC));
                         }
                         else //XC
                         {

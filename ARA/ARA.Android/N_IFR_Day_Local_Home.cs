@@ -62,6 +62,7 @@ namespace ARA.Droid
             }
             else
             {
+                questionNum = 0;
                 mCurrent = mFragment3;
             }
             trans.Add(Resource.Id.frameLayout1, mCurrent);
@@ -79,7 +80,7 @@ namespace ARA.Droid
             var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
 
             ShortCutFunctions sc = new ShortCutFunctions();
-            sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 7, 9);
+            sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 8, 10);
 
 
             btnNext.Click += (s, e) =>
@@ -90,7 +91,12 @@ namespace ARA.Droid
                 {
                     questionNum = 5;
 
-                    StartActivity(typeof(N_IFR_Day_Local_Alternate));
+                    if (HomeRisk > 9)
+                    {
+                        sc.alertShow("Home Airfield Risk", this);
+                    }
+                    else
+                        StartActivity(typeof(N_IFR_Day_Local_Alternate));
                 }
                 else
                 {
@@ -168,7 +174,7 @@ namespace ARA.Droid
                 var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
                 HomeRisk = r1 + r2;
-                sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 7, 9);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 8, 10);
                 questionArray[questionNum] = riskOut;
                 questionArray[questionNum + 1] = riskOut2;
             }
@@ -188,7 +194,7 @@ namespace ARA.Droid
                 var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
                 HomeRisk = r1 + r2;
-                sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 7, 9);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airfield Risk", HomeRisk, 8, 10);
                 questionArray[questionNum] = riskOut;
                 questionArray[questionNum + 1] = riskOut2;
                 questionArray[questionNum + 2] = r3;

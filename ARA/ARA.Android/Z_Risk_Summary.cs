@@ -131,11 +131,19 @@ namespace ARA.Droid
 
                     }
                 }
-                else //Night
+                else //Day
                 {
                     if (D_Syllabus_Activity.isLocal) //Local
                     {
-
+                        txtFlight.Text = "Flying under IFR - Day, Commerical/CFI Solo - Local Area (10)";
+                        txtSHF.Text = "Total Risk - Student Human Factors: " + F_Student_Human_Factors.SHFRisk;
+                        txtRisk1.Text = "Home Airfield Risk: " + N_IFR_Day_Local_Home.HomeRisk;
+                        txtRisk2.Visibility = ViewStates.Visible;
+                        txtRisk3.Visibility = ViewStates.Visible;
+                        txtRisk4.Visibility = ViewStates.Invisible;
+                        txtRisk5.Visibility = ViewStates.Invisible;
+                        txtRisk2.Text = "Alternate Risk: " + N_IFR_Day_Local_Alternate.AltRisk;
+                        txtRisk3.Text = "PIC Risk: " + N_IFR_Day_Local_PIC.PIC;
                     }
                     else //XC
                     {

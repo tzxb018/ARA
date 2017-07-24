@@ -627,6 +627,17 @@ namespace ARA.Droid
                     {
                         if (D_Syllabus_Activity.isLocal) //Local
                         {
+                            
+                        }
+                        else //XC
+                        {
+
+                        }
+                    }
+                    else //Night
+                    {
+                        if (D_Syllabus_Activity.isLocal) //Local
+                        {
                             if (F_Student_Human_Factors.SHFRisk < 9)
                             {
                                 StartActivity(typeof(N_IFR_Day_Local_Home));
@@ -642,17 +653,6 @@ namespace ARA.Droid
                                 });
                                 alertSHFisHigh.Show();
                             }
-                        }
-                        else //XC
-                        {
-
-                        }
-                    }
-                    else //Night
-                    {
-                        if (D_Syllabus_Activity.isLocal) //Local
-                        {
-
                         }
                         else //XC
                         {

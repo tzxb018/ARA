@@ -1,0 +1,60 @@
+if (instructor.Equals("Tom Arington"))
+            {
+
+            }
+            else if (instructor.Equals("Jim Beyers"))
+            {
+
+            }
+            else if (instructor.Equals("Nick Bolander"))
+            {
+
+            }
+            else if (instructor.Equals("Eric Busskohl"))
+            {
+
+            }
+            else if (instructor.Equals("Thomas Christoffersen"))
+            {
+
+            }
+            else if (instructor.Equals("Benji Cunningham"))
+            {
+
+            }
+            else if (instructor.Equals("Steve Dethlefs"))
+            {
+
+            }
+            else if (instructor.Equals("Ken Green"))
+            {
+
+            }
+            else if (instructor.Equals("Joe Gustafson"))
+            {
+
+            }
+            else if (instructor.Equals("David Haller"))
+            {
+
+            }
+            else if (instructor.Equals("Adam Liston"))
+            {
+
+            }
+            else if (instructor.Equals("Nick Lynam"))
+            {
+
+            }
+            else if (instructor.Equals("Dan Manning"))
+            {
+
+            }
+            else if (instructor.Equals("Ted Manos"))
+            {
+
+            }
+            else if (instructor.Equals("Steve Michael"))
+            {
+
+            }

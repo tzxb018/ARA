@@ -15,7 +15,7 @@ namespace ARA.Droid
     [Activity(Label = "Aircraft and Instructor")]
     public class Y_Aircraft_and_Instructor : Activity
     {
-        public static string aircraft, instructor, personal;
+        public static string aircraft, instructor, personal, email;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -31,6 +31,8 @@ namespace ARA.Droid
 
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spinner.Adapter = adapter;
+
+            
 
 
             EditText txtAircraft = FindViewById<EditText>(Resource.Id.txtAircraft);

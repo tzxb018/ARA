@@ -38,8 +38,6 @@ namespace ARA.Droid
                 e.Handled = true;
 
                 txt1.Text = "You have selected the '" + btn1.Text + "' option.";
-
-               
             };
 
             return 0;
@@ -112,6 +110,7 @@ namespace ARA.Droid
                 btn1.Pressed = true;
                 btn2.Pressed = false;
                 btn3.Pressed = false;
+
                 txt.Text = "You have selected the '" + btn1.Text + "' option.";
             }
             else if (val == 1)
@@ -119,6 +118,7 @@ namespace ARA.Droid
                 btn2.Pressed = true;
                 btn1.Pressed = false;
                 btn3.Pressed = false;
+
                 txt.Text = "You have selected the '" + btn2.Text + "' option.";
             }
             else
@@ -126,6 +126,7 @@ namespace ARA.Droid
                 btn3.Pressed = true;
                 btn2.Pressed = false;
                 btn1.Pressed = false;
+
                 txt.Text = "You have selected the '" + btn3.Text + "' option.";
             }
         }

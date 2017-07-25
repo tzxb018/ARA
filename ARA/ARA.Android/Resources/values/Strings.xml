@@ -31,4 +31,9 @@
     <item value="williams.ryan073@gmail.com">Ryan Williams</item>
     <item value="mark1derlich@gmail.com">Mark Wunderlich</item>
   </string-array>
+
+  <string name ="altTitle1">"Alternate - 1 of 2"</string>
+  <string name ="altTitle2">"Alternate - 2 of 2"</string>
+  <string name ="homeTitle1">"Home Airfield - 1 of 2"</string>
+  <string name ="homeTitle2">"Home Airfield - 2 of 2"</string>
 </resources>

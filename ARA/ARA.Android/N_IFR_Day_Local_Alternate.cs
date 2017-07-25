@@ -83,14 +83,16 @@ namespace ARA.Droid
             {
                 if (mCurrent.Equals(mFrg2)) //determining question
                 {
-                    questionNum = 6;
-
                     if (AltRisk > 11)
                     {
                         sc.alertShow("Alternate Risk", this);
                     }
                     else
+                    {
                         StartActivity(typeof(N_IFR_Day_Local_PIC));
+                        questionNum = 6;
+
+                    }
                 }
                 else
                 {

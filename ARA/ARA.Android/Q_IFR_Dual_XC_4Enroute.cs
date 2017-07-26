@@ -79,7 +79,7 @@ namespace ARA.Droid
                     }
                     else
                     {
-                        StartActivity(typeof());
+                        StartActivity(typeof(Q_IFR_Dual_XC_5DestinationDayandNight));
                         questionNum = 5;
                     }
                 }
@@ -94,7 +94,7 @@ namespace ARA.Droid
             {
                 if (mCurrent.Equals(mFrg1))
                 {
-                    StartActivity(typeof(P_IFR_Dual_Local_3DayNight));
+                    StartActivity(typeof(Q_IFR_Dual_XC_3EnrouteDayandNight));
                 }
                 else
                 {

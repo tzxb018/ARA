@@ -15,7 +15,7 @@ using Newtonsoft.Json;
 
 namespace ARA.Droid.Fragments
 {
-    public class Q_IFR_Dual_XC2 : Android.Support.V4.App.Fragment
+    public class Q_IFR_Dual_XC6 : Android.Support.V4.App.Fragment
     {
         private ImageButton btnNext;
         private ImageButton btnBack;
@@ -108,8 +108,8 @@ namespace ARA.Droid.Fragments
             ShortCutFunctions sc = new ShortCutFunctions();
 
 
-            sc.defaultVals(ans11, ans12, ans13, ans1, Q_IFR_Dual_XC_2Departure.questionArray[Q_IFR_Dual_XC_2Departure.questionNum]);
-            sc.defaultVals(ans21, ans22, ans23, ans2, Q_IFR_Dual_XC_2Departure.questionArray[Q_IFR_Dual_XC_2Departure.questionNum + 1]);
+            sc.defaultVals(ans11, ans12, ans13, ans1, Q_IFR_Dual_XC_6Destination.questionArray[Q_IFR_Dual_XC_6Destination.questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, Q_IFR_Dual_XC_6Destination.questionArray[Q_IFR_Dual_XC_6Destination.questionNum + 1]);
 
             ans11.Touch += (s, e) =>
             {

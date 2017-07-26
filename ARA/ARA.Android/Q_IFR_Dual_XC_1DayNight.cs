@@ -106,7 +106,7 @@ namespace ARA.Droid
                 txtDay.Visibility = ViewStates.Visible;
                 txtNight.Visibility = ViewStates.Visible;
             }
-            Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+            Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
             sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8 , 10);
 
             btnDay.Touch += (s, e) =>
@@ -154,7 +154,7 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
                 sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8, 10);
             };
             btnNight.Touch += (s, e) =>
@@ -202,7 +202,7 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
                 sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8, 10);
             };
             btnBoth.Touch += (s, e) =>
@@ -251,7 +251,7 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
                 sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8, 10);
 
             };
@@ -301,7 +301,7 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
                 sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8, 10);
 
             };
@@ -350,7 +350,7 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
                 sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8, 10);
 
             };
@@ -399,7 +399,7 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
                 sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8, 10);
             };
 
@@ -448,7 +448,7 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
                 sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8, 10);
 
             };
@@ -497,7 +497,7 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
                 sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8, 10);
 
             };
@@ -546,7 +546,7 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC2.risk5 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                Q_IFR_Dual_XC_2Departure.departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
                 sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", Q_IFR_Dual_XC_2Departure.departureRisk, 8, 10);
             };
 
@@ -555,7 +555,7 @@ namespace ARA.Droid
 
             btnNext.Click += delegate
             {
-                StartActivity(typeof(P_IFR_Dual_Local_2Home));
+                StartActivity(typeof(Q_IFR_Dual_XC_2Departure));
             };
 
             btnBack.Click += delegate

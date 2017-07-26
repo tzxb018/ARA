@@ -18,10 +18,10 @@ using ARA.Droid.Fragments;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Departure Airfield", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
-    public class Q_IFR_Dual_XC_2Departure : FragmentActivity, OnFragmentInteractionListener
+    [Activity(Label = "Destination Airfield", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+    public class Q_IFR_Dual_XC_6Destination : FragmentActivity, OnFragmentInteractionListener
     {
-        public static int departureRisk;
+        public static int destinationRisk;
         public static int questionNum;
         private Stack<SupportFragment> mStackFragment;
         private ImageButton btnNext;
@@ -67,13 +67,13 @@ namespace ARA.Droid
             var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
 
             ShortCutFunctions sc = new ShortCutFunctions();
-            sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", departureRisk, 8, 10);
+            sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", destinationRisk, 8, 10);
 
             btnNext.Click += (s, e) =>
             {
                 if (mCurrent.Equals(mFrg2)) //determining question
                 {
-                    if (departureRisk > 9)
+                    if (destinationRisk > 9)
                     {
                         sc.alertShow("Departure Risk", this);
                     }
@@ -94,7 +94,7 @@ namespace ARA.Droid
             {
                 if (mCurrent.Equals(mFrg1))
                 {
-                    StartActivity(typeof(Q_IFR_Dual_XC_1DayNight));
+                    StartActivity(typeof(P_IFR_Dual_Local_1DayNight));
                 }
                 else
                 {
@@ -129,8 +129,8 @@ namespace ARA.Droid
             {
                 var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
-                departureRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
-                sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", departureRisk, 8, 10);
+                destinationRisk = Q_IFR_Dual_XC1.risk1 + Q_IFR_Dual_XC1.risk2 + Q_IFR_Dual_XC2.risk3 + Q_IFR_Dual_XC2.risk4 + Q_IFR_Dual_XC_1DayNight.timeRisk;
+                sc.riskShow(txtRisk, txtRiskNum, "Departure Risk", destinationRisk, 8, 10);
                 questionArray[questionNum] = riskOut;
                 questionArray[questionNum + 1] = riskOut2;
             }

@@ -13,8 +13,8 @@ using ARA.Droid.Fragments;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Enroute")]
-    public class Q_IFR_Dual_XC_3EnrouteDayandNight : Activity
+    [Activity(Label = "Destination")]
+    public class Q_IFR_Dual_XC_5DestinationDayandNight : Activity
     {
         public static int dayCeiling, nightCeiling, ceilingRisk;
 
@@ -94,8 +94,8 @@ namespace ARA.Droid
                 txtDay.Visibility = ViewStates.Visible;
                 txtNight.Visibility = ViewStates.Visible;
             }
-            Q_IFR_Dual_XC_4Enroute.enrouteRisk = Q_IFR_Dual_XC_3EnrouteDayandNight.ceilingRisk + Q_IFR_Dual_XC3.risk1 + Q_IFR_Dual_XC3.risk2 + Q_IFR_Dual_XC3.risk5 + Q_IFR_Dual_XC4.risk4 + Q_IFR_Dual_XC4.risk5;
-            sc.riskShow(txtRisk, txtRiskNum, "Enroute Risk", Q_IFR_Dual_XC_4Enroute.enrouteRisk, 9, 12);
+            Q_IFR_Dual_XC_6Destination.destinationRisk = Q_IFR_Dual_XC5.risk1 + Q_IFR_Dual_XC5.risk2 + Q_IFR_Dual_XC6.risk3 + Q_IFR_Dual_XC6.risk4 + Q_IFR_Dual_XC_5DestinationDayandNight.ceilingRisk;
+            sc.riskShow(txtRisk, txtRiskNum, "Destination Risk", Q_IFR_Dual_XC_6Destination.destinationRisk, 8, 10);
 
             btn1500.Touch += (s, e) =>
             {
@@ -142,8 +142,8 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_4Enroute.enrouteRisk = Q_IFR_Dual_XC_3EnrouteDayandNight.ceilingRisk + Q_IFR_Dual_XC3.risk1 + Q_IFR_Dual_XC3.risk2 + Q_IFR_Dual_XC3.risk5 + Q_IFR_Dual_XC4.risk4 + Q_IFR_Dual_XC4.risk5;
-                sc.riskShow(txtRisk, txtRiskNum, "Enroute Risk", Q_IFR_Dual_XC_4Enroute.enrouteRisk, 9, 12);
+                Q_IFR_Dual_XC_6Destination.destinationRisk = Q_IFR_Dual_XC5.risk1 + Q_IFR_Dual_XC5.risk2 + Q_IFR_Dual_XC6.risk3 + Q_IFR_Dual_XC6.risk4 + Q_IFR_Dual_XC_5DestinationDayandNight.ceilingRisk;
+                sc.riskShow(txtRisk, txtRiskNum, "Destination Risk", Q_IFR_Dual_XC_6Destination.destinationRisk, 8, 10);
             };
             btn1200.Touch += (s, e) =>
             {
@@ -190,8 +190,8 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_4Enroute.enrouteRisk = Q_IFR_Dual_XC_3EnrouteDayandNight.ceilingRisk + Q_IFR_Dual_XC3.risk1 + Q_IFR_Dual_XC3.risk2 + Q_IFR_Dual_XC3.risk5 + Q_IFR_Dual_XC4.risk4 + Q_IFR_Dual_XC4.risk5;
-                sc.riskShow(txtRisk, txtRiskNum, "Enroute Risk", Q_IFR_Dual_XC_4Enroute.enrouteRisk, 9, 12);
+                Q_IFR_Dual_XC_6Destination.destinationRisk = Q_IFR_Dual_XC5.risk1 + Q_IFR_Dual_XC5.risk2 + Q_IFR_Dual_XC6.risk3 + Q_IFR_Dual_XC6.risk4 + Q_IFR_Dual_XC_5DestinationDayandNight.ceilingRisk;
+                sc.riskShow(txtRisk, txtRiskNum, "Destination Risk", Q_IFR_Dual_XC_6Destination.destinationRisk, 8, 10);
             };
             btn1000to.Touch += (s, e) =>
             {
@@ -238,8 +238,8 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_4Enroute.enrouteRisk = Q_IFR_Dual_XC_3EnrouteDayandNight.ceilingRisk + Q_IFR_Dual_XC3.risk1 + Q_IFR_Dual_XC3.risk2 + Q_IFR_Dual_XC3.risk5 + Q_IFR_Dual_XC4.risk4 + Q_IFR_Dual_XC4.risk5;
-                sc.riskShow(txtRisk, txtRiskNum, "Enroute Risk", Q_IFR_Dual_XC_4Enroute.enrouteRisk, 9, 12);
+                Q_IFR_Dual_XC_6Destination.destinationRisk = Q_IFR_Dual_XC5.risk1 + Q_IFR_Dual_XC5.risk2 + Q_IFR_Dual_XC6.risk3 + Q_IFR_Dual_XC6.risk4 + Q_IFR_Dual_XC_5DestinationDayandNight.ceilingRisk;
+                sc.riskShow(txtRisk, txtRiskNum, "Destination Risk", Q_IFR_Dual_XC_6Destination.destinationRisk, 8, 10);
             };
 
             btn1000.Touch += (s, e) =>
@@ -287,8 +287,8 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_4Enroute.enrouteRisk = Q_IFR_Dual_XC_3EnrouteDayandNight.ceilingRisk + Q_IFR_Dual_XC3.risk1 + Q_IFR_Dual_XC3.risk2 + Q_IFR_Dual_XC3.risk5 + Q_IFR_Dual_XC4.risk4 + Q_IFR_Dual_XC4.risk5;
-                sc.riskShow(txtRisk, txtRiskNum, "Enroute Risk", Q_IFR_Dual_XC_4Enroute.enrouteRisk, 9, 12); ;
+                Q_IFR_Dual_XC_6Destination.destinationRisk = Q_IFR_Dual_XC5.risk1 + Q_IFR_Dual_XC5.risk2 + Q_IFR_Dual_XC6.risk3 + Q_IFR_Dual_XC6.risk4 + Q_IFR_Dual_XC_5DestinationDayandNight.ceilingRisk;
+                sc.riskShow(txtRisk, txtRiskNum, "Destination Risk", Q_IFR_Dual_XC_6Destination.destinationRisk, 8, 10);
             };
             btn800.Touch += (s, e) =>
             {
@@ -335,8 +335,8 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_4Enroute.enrouteRisk = Q_IFR_Dual_XC_3EnrouteDayandNight.ceilingRisk + Q_IFR_Dual_XC3.risk1 + Q_IFR_Dual_XC3.risk2 + Q_IFR_Dual_XC3.risk5 + Q_IFR_Dual_XC4.risk4 + Q_IFR_Dual_XC4.risk5;
-                sc.riskShow(txtRisk, txtRiskNum, "Enroute Risk", Q_IFR_Dual_XC_4Enroute.enrouteRisk, 9, 12);
+                Q_IFR_Dual_XC_6Destination.destinationRisk = Q_IFR_Dual_XC5.risk1 + Q_IFR_Dual_XC5.risk2 + Q_IFR_Dual_XC6.risk3 + Q_IFR_Dual_XC6.risk4 + Q_IFR_Dual_XC_5DestinationDayandNight.ceilingRisk;
+                sc.riskShow(txtRisk, txtRiskNum, "Destination Risk", Q_IFR_Dual_XC_6Destination.destinationRisk, 8, 10);
             };
             btn600.Touch += (s, e) =>
             {
@@ -383,8 +383,8 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                Q_IFR_Dual_XC_4Enroute.enrouteRisk = Q_IFR_Dual_XC_3EnrouteDayandNight.ceilingRisk + Q_IFR_Dual_XC3.risk1 + Q_IFR_Dual_XC3.risk2 + Q_IFR_Dual_XC3.risk5 + Q_IFR_Dual_XC4.risk4 + Q_IFR_Dual_XC4.risk5;
-                sc.riskShow(txtRisk, txtRiskNum, "Enroute Risk", Q_IFR_Dual_XC_4Enroute.enrouteRisk, 9, 12);
+                Q_IFR_Dual_XC_6Destination.destinationRisk = Q_IFR_Dual_XC5.risk1 + Q_IFR_Dual_XC5.risk2 + Q_IFR_Dual_XC6.risk3 + Q_IFR_Dual_XC6.risk4 + Q_IFR_Dual_XC_5DestinationDayandNight.ceilingRisk;
+                sc.riskShow(txtRisk, txtRiskNum, "Destination Risk", Q_IFR_Dual_XC_6Destination.destinationRisk, 8, 10);
             };
 
 
@@ -393,12 +393,12 @@ namespace ARA.Droid
 
             btnNext.Click += delegate
             {
-                StartActivity(typeof(Q_IFR_Dual_XC_4Enroute));
+                StartActivity(typeof(Q_IFR_Dual_XC_6Destination));
             };
 
             btnBack.Click += delegate
             {
-                StartActivity(typeof(Q_IFR_Dual_XC_2Departure));
+                StartActivity(typeof(Q_IFR_Dual_XC_4Enroute));
             };
         }
     }

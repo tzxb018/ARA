@@ -59,10 +59,10 @@ namespace ARA.Droid
             btn1200.Text = "1200 - 1499 ft";
             btn1000.Text = "1000 - 1199 ft";
 
-            ShortCutFunctions class1 = new ShortCutFunctions();
-            class1.defaultVals(btnDay, btnNight, btnBoth, txtTime, time);
-            class1.defaultVals(btn1000, btn800, btn600, txtDay, dayCeiling);
-            class1.defaultVals(btn1500, btn1200, btn1000, txtNight, nightCeiling);
+            ShortCutFunctions sc = new ShortCutFunctions();
+            sc.defaultVals(btnDay, btnNight, btnBoth, txtTime, time);
+            sc.defaultVals(btn1000, btn800, btn600, txtDay, dayCeiling);
+            sc.defaultVals(btn1500, btn1200, btn1000, txtNight, nightCeiling);
 
             if (time == 0)
             {
@@ -71,10 +71,12 @@ namespace ARA.Droid
                 btn1000.Visibility = ViewStates.Visible;
                 btn800.Visibility = ViewStates.Visible;
                 btn600.Visibility = ViewStates.Visible;
+                txtDay.Visibility = ViewStates.Visible;
                 lblNight.Visibility = ViewStates.Invisible;
                 btn1500.Visibility = ViewStates.Invisible;
                 btn1200.Visibility = ViewStates.Invisible;
                 btn1000to.Visibility = ViewStates.Invisible;
+                txtNight.Visibility = ViewStates.Invisible;
             }
             else if (time == 1)
             {
@@ -87,6 +89,8 @@ namespace ARA.Droid
                 btn1500.Visibility = ViewStates.Visible;
                 btn1200.Visibility = ViewStates.Visible;
                 btn1000to.Visibility = ViewStates.Visible;
+                txtNight.Visibility = ViewStates.Visible;
+                txtDay.Visibility = ViewStates.Invisible;
             }
             else
             {
@@ -99,24 +103,30 @@ namespace ARA.Droid
                 btn1500.Visibility = ViewStates.Visible;
                 btn1200.Visibility = ViewStates.Visible;
                 btn1000to.Visibility = ViewStates.Visible;
+                txtDay.Visibility = ViewStates.Visible;
+                txtNight.Visibility = ViewStates.Visible;
             }
             P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-            class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8 , 10);
+            sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8 , 10);
 
             btnDay.Touch += (s, e) =>
             {
-                time = class1.button1Pressed(btnDay, btnNight, btnBoth, txtTime);
-                if (time == 0)
+                sc.defaultVals(btn1000, btn800, btn600, txtDay, dayCeiling);
+                sc.defaultVals(btn1500, btn1200, btn1000, txtNight, nightCeiling);
+                time = sc.button1Pressed(btnDay, btnNight, btnBoth, txtTime);
+                if(time == 0)
                 {
                     timeRisk = dayCeiling;
                     lblDay.Visibility = ViewStates.Visible;
                     btn1000.Visibility = ViewStates.Visible;
                     btn800.Visibility = ViewStates.Visible;
                     btn600.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
                     lblNight.Visibility = ViewStates.Invisible;
                     btn1500.Visibility = ViewStates.Invisible;
                     btn1200.Visibility = ViewStates.Invisible;
                     btn1000to.Visibility = ViewStates.Invisible;
+                    txtNight.Visibility = ViewStates.Invisible;
                 }
                 else if (time == 1)
                 {
@@ -129,6 +139,8 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Invisible;
                 }
                 else
                 {
@@ -141,13 +153,17 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
                 }
                 P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-                class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
             };
             btnNight.Touch += (s, e) =>
             {
-                time = class1.button2Pressed(btnDay, btnNight, btnBoth, txtTime);
+                sc.defaultVals(btn1000, btn800, btn600, txtDay, dayCeiling);
+                sc.defaultVals(btn1500, btn1200, btn1000, txtNight, nightCeiling);
+                time = sc.button2Pressed(btnDay, btnNight, btnBoth, txtTime);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -155,10 +171,12 @@ namespace ARA.Droid
                     btn1000.Visibility = ViewStates.Visible;
                     btn800.Visibility = ViewStates.Visible;
                     btn600.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
                     lblNight.Visibility = ViewStates.Invisible;
                     btn1500.Visibility = ViewStates.Invisible;
                     btn1200.Visibility = ViewStates.Invisible;
                     btn1000to.Visibility = ViewStates.Invisible;
+                    txtNight.Visibility = ViewStates.Invisible;
                 }
                 else if (time == 1)
                 {
@@ -171,6 +189,8 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Invisible;
                 }
                 else
                 {
@@ -183,13 +203,17 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
                 }
                 P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-                class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
             };
             btnBoth.Touch += (s, e) =>
             {
-                time = class1.button3Pressed(btnDay, btnNight, btnBoth, txtTime);
+                sc.defaultVals(btn1000, btn800, btn600, txtDay, dayCeiling);
+                sc.defaultVals(btn1500, btn1200, btn1000, txtNight, nightCeiling);
+                time = sc.button3Pressed(btnDay, btnNight, btnBoth, txtTime);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -197,10 +221,12 @@ namespace ARA.Droid
                     btn1000.Visibility = ViewStates.Visible;
                     btn800.Visibility = ViewStates.Visible;
                     btn600.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
                     lblNight.Visibility = ViewStates.Invisible;
                     btn1500.Visibility = ViewStates.Invisible;
                     btn1200.Visibility = ViewStates.Invisible;
                     btn1000to.Visibility = ViewStates.Invisible;
+                    txtNight.Visibility = ViewStates.Invisible;
                 }
                 else if (time == 1)
                 {
@@ -213,6 +239,8 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Invisible;
                 }
                 else
                 {
@@ -225,15 +253,17 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
                 }
                 P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-                class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
 
             };
 
             btn1000.Touch += (s, e) =>
             {
-                dayCeiling = class1.button1Pressed(btn1000, btn800, btn600, txtDay);
+                dayCeiling = sc.button1Pressed(btn1000, btn800, btn600, txtDay);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -241,10 +271,12 @@ namespace ARA.Droid
                     btn1000.Visibility = ViewStates.Visible;
                     btn800.Visibility = ViewStates.Visible;
                     btn600.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
                     lblNight.Visibility = ViewStates.Invisible;
                     btn1500.Visibility = ViewStates.Invisible;
                     btn1200.Visibility = ViewStates.Invisible;
                     btn1000to.Visibility = ViewStates.Invisible;
+                    txtNight.Visibility = ViewStates.Invisible;
                 }
                 else if (time == 1)
                 {
@@ -257,6 +289,8 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Invisible;
                 }
                 else
                 {
@@ -269,14 +303,16 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
                 }
                 P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-                class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
 
             };
             btn800.Touch += (s, e) =>
             {
-                dayCeiling = class1.button2Pressed(btn1000, btn800, btn600, txtDay);
+                dayCeiling = sc.button2Pressed(btn1000, btn800, btn600, txtDay);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -284,10 +320,12 @@ namespace ARA.Droid
                     btn1000.Visibility = ViewStates.Visible;
                     btn800.Visibility = ViewStates.Visible;
                     btn600.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
                     lblNight.Visibility = ViewStates.Invisible;
                     btn1500.Visibility = ViewStates.Invisible;
                     btn1200.Visibility = ViewStates.Invisible;
                     btn1000to.Visibility = ViewStates.Invisible;
+                    txtNight.Visibility = ViewStates.Invisible;
                 }
                 else if (time == 1)
                 {
@@ -300,6 +338,8 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Invisible;
                 }
                 else
                 {
@@ -312,14 +352,16 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
                 }
                 P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-                class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
 
             };
             btn600.Touch += (s, e) =>
             {
-                dayCeiling = class1.button3Pressed(btn1000, btn800, btn600, txtDay);
+                dayCeiling = sc.button3Pressed(btn1000, btn800, btn600, txtDay);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -327,10 +369,12 @@ namespace ARA.Droid
                     btn1000.Visibility = ViewStates.Visible;
                     btn800.Visibility = ViewStates.Visible;
                     btn600.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
                     lblNight.Visibility = ViewStates.Invisible;
                     btn1500.Visibility = ViewStates.Invisible;
                     btn1200.Visibility = ViewStates.Invisible;
                     btn1000to.Visibility = ViewStates.Invisible;
+                    txtNight.Visibility = ViewStates.Invisible;
                 }
                 else if (time == 1)
                 {
@@ -343,6 +387,8 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Invisible;
                 }
                 else
                 {
@@ -355,14 +401,16 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
                 }
                 P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-                class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
             };
 
             btn1500.Touch += (s, e) =>
             {
-                nightCeiling = class1.button1Pressed(btn1500, btn1200, btn1000, txtNight);
+                nightCeiling = sc.button1Pressed(btn1500, btn1200, btn1000, txtNight);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -370,10 +418,12 @@ namespace ARA.Droid
                     btn1000.Visibility = ViewStates.Visible;
                     btn800.Visibility = ViewStates.Visible;
                     btn600.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
                     lblNight.Visibility = ViewStates.Invisible;
                     btn1500.Visibility = ViewStates.Invisible;
                     btn1200.Visibility = ViewStates.Invisible;
                     btn1000to.Visibility = ViewStates.Invisible;
+                    txtNight.Visibility = ViewStates.Invisible;
                 }
                 else if (time == 1)
                 {
@@ -386,6 +436,8 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Invisible;
                 }
                 else
                 {
@@ -398,14 +450,16 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
                 }
                 P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-                class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
 
             };
             btn1200.Touch += (s, e) =>
             { 
-                nightCeiling = class1.button2Pressed(btn1500, btn1200, btn1000, txtNight);
+                nightCeiling = sc.button2Pressed(btn1500, btn1200, btn1000, txtNight);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -413,10 +467,12 @@ namespace ARA.Droid
                     btn1000.Visibility = ViewStates.Visible;
                     btn800.Visibility = ViewStates.Visible;
                     btn600.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
                     lblNight.Visibility = ViewStates.Invisible;
                     btn1500.Visibility = ViewStates.Invisible;
                     btn1200.Visibility = ViewStates.Invisible;
                     btn1000to.Visibility = ViewStates.Invisible;
+                    txtNight.Visibility = ViewStates.Invisible;
                 }
                 else if (time == 1)
                 {
@@ -429,6 +485,8 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Invisible;
                 }
                 else
                 {
@@ -441,14 +499,16 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
                 }
                 P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-                class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
 
             };
             btn1000.Touch += (s, e) =>
             {
-                nightCeiling = class1.button3Pressed(btn1500, btn1200, btn1000, txtNight);
+                nightCeiling = sc.button3Pressed(btn1500, btn1200, btn1000, txtNight);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -456,10 +516,12 @@ namespace ARA.Droid
                     btn1000.Visibility = ViewStates.Visible;
                     btn800.Visibility = ViewStates.Visible;
                     btn600.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
                     lblNight.Visibility = ViewStates.Invisible;
                     btn1500.Visibility = ViewStates.Invisible;
                     btn1200.Visibility = ViewStates.Invisible;
                     btn1000to.Visibility = ViewStates.Invisible;
+                    txtNight.Visibility = ViewStates.Invisible;
                 }
                 else if (time == 1)
                 {
@@ -472,6 +534,8 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Invisible;
                 }
                 else
                 {
@@ -484,9 +548,11 @@ namespace ARA.Droid
                     btn1500.Visibility = ViewStates.Visible;
                     btn1200.Visibility = ViewStates.Visible;
                     btn1000to.Visibility = ViewStates.Visible;
+                    txtDay.Visibility = ViewStates.Visible;
+                    txtNight.Visibility = ViewStates.Visible;
                 }
                 P_IFR_Dual_Local_2Home.homeRisk = timeRisk + P_IFR_Dual_Local1.risk1 + P_IFR_Dual_Local1.risk2 + P_IFR_Dual_Local2.risk4 + P_IFR_Dual_Local2.risk5;
-                class1.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
+                sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
             };
 
             var btnNext = FindViewById<ImageButton>(Resource.Id.btnContinueFrom3);

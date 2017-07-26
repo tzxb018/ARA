@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace ARA.Droid
 {
-	[Activity (Label = "UNO Flight Risk Assessment",  ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, MainLauncher = true)] // Theme="@style/MainTheme", 
+	[Activity (Label = "UNO Flight Risk Assessment",  ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait )]//, MainLauncher = true)] // Theme="@style/MainTheme", 
    
     public class A_Flight_Info_Activity : Activity //global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{

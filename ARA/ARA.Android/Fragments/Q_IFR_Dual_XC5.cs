@@ -15,7 +15,7 @@ using Newtonsoft.Json;
 
 namespace ARA.Droid.Fragments
 {
-    public class O_IFR_Day_XC3 : Android.Support.V4.App.Fragment
+    public class Q_IFR_Dual_XC5 : Android.Support.V4.App.Fragment
     {
         private ImageButton btnNext;
         private ImageButton btnBack;
@@ -67,7 +67,7 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
-            
+
 
             /*
             q1.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][0];
@@ -88,15 +88,15 @@ namespace ARA.Droid.Fragments
             ans33.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][3];
             ans3.Text = "You have selected the '" + ans31.Text + "' option"; */
 
-            q1.Text = "Ceiling";
-            ans11.Text = "> 3000 ft";
-            ans12.Text = "2501 - 3000 ft";
-            ans13.Text = "2000 - 2500 ft";
+            q1.Text = "Visibility";
+            ans11.Text = "4+ SM";
+            ans12.Text = "3 SM";
+            ans13.Text = "2 SM";
 
-            q2.Text = "Visibility";
-            ans21.Text = "5+ SM";
-            ans22.Text = "4 SM";
-            ans23.Text = "3 SM";
+            q2.Text = "Best IAP Available";
+            ans21.Text = "Precision";
+            ans22.Text = "Non-Precision";
+            ans23.Text = "Circling";
 
             return view;
         }
@@ -107,9 +107,8 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
-            sc.defaultVals(ans11, ans12, ans13, ans1, O_IFR_Day_XC_2Enroute.questionArray[O_IFR_Day_XC_2Enroute.questionNum]);
-            sc.defaultVals(ans21, ans22, ans23, ans2, O_IFR_Day_XC_2Enroute.questionArray[O_IFR_Day_XC_2Enroute.questionNum + 1]);
-
+            sc.defaultVals(ans11, ans12, ans13, ans1, Q_IFR_Dual_XC_6Destination.questionArray[Q_IFR_Dual_XC_6Destination.questionNum]); //CHANGE
+            sc.defaultVals(ans21, ans22, ans23, ans2, Q_IFR_Dual_XC_6Destination.questionArray[Q_IFR_Dual_XC_6Destination.questionNum + 1]);
 
             ans11.Touch += (s, e) =>
             {

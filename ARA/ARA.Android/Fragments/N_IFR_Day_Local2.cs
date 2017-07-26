@@ -82,20 +82,16 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
-            sc.defaultVals(ans11, ans12, ans13, ans1, N_IFR_Day_Local_Home.questionArray[N_IFR_Day_Local_Home.questionNum]);
-            sc.defaultVals(ans21, ans22, ans23, ans2, N_IFR_Day_Local_Home.questionArray[N_IFR_Day_Local_Home.questionNum + 1]);
 
             q1.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][0];
             ans11.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][1];
             ans12.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][2];
             ans13.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][3];
-            ans1.Text = "You have selected the '" + ans11.Text + "' option";
 
             q2.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][0];
             ans21.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][1];
             ans22.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][2];
             ans23.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][3];
-            ans2.Text = "You have selected the '" + ans21.Text + "' option";
 
             return view;
         }
@@ -105,6 +101,10 @@ namespace ARA.Droid.Fragments
             base.OnActivityCreated(savedInstanceState);
 
             ShortCutFunctions sc = new ShortCutFunctions();
+
+
+            sc.defaultVals(ans11, ans12, ans13, ans1, N_IFR_Day_Local_Home.questionArray[N_IFR_Day_Local_Home.questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, N_IFR_Day_Local_Home.questionArray[N_IFR_Day_Local_Home.questionNum + 1]);
 
             ans11.Touch += (s, e) =>
             {

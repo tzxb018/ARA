@@ -15,7 +15,7 @@ using Newtonsoft.Json;
 
 namespace ARA.Droid.Fragments
 {
-    public class O_IFR_Day_XC3 : Android.Support.V4.App.Fragment
+    public class P_IFR_Dual_Local2 : Android.Support.V4.App.Fragment
     {
         private ImageButton btnNext;
         private ImageButton btnBack;
@@ -35,7 +35,7 @@ namespace ARA.Droid.Fragments
         private TextView ans2;
         private TextView ans3;
 
-        public static int risk1, risk2;
+        public static int risk4, risk5, risk6;
 
         private OnFragmentInteractionListener mListener;
 
@@ -67,7 +67,6 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
-            
 
             /*
             q1.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][0];
@@ -88,15 +87,16 @@ namespace ARA.Droid.Fragments
             ans33.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][3];
             ans3.Text = "You have selected the '" + ans31.Text + "' option"; */
 
-            q1.Text = "Ceiling";
-            ans11.Text = "> 3000 ft";
-            ans12.Text = "2501 - 3000 ft";
-            ans13.Text = "2000 - 2500 ft";
+            q1.Text = "Wind";
+            ans11.Text = "0 - 15 kts";
+            ans12.Text = "16 - 20 kts";
+            ans13.Text = "21 - 25 kts";
 
-            q2.Text = "Visibility";
-            ans21.Text = "5+ SM";
-            ans22.Text = "4 SM";
-            ans23.Text = "3 SM";
+            q2.Text = "Xwind";
+            ans21.Text = "0 - 5 kts";
+            ans22.Text = "6 - 10 kts";
+            ans23.Text = "11 - 15 kts";
+
 
             return view;
         }
@@ -107,45 +107,45 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
-            sc.defaultVals(ans11, ans12, ans13, ans1, O_IFR_Day_XC_2Enroute.questionArray[O_IFR_Day_XC_2Enroute.questionNum]);
-            sc.defaultVals(ans21, ans22, ans23, ans2, O_IFR_Day_XC_2Enroute.questionArray[O_IFR_Day_XC_2Enroute.questionNum + 1]);
 
+            sc.defaultVals(ans11, ans12, ans13, ans1, P_IFR_Dual_Local_2Home.questionArray[P_IFR_Dual_Local_2Home.questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, P_IFR_Dual_Local_2Home.questionArray[P_IFR_Dual_Local_2Home.questionNum + 1]);
 
             ans11.Touch += (s, e) =>
             {
-                risk1 = 0;
-                mListener.onFragmentInteraction(risk1, risk2);
+                risk4 = 0;
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button1Pressed(ans11, ans12, ans13, ans1);
             };
             ans12.Touch += (s, e) =>
             {
-                risk1 = 1;
-                mListener.onFragmentInteraction(risk1, risk2);
+                risk4 = 1;
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button2Pressed(ans11, ans12, ans13, ans1);
             };
             ans13.Touch += (s, e) =>
             {
-                risk1 = 3;
-                mListener.onFragmentInteraction(risk1, risk2);
+                risk4 = 3;
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button3Pressed(ans11, ans12, ans13, ans1);
             };
 
             ans21.Touch += (s, e) =>
             {
-                risk2 = 0;
-                mListener.onFragmentInteraction(risk1, risk2);
+                risk5 = 0;
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button1Pressed(ans21, ans22, ans23, ans2);
             };
             ans22.Touch += (s, e) =>
             {
-                risk2 = 1;
-                mListener.onFragmentInteraction(risk1, risk2);
+                risk5 = 1;
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button2Pressed(ans21, ans22, ans23, ans2);
             };
             ans23.Touch += (s, e) =>
             {
-                risk2 = 3;
-                mListener.onFragmentInteraction(risk1, risk2);
+                risk5 = 3;
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button3Pressed(ans21, ans22, ans23, ans2);
             };
 

@@ -656,7 +656,21 @@ namespace ARA.Droid
                         }
                         else //XC
                         {
-
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(O_IFR_Day_XC_1Departure));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
                         }
                     }
                 }

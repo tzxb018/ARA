@@ -110,7 +110,7 @@ namespace ARA.Droid
                         }
                         else //XC
                         {
-
+                            StartActivity(typeof(O_IFR_Day_XC_5PIC));
                         }
                     }
                 }

@@ -147,7 +147,17 @@ namespace ARA.Droid
                     }
                     else //XC
                     {
-
+                        txtFlight.Text = "Flying under IFR - Day, Commercial/CFI Solo - Cross Country (11)";
+                        txtSHF.Text = "Total Risk - Student Human Factors: " + F_Student_Human_Factors.SHFRisk;
+                        txtRisk1.Text = "Departure Airfield Risk: " + O_IFR_Day_XC_1Departure.HomeRisk;
+                        txtRisk2.Visibility = ViewStates.Visible;
+                        txtRisk3.Visibility = ViewStates.Visible;
+                        txtRisk4.Visibility = ViewStates.Visible;
+                        txtRisk5.Visibility = ViewStates.Visible;
+                        txtRisk2.Text = "Enroute Risk: " + O_IFR_Day_XC_2Enroute.enroute;
+                        txtRisk3.Text = "Destination Risk: " + O_IFR_Day_XC_3Destination.destinationRisk;
+                        txtRisk4.Text = "Alternate Risk: " + O_IFR_Day_XC_4Alternate.AltRisk;
+                        txtRisk5.Text = "PIC Risk: " + O_IFR_Day_XC_5PIC.PIC;
                     }
                 }
             }

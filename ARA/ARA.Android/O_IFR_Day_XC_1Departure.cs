@@ -18,7 +18,7 @@ using System.IO;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Departure", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, MainLauncher = true)]
+    [Activity(Label = "Departure", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class O_IFR_Day_XC_1Departure : FragmentActivity, OnFragmentInteractionListener
     {
         private O_IFR_Day_XC2 mFragment2;

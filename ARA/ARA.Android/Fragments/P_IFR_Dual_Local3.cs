@@ -15,7 +15,7 @@ using Newtonsoft.Json;
 
 namespace ARA.Droid.Fragments
 {
-    public class P_IFR_Dual_Local1 : Android.Support.V4.App.Fragment
+    public class P_IFR_Dual_Local3 : Android.Support.V4.App.Fragment
     {
         private ImageButton btnNext;
         private ImageButton btnBack;
@@ -67,8 +67,8 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
-            sc.defaultVals(ans11, ans12, ans13, ans1, P_IFR_Dual_Local_2Home.questionArray[P_IFR_Dual_Local_2Home.questionNum]); //CHANGE
-            sc.defaultVals(ans21, ans22, ans23, ans2, P_IFR_Dual_Local_2Home.questionArray[P_IFR_Dual_Local_2Home.questionNum + 1]);
+            sc.defaultVals(ans11, ans12, ans13, ans1, P_IFR_Dual_Local_4Alt.questionArray[P_IFR_Dual_Local_4Alt.questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, P_IFR_Dual_Local_4Alt.questionArray[P_IFR_Dual_Local_4Alt.questionNum + 1]);
 
             /*
             q1.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][0];

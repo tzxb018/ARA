@@ -149,6 +149,8 @@
     <Compile Include="Fragments\O_IFR_Day_XC1.cs" />
     <Compile Include="Fragments\P_IFR_Dual_Local1.cs" />
     <Compile Include="Fragments\P_IFR_Dual_Local2.cs" />
+    <Compile Include="Fragments\P_IFR_Dual_Local3.cs" />
+    <Compile Include="Fragments\P_IFR_Dual_Local4.cs" />
     <Compile Include="N_Alternate.cs" />
     <Compile Include="O_IFR_Day_XC_4Alternate.cs" />
     <Compile Include="O_IFR_Day_XC_3Destination.cs" />
@@ -195,8 +197,9 @@
     <Compile Include="M_VFR_Night_XCA10.cs" />
     <Compile Include="O_IFR_Day_XC_1Departure.cs" />
     <Compile Include="P_IFR_Dual_Local_2Home.cs" />
-    <Compile Include="P_IFR_Dual_Local_3Alt.cs" />
+    <Compile Include="P_IFR_Dual_Local_4Alt.cs" />
     <Compile Include="P_IFR_Dual_Local_1DayNight.cs" />
+    <Compile Include="P_IFR_Dual_Local_3DayNight.cs" />
     <Compile Include="ShortCutFunctions.cs" />
     <Compile Include="F_Student_Human_Factors.cs" />
     <Compile Include="G_Student_Human_Factors_2.cs" />

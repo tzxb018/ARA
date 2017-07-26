@@ -79,7 +79,7 @@ namespace ARA.Droid
                     }
                     else
                     {
-                        StartActivity(typeof(P_IFR_Dual_Local_4Alt));
+                        StartActivity(typeof(P_IFR_Dual_Local_3DayNight));
                         questionNum = 4;
                     }
                 }

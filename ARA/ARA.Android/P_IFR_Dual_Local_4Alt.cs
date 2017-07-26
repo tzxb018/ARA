@@ -85,7 +85,7 @@ namespace ARA.Droid
                 }
                 else
                 {
-                    questionNum += 3;
+                    questionNum += 2;
                     replaceFragment(mFrg2);
                 }
             };
@@ -99,7 +99,7 @@ namespace ARA.Droid
                 else
                 {
                     replaceFragment(mFrg1);
-                    questionNum -= 3;
+                    questionNum -= 2;
                 }
             };
         }

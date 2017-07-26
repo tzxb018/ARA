@@ -57,12 +57,12 @@ namespace ARA.Droid
             lblNight.Text = "Ceiling (Night)";
             btn1500.Text = "> 1500 ft";
             btn1200.Text = "1200 - 1499 ft";
-            btn1000.Text = "1000 - 1199 ft";
+            btn1000to.Text = "1000 - 1199 ft";
 
             ShortCutFunctions sc = new ShortCutFunctions();
             sc.defaultVals(btnDay, btnNight, btnBoth, txtTime, time);
             sc.defaultVals(btn1000, btn800, btn600, txtDay, dayCeiling);
-            sc.defaultVals(btn1500, btn1200, btn1000, txtNight, nightCeiling);
+            sc.defaultVals(btn1500, btn1200, btn1000to, txtNight, nightCeiling);
 
             if (time == 0)
             {
@@ -405,7 +405,7 @@ namespace ARA.Droid
 
             btn1500.Touch += (s, e) =>
             {
-                nightCeiling = sc.button1Pressed(btn1500, btn1200, btn1000, txtNight);
+                nightCeiling = sc.button1Pressed(btn1500, btn1200, btn1000to, txtNight);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -454,7 +454,7 @@ namespace ARA.Droid
             };
             btn1200.Touch += (s, e) =>
             { 
-                nightCeiling = sc.button2Pressed(btn1500, btn1200, btn1000, txtNight);
+                nightCeiling = sc.button2Pressed(btn1500, btn1200, btn1000to, txtNight);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;
@@ -501,9 +501,9 @@ namespace ARA.Droid
                 sc.riskShow(txtRisk, txtRiskNum, "Home Airport Risk", P_IFR_Dual_Local_2Home.homeRisk, 8, 10);
 
             };
-            btn1000.Touch += (s, e) =>
+            btn1000to.Touch += (s, e) =>
             {
-                nightCeiling = sc.button3Pressed(btn1500, btn1200, btn1000, txtNight);
+                nightCeiling = sc.button3Pressed(btn1500, btn1200, btn1000to, txtNight);
                 if (time == 0)
                 {
                     timeRisk = dayCeiling;

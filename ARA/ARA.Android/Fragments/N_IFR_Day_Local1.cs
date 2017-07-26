@@ -50,7 +50,7 @@ namespace ARA.Droid.Fragments
         {
             View view = inflater.Inflate(Resource.Layout.LayoutFragment3, container, false);
 
-            /*
+            
             String stringData = this.Arguments.GetString("JSON Location");
             string riskType = this.Arguments.GetString("Risk");
 
@@ -59,7 +59,7 @@ namespace ARA.Droid.Fragments
             StreamReader sr = new StreamReader(stream);
             string jsonText = sr.ReadToEnd();
 
-            IFR_Day_Home result = JsonConvert.DeserializeObject<IFR_Day_Home>(jsonText); */
+            IFR_Day_Home result = JsonConvert.DeserializeObject<IFR_Day_Home>(jsonText); 
 
             q1 = view.FindViewById<TextView>(Resource.Id.txtQuestion1);
             ans11 = view.FindViewById<Button>(Resource.Id.btnQ1C1);
@@ -88,7 +88,7 @@ namespace ARA.Droid.Fragments
             sc.defaultVals(ans21, ans22, ans23, ans2, N_IFR_Day_Local_Home.questionArray[N_IFR_Day_Local_Home.questionNum + 1]);
             sc.defaultVals(ans31, ans32, ans33, ans3, N_IFR_Day_Local_Home.questionArray[N_IFR_Day_Local_Home.questionNum + 2]);
 
-            /*
+            
             q1.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][0];
             ans11.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][1];
             ans12.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][2];
@@ -105,7 +105,7 @@ namespace ARA.Droid.Fragments
             ans31.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 2][1];
             ans32.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 2][2];
             ans33.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 2][3];
-            ans3.Text = "You have selected the '" + ans31.Text + "' option"; */
+            ans3.Text = "You have selected the '" + ans31.Text + "' option"; 
 
             return view;
         }

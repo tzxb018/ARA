@@ -97,7 +97,10 @@ namespace ARA.Droid.Fragments
             q2.Text = "Xwind";
             ans21.Text = "0 - 5 kts";
             ans22.Text = "6 - 10 kts";
-            ans23.Text = "11 - 15 kts";;
+            ans23.Text = "11 - 15 kts";
+
+            ans1.Text = "You have selected the '" + ans11.Text + "' option";
+            ans2.Text = "You have selected the '" + ans21.Text + "' option";
 
             return view;
         }
@@ -111,38 +114,38 @@ namespace ARA.Droid.Fragments
             ans11.Touch += (s, e) =>
             {
                 risk4 = 0;
-                mListener.onFragmentInteraction(risk4, risk5, risk6);
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button1Pressed(ans11, ans12, ans13, ans1);
             };
             ans12.Touch += (s, e) =>
             {
                 risk4 = 1;
-                mListener.onFragmentInteraction(risk4, risk5, risk6);
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button2Pressed(ans11, ans12, ans13, ans1);
             };
             ans13.Touch += (s, e) =>
             {
                 risk4 = 3;
-                mListener.onFragmentInteraction(risk4, risk5, risk6);
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button3Pressed(ans11, ans12, ans13, ans1);
             };
 
             ans21.Touch += (s, e) =>
             {
                 risk5 = 0;
-                mListener.onFragmentInteraction(risk4, risk5, risk6);
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button1Pressed(ans21, ans22, ans23, ans2);
             };
             ans22.Touch += (s, e) =>
             {
                 risk5 = 1;
-                mListener.onFragmentInteraction(risk4, risk5, risk6);
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button2Pressed(ans21, ans22, ans23, ans2);
             };
             ans23.Touch += (s, e) =>
             {
                 risk5 = 3;
-                mListener.onFragmentInteraction(risk4, risk5, risk6);
+                mListener.onFragmentInteraction(risk4, risk5);
                 sc.button3Pressed(ans21, ans22, ans23, ans2);
             };
 

@@ -10,13 +10,13 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace ARA.Droid.Fragments
 {
     public class O_IFR_Day_XC8 : Android.Support.V4.App.Fragment
     {
-        public static int wind, xwind, fuel;
-
         private ImageButton btnNext;
         private ImageButton btnBack;
         private TextView q1;
@@ -35,6 +35,10 @@ namespace ARA.Droid.Fragments
         private TextView ans2;
         private TextView ans3;
 
+        public static int risk1, risk2, risk3;
+
+        private OnFragmentInteractionListener mListener;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -44,7 +48,6 @@ namespace ARA.Droid.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragment
             View view = inflater.Inflate(Resource.Layout.LayoutFragment3, container, false);
 
             q1 = view.FindViewById<TextView>(Resource.Id.txtQuestion1);
@@ -70,6 +73,26 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
+            sc.defaultVals(ans11, ans12, ans13, ans1, O_IFR_Day_XC_4Alternate.questionArray[O_IFR_Day_XC_4Alternate.questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, O_IFR_Day_XC_4Alternate.questionArray[O_IFR_Day_XC_4Alternate.questionNum + 1]);
+            sc.defaultVals(ans31, ans32, ans33, ans3, O_IFR_Day_XC_4Alternate.questionArray[O_IFR_Day_XC_4Alternate.questionNum + 2]);
+
+            /*
+            q1.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][0];
+            ans11.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][1];
+            ans12.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][2];
+            ans13.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][3];
+
+            q2.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 1][0];
+            ans21.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 1][1];
+            ans22.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 1][2];
+            ans23.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 1][3];
+
+            q3.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][0];
+            ans31.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][1];
+            ans32.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][2];
+            ans33.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][3]; */
+
             q1.Text = "Wind";
             ans11.Text = "0 - 15 kts";
             ans12.Text = "16 - 20 kts";
@@ -85,50 +108,97 @@ namespace ARA.Droid.Fragments
             ans32.Text = "60 - 75 min";
             ans33.Text = "45 - 60 min";
 
-            sc.defaultVals(ans11, ans12, ans13, ans1, wind);
-            sc.defaultVals(ans21, ans22, ans23, ans2, xwind);
-            sc.defaultVals(ans31, ans32, ans33, ans3, fuel);
+            ans1.Text = "You have selected the '" + ans11.Text + "' option";
+            ans2.Text = "You have selected the '" + ans21.Text + "' option";
+            ans3.Text = "You have selected the '" + ans31.Text + "' option";
+            return view;
+        }
+
+        public override void OnActivityCreated(Bundle savedInstanceState)
+        {
+            base.OnActivityCreated(savedInstanceState);
+
+            ShortCutFunctions sc = new ShortCutFunctions();
 
             ans11.Touch += (s, e) =>
             {
-                wind = sc.button1Pressed(ans11, ans12, ans13, ans1);
+                risk1 = 0;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button1Pressed(ans11, ans12, ans13, ans1);
             };
             ans12.Touch += (s, e) =>
             {
-                wind = sc.button2Pressed(ans11, ans12, ans13, ans1);
+                risk1 = 1;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button2Pressed(ans11, ans12, ans13, ans1);
             };
             ans13.Touch += (s, e) =>
             {
-                wind = sc.button3Pressed(ans11, ans12, ans13, ans1);
+                risk1 = 3;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button3Pressed(ans11, ans12, ans13, ans1);
             };
 
             ans21.Touch += (s, e) =>
             {
-                xwind = sc.button1Pressed(ans21, ans22, ans23, ans2);
+                risk2 = 0;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button1Pressed(ans21, ans22, ans23, ans2);
             };
             ans22.Touch += (s, e) =>
             {
-                xwind = sc.button2Pressed(ans21, ans22, ans23, ans2);
+                risk2 = 1;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button2Pressed(ans21, ans22, ans23, ans2);
             };
             ans23.Touch += (s, e) =>
             {
-                xwind = sc.button3Pressed(ans21, ans22, ans23, ans2);
+                risk2 = 3;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button3Pressed(ans21, ans22, ans23, ans2);
             };
 
             ans31.Touch += (s, e) =>
             {
-                fuel = sc.button1Pressed(ans31, ans32, ans33, ans3);
+                risk3 = 0;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button1Pressed(ans31, ans32, ans33, ans3);
             };
             ans32.Touch += (s, e) =>
             {
-                fuel = sc.button2Pressed(ans31, ans32, ans33, ans3);
+                risk3 = 1;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button2Pressed(ans31, ans32, ans33, ans3);
             };
             ans33.Touch += (s, e) =>
             {
-                fuel = sc.button3Pressed(ans31, ans32, ans33, ans3);
+                risk3 = 3;
+                mListener.onFragmentInteraction(risk1, risk2, risk3);
+                sc.button3Pressed(ans31, ans32, ans33, ans3);
             };
 
-            return View;
+
+        }
+
+        public override void OnAttach(Context context)
+        {
+            base.OnAttach(context);
+
+            try
+            {
+                mListener = (OnFragmentInteractionListener)Activity;
+            }
+            catch (Exception ex) { }
+        }
+
+
+        public void onFragmentInteraction(int riskOut, int riskOut2)
+        {
+
+        }
+
+        public void onFragmentInteraction(int riskOut, int riskOut2, int r3)
+        {
         }
     }
 }

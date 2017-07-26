@@ -21,8 +21,8 @@ namespace ARA.Droid
     [Activity(Label = "Alternate", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class O_IFR_Day_XC_4Alternate : FragmentActivity, OnFragmentInteractionListener 
     {
-        private N_IFR_Day_Local3 mFrg1;
-        private N_IFR_Day_Local4 mFrg2;
+        private O_IFR_Day_XC7 mFrg1;
+        private O_IFR_Day_XC8 mFrg2;
         private Stack<SupportFragment> mStackFragment;
         private ImageButton btnNext;
         private ImageButton btnBack;
@@ -32,7 +32,6 @@ namespace ARA.Droid
 
         public static int AltRisk, r1, r2; //indivdual risks for IFR day local       
 
-        public static string JSON_ARRAY = "IFR_Day_Local_Alternate.json";
         public static string RISK_TYPE = "Alternate Risk";
 
         public static int[] questionArray = new int[6];
@@ -46,8 +45,8 @@ namespace ARA.Droid
             btnNext = FindViewById<ImageButton>(Resource.Id.btnContinueFragment);
             btnBack = FindViewById<ImageButton>(Resource.Id.btnBackFragment);
 
-            mFrg1 = new N_IFR_Day_Local3();
-            mFrg2 = new N_IFR_Day_Local4();
+            mFrg1 = new O_IFR_Day_XC7();
+            mFrg2 = new O_IFR_Day_XC8();
             mStackFragment = new Stack<SupportFragment>();
 
             var trans = SupportFragmentManager.BeginTransaction();
@@ -65,7 +64,6 @@ namespace ARA.Droid
             trans.Commit();
 
             Bundle bundle = new Bundle();
-            bundle.PutString("JSON Location", JSON_ARRAY);
             bundle.PutString("Risk", RISK_TYPE);
 
             Android.App.FragmentTransaction fragmentTransaction = FragmentManager.BeginTransaction();
@@ -76,7 +74,7 @@ namespace ARA.Droid
             var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
 
             ShortCutFunctions sc = new ShortCutFunctions();
-            sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", AltRisk, 10, 12);
+            sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", AltRisk, 9, 12);
 
 
             btnNext.Click += (s, e) =>
@@ -89,7 +87,7 @@ namespace ARA.Droid
                     }
                     else
                     {
-                        StartActivity(typeof(N_IFR_Day_Local_PIC));
+                        StartActivity(typeof(O_IFR_Day_XC_5PIC));
                         questionNum = 6;
 
                     }
@@ -100,7 +98,6 @@ namespace ARA.Droid
                     replaceFragment(mFrg2);
 
                     bundle = new Bundle();
-                    bundle.PutString("JSON Location", JSON_ARRAY);
                     fragmentTransaction = FragmentManager.BeginTransaction();
                 }
             };
@@ -109,7 +106,7 @@ namespace ARA.Droid
             {
                 if (mCurrent.Equals(mFrg1))
                 {
-                    StartActivity(typeof(N_IFR_Day_Local_Home));
+                    StartActivity(typeof(O_IFR_Day_XC_3Destination));
                 }
                 else
                 {
@@ -117,7 +114,6 @@ namespace ARA.Droid
                     replaceFragment(mFrg1);
                     
                     bundle = new Bundle();
-                    bundle.PutString("JSON Location", JSON_ARRAY);
                     fragmentTransaction = FragmentManager.BeginTransaction();
                 }
             };
@@ -141,7 +137,7 @@ namespace ARA.Droid
                 var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
                 AltRisk = r1 + r2;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", AltRisk, 10, 12);
+                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", AltRisk, 9, 12);
                 questionArray[questionNum] = riskOut;
                 questionArray[questionNum + 1] = riskOut2;
             }
@@ -160,8 +156,8 @@ namespace ARA.Droid
                 r2 = riskOut + riskOut2 + r3;
                 var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
-                AltRisk = N_IFR_Day_Local3.risk1 + N_IFR_Day_Local3.risk2 + N_IFR_Day_Local3.risk3 + N_IFR_Day_Local4.risk4 + N_IFR_Day_Local4.risk5 + N_IFR_Day_Local4.risk6;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", AltRisk, 10, 12);
+                AltRisk = O_IFR_Day_XC7.risk1 + O_IFR_Day_XC7.risk2 + O_IFR_Day_XC7.risk3 + O_IFR_Day_XC8.risk1 + O_IFR_Day_XC8.risk2 + O_IFR_Day_XC8.risk3;
+                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", AltRisk, 9, 12);
                 questionArray[questionNum] = riskOut;
                 questionArray[questionNum + 1] = riskOut2;
                 questionArray[questionNum + 2] = r3;

@@ -10,13 +10,13 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace ARA.Droid.Fragments
 {
     public class O_IFR_Day_XC4 : Android.Support.V4.App.Fragment
     {
-        public static int time, thunder;
-
         private ImageButton btnNext;
         private ImageButton btnBack;
         private TextView q1;
@@ -35,6 +35,10 @@ namespace ARA.Droid.Fragments
         private TextView ans2;
         private TextView ans3;
 
+        public static int risk3, risk4;
+
+        private OnFragmentInteractionListener mListener;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -44,7 +48,6 @@ namespace ARA.Droid.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragment
             View view = inflater.Inflate(Resource.Layout.Layoutfragment2, container, false);
 
             q1 = view.FindViewById<TextView>(Resource.Id.txt2Question1);
@@ -64,46 +67,111 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
+            sc.defaultVals(ans11, ans12, ans13, ans1, O_IFR_Day_XC_2Enroute.questionArray[O_IFR_Day_XC_2Enroute.questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, O_IFR_Day_XC_2Enroute.questionArray[O_IFR_Day_XC_2Enroute.questionNum + 1]);
+
+            /*
+            q1.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][0];
+            ans11.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][1];
+            ans12.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][2];
+            ans13.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][3];
+            ans1.Text = "You have selected the '" + ans11.Text + "' option";
+
+            q2.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 1][0];
+            ans21.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 1][1];
+            ans22.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 1][2];
+            ans23.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 1][3];
+            ans2.Text = "You have selected the '" + ans21.Text + "' option";
+
+            q3.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][0];
+            ans31.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][1];
+            ans32.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][2];
+            ans33.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum + 2][3];
+            ans3.Text = "You have selected the '" + ans31.Text + "' option"; */
+
             q1.Text = "Time Enroute";
             ans11.Text = "< 45 min";
             ans12.Text = "45 - 90 min";
             ans13.Text = "> 90 min";
 
-            q2.Text = "Thunderstorms Probability";
+            q2.Text = "Thunderstorm Probability";
             ans21.Text = "0 - 10%";
             ans22.Text = "11 - 29%";
             ans23.Text = "> 30%";
 
-            sc.defaultVals(ans11, ans12, ans13, ans1, time);
-            sc.defaultVals(ans21, ans22, ans23, ans2, thunder);
+            ans1.Text = "You have selected the '" + ans11.Text + "' option";
+            ans2.Text = "You have selected the '" + ans21.Text + "' option";
+
+            return view;
+        }
+
+        public override void OnActivityCreated(Bundle savedInstanceState)
+        {
+            base.OnActivityCreated(savedInstanceState);
+
+            ShortCutFunctions sc = new ShortCutFunctions();
 
             ans11.Touch += (s, e) =>
             {
-                time = sc.button1Pressed(ans11, ans12, ans13, ans1);
+                risk3 = 0;
+                mListener.onFragmentInteraction(risk3, risk4);
+                sc.button1Pressed(ans11, ans12, ans13, ans1);
             };
             ans12.Touch += (s, e) =>
             {
-                time = sc.button2Pressed(ans11, ans12, ans13, ans1);
+                risk3 = 1;
+                mListener.onFragmentInteraction(risk3, risk4);
+                sc.button2Pressed(ans11, ans12, ans13, ans1);
             };
             ans13.Touch += (s, e) =>
             {
-                time = sc.button3Pressed(ans11, ans12, ans13, ans1);
+                risk3 = 3;
+                mListener.onFragmentInteraction(risk3, risk4);
+                sc.button3Pressed(ans11, ans12, ans13, ans1);
             };
 
             ans21.Touch += (s, e) =>
             {
-                thunder = sc.button1Pressed(ans21, ans22, ans23, ans2);
+                risk4 = 0;
+                mListener.onFragmentInteraction(risk3, risk4);
+                sc.button1Pressed(ans21, ans22, ans23, ans2);
             };
             ans22.Touch += (s, e) =>
             {
-                thunder = sc.button2Pressed(ans21, ans22, ans23, ans2);
+                risk4 = 1;
+                mListener.onFragmentInteraction(risk3, risk4);
+                sc.button2Pressed(ans21, ans22, ans23, ans2);
             };
             ans23.Touch += (s, e) =>
             {
-                thunder = sc.button3Pressed(ans21, ans22, ans23, ans2);
+                risk4 = 3;
+                mListener.onFragmentInteraction(risk3, risk4);
+                sc.button3Pressed(ans21, ans22, ans23, ans2);
             };
 
-            return View;
+
+
+        }
+
+        public override void OnAttach(Context context)
+        {
+            base.OnAttach(context);
+
+            try
+            {
+                mListener = (OnFragmentInteractionListener)Activity;
+            }
+            catch (Exception ex) { }
+        }
+
+
+        public void onFragmentInteraction(int riskOut, int riskOut2)
+        {
+
+        }
+
+        public void onFragmentInteraction(int riskOut, int riskOut2, int r3)
+        {
         }
     }
 }

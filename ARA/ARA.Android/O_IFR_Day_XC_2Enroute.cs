@@ -12,49 +12,42 @@ using Android.Support.V4.Widget;
 using System.Collections.Generic;
 using SupportFragment = Android.Support.V4.App.Fragment;
 using Android.Support.V4.App;
-using ARA.Droid.Fragments;
 using Newtonsoft.Json;
 using System.IO;
+using ARA.Droid.Fragments;
 
 namespace ARA.Droid
 {
     [Activity(Label = "Enroute", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
-    public class O_IFR_Day_XC_2Enroute : FragmentActivity, OnFragmentInteractionListener 
+    public class O_IFR_Day_XC_2Enroute : FragmentActivity, OnFragmentInteractionListener
     {
-        private N_IFR_Day_Local3 mFrg1;
-        private N_IFR_Day_Local4 mFrg2;
+        public static int enroute;
+        public static int questionNum;
         private Stack<SupportFragment> mStackFragment;
         private ImageButton btnNext;
         private ImageButton btnBack;
         private SupportFragment mCurrent;
 
-        public static int questionNum; //int to keep track of which number question of the section
-
-        public static int AltRisk, r1, r2; //indivdual risks for IFR day local       
-
-        public static string JSON_ARRAY = "IFR_Day_Local_Alternate.json";
-        public static string RISK_TYPE = "Alternate Risk";
-
-        public static int[] questionArray = new int[6];
+        public static int[] questionArray = new int[4];
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.fragmentHolder);   
+            SetContentView(Resource.Layout.fragmentHolder);
 
             btnNext = FindViewById<ImageButton>(Resource.Id.btnContinueFragment);
             btnBack = FindViewById<ImageButton>(Resource.Id.btnBackFragment);
 
-            mFrg1 = new N_IFR_Day_Local3();
-            mFrg2 = new N_IFR_Day_Local4();
+            var mFrg1 = new O_IFR_Day_XC3();
+            var mFrg2 = new O_IFR_Day_XC4();
             mStackFragment = new Stack<SupportFragment>();
 
             var trans = SupportFragmentManager.BeginTransaction();
-            if (questionNum == 6)
+            if (questionNum == 4)
             {
                 mCurrent = mFrg2;
-                questionNum = 3;
+                questionNum = 2;
             }
             else
             {
@@ -64,44 +57,36 @@ namespace ARA.Droid
             trans.Add(Resource.Id.frameLayout1, mCurrent);
             trans.Commit();
 
-            Bundle bundle = new Bundle();
-            bundle.PutString("JSON Location", JSON_ARRAY);
-            bundle.PutString("Risk", RISK_TYPE);
+            Bundle bundle = new Bundle(); ;
 
             Android.App.FragmentTransaction fragmentTransaction = FragmentManager.BeginTransaction();
             mFrg2.Arguments = bundle;
-            mFrg1.Arguments = bundle;            
+            mFrg1.Arguments = bundle;
 
             var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
             var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
 
             ShortCutFunctions sc = new ShortCutFunctions();
-            sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", AltRisk, 10, 12);
-
+            sc.riskShow(txtRisk, txtRiskNum, "Enroute Risk", enroute, 7, 9);
 
             btnNext.Click += (s, e) =>
             {
                 if (mCurrent.Equals(mFrg2)) //determining question
                 {
-                    if (AltRisk > 11)
+                    if (enroute > 8)
                     {
-                        sc.alertShow("Alternate Risk", this);
+                        sc.alertShow("Enroute Risk", this);
                     }
                     else
                     {
-                        StartActivity(typeof(N_IFR_Day_Local_PIC));
-                        questionNum = 6;
-
+                        StartActivity(typeof(O_IFR_Day_XC_3Destination));
+                        questionNum = 4;
                     }
                 }
                 else
                 {
-                    questionNum += 3;
+                    questionNum += 2;
                     replaceFragment(mFrg2);
-
-                    bundle = new Bundle();
-                    bundle.PutString("JSON Location", JSON_ARRAY);
-                    fragmentTransaction = FragmentManager.BeginTransaction();
                 }
             };
 
@@ -109,27 +94,32 @@ namespace ARA.Droid
             {
                 if (mCurrent.Equals(mFrg1))
                 {
-                    StartActivity(typeof(N_IFR_Day_Local_Home));
+                    StartActivity(typeof(O_IFR_Day_XC_1Departure));
                 }
                 else
                 {
-                    questionNum -= 3;
                     replaceFragment(mFrg1);
-                    
-                    bundle = new Bundle();
-                    bundle.PutString("JSON Location", JSON_ARRAY);
-                    fragmentTransaction = FragmentManager.BeginTransaction();
+                    questionNum -= 2;
                 }
             };
         }
+
 
         public void replaceFragment(SupportFragment frg)
         {
             var ft = SupportFragmentManager.BeginTransaction();
             ft.Replace(Resource.Id.frameLayout1, frg);
-            ft.AddToBackStack(null);
             mCurrent = frg;
+            ft.AddToBackStack(null);
             ft.Commit();
+        }
+
+        public void onFragmentInteraction(int riskOut, int riskOut2, int r3)
+        {
+           
+                throw new NotImplementedException();
+
+            
         }
 
         public void onFragmentInteraction(int riskOut, int riskOut2)
@@ -137,11 +127,10 @@ namespace ARA.Droid
             ShortCutFunctions sc = new ShortCutFunctions();
             try
             {
-                r1 = riskOut + riskOut2;
                 var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
                 var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
-                AltRisk = r1 + r2;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", AltRisk, 10, 12);
+                enroute = O_IFR_Day_XC3.risk1 + O_IFR_Day_XC3.risk2 + O_IFR_Day_XC4.risk3 + O_IFR_Day_XC4.risk4;
+                sc.riskShow(txtRisk, txtRiskNum, "Enroute Risk", enroute, 7, 9);
                 questionArray[questionNum] = riskOut;
                 questionArray[questionNum + 1] = riskOut2;
             }
@@ -151,28 +140,5 @@ namespace ARA.Droid
 
             }
         }
-
-        public void onFragmentInteraction(int riskOut, int riskOut2, int r3)
-        {
-            ShortCutFunctions sc = new ShortCutFunctions();
-            try
-            {
-                r2 = riskOut + riskOut2 + r3;
-                var txtRisk = FindViewById<TextView>(Resource.Id.txtRiskFragment);
-                var txtRiskNum = FindViewById<TextView>(Resource.Id.txtRiskNumFragment);
-                AltRisk = N_IFR_Day_Local3.risk1 + N_IFR_Day_Local3.risk2 + N_IFR_Day_Local3.risk3 + N_IFR_Day_Local4.risk4 + N_IFR_Day_Local4.risk5 + N_IFR_Day_Local4.risk6;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", AltRisk, 10, 12);
-                questionArray[questionNum] = riskOut;
-                questionArray[questionNum + 1] = riskOut2;
-                questionArray[questionNum + 2] = r3;
-            }
-            catch (Exception e)
-            {
-                throw new NotImplementedException();
-
-            }
-        }
-
-
     }
 }

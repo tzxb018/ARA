@@ -133,7 +133,7 @@ namespace ARA.Droid
 
             btnBack.Click += delegate
             {
-                StartActivity(typeof(N_IFR_Day_Local_Alternate));
+                StartActivity(typeof(O_IFR_Day_XC_4Alternate));
             };
         }
     }

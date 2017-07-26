@@ -73,9 +73,7 @@ namespace ARA.Droid.Fragments
 
             ShortCutFunctions sc = new ShortCutFunctions();
 
-            sc.defaultVals(ans11, ans12, ans13, ans1, P_IFR_Dual_Local_4Alt.questionArray[P_IFR_Dual_Local_4Alt.questionNum]);
-            sc.defaultVals(ans21, ans22, ans23, ans2, P_IFR_Dual_Local_4Alt.questionArray[P_IFR_Dual_Local_4Alt.questionNum + 1]);
-            sc.defaultVals(ans31, ans32, ans33, ans3, P_IFR_Dual_Local_4Alt.questionArray[P_IFR_Dual_Local_4Alt.questionNum + 2]);
+            
 
             /*
             q1.Text = result.IFR_Day_Local_Questions_Alternate[N_IFR_Day_Local_Alternate.questionNum][0];
@@ -116,6 +114,10 @@ namespace ARA.Droid.Fragments
             base.OnActivityCreated(savedInstanceState);
 
             ShortCutFunctions sc = new ShortCutFunctions();
+
+            sc.defaultVals(ans11, ans12, ans13, ans1, P_IFR_Dual_Local_4Alt.questionArray[P_IFR_Dual_Local_4Alt.questionNum]);
+            sc.defaultVals(ans21, ans22, ans23, ans2, P_IFR_Dual_Local_4Alt.questionArray[P_IFR_Dual_Local_4Alt.questionNum + 1]);
+            sc.defaultVals(ans31, ans32, ans33, ans3, P_IFR_Dual_Local_4Alt.questionArray[P_IFR_Dual_Local_4Alt.questionNum + 2]);
 
             ans11.Touch += (s, e) =>
             {

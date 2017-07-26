@@ -99,9 +99,6 @@ namespace ARA.Droid.Fragments
             ans22.Text = "6 - 10 kts";
             ans23.Text = "11 - 15 kts";
 
-            ans1.Text = "You have selected the '" + ans11.Text + "' option";
-            ans2.Text = "You have selected the '" + ans21.Text + "' option";
-
             return view;
         }
 

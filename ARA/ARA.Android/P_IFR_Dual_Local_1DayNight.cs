@@ -13,7 +13,7 @@ using ARA.Droid.Fragments;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Home Airfield - Time Assessment", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, MainLauncher = true)]
+    [Activity(Label = "Home Airfield - Time Assessment", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class P_IFR_Dual_Local_1DayNight : Activity
     {
         public static int time, dayCeiling, nightCeiling, timeRisk;

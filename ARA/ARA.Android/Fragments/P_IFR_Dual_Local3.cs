@@ -99,8 +99,6 @@ namespace ARA.Droid.Fragments
             ans22.Text = "Non-Precision";
             ans23.Text = "Circling";
 
-            ans1.Text = "You have selected the '" + ans11.Text + "' option";
-            ans2.Text = "You have selected the '" + ans21.Text + "' option";
 
             return view;
         }

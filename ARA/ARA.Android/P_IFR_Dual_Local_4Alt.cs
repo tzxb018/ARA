@@ -18,7 +18,7 @@ using ARA.Droid.Fragments;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Alternate", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+    [Activity(Label = "Alternate", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, MainLauncher = true)]
     public class P_IFR_Dual_Local_4Alt : FragmentActivity, OnFragmentInteractionListener
     {
         public static int altRisk;

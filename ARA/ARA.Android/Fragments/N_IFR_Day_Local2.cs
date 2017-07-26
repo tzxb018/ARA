@@ -89,13 +89,11 @@ namespace ARA.Droid.Fragments
             ans11.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][1];
             ans12.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][2];
             ans13.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum][3];
-            ans1.Text = "You have selected the '" + ans11.Text + "' option";
 
             q2.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][0];
             ans21.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][1];
             ans22.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][2];
             ans23.Text = result.IFR_Day_Local_Questions_Home_Airfield[N_IFR_Day_Local_Home.questionNum + 1][3];
-            ans2.Text = "You have selected the '" + ans21.Text + "' option";
 
             return view;
         }

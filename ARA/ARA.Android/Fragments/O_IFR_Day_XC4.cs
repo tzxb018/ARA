@@ -99,9 +99,6 @@ namespace ARA.Droid.Fragments
             ans22.Text = "11 - 29%";
             ans23.Text = "> 30%";
 
-            ans1.Text = "You have selected the '" + ans11.Text + "' option";
-            ans2.Text = "You have selected the '" + ans21.Text + "' option";
-
             return view;
         }
 

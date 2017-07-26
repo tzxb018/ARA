@@ -1,14 +1,20 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 using Android.App;
+using Android.Content;
 using Android.OS;
+using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using ARA.Droid.Fragments;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Alternate", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
-    public class P_IFR_Dual_Local_3DayNight : Activity
+    [Activity(Label = "Alternate")]
+    public class Q_IFR_Dual_XC_7AlternateDayandNight : Activity
     {
         public static int dayCeiling, nightCeiling, ceilingRisk;
 
@@ -46,7 +52,7 @@ namespace ARA.Droid
             sc.defaultVals(btn1500, btn1200, btn1000to, txtNight, nightCeiling);
             sc.defaultVals(btn1000, btn800, btn600, txtDay, dayCeiling);
 
-            if (P_IFR_Dual_Local_1DayNight.time == 0)
+            if (Q_IFR_Dual_XC_1DayNight.time == 0)
             {
                 ceilingRisk = dayCeiling;
                 lblDay.Visibility = ViewStates.Visible;
@@ -60,7 +66,7 @@ namespace ARA.Droid
                 btn1000to.Visibility = ViewStates.Invisible;
                 txtNight.Visibility = ViewStates.Invisible;
             }
-            else if (P_IFR_Dual_Local_1DayNight.time == 1)
+            else if (Q_IFR_Dual_XC_1DayNight.time == 1)
             {
                 ceilingRisk = nightCeiling;
                 lblDay.Visibility = ViewStates.Invisible;
@@ -88,13 +94,13 @@ namespace ARA.Droid
                 txtDay.Visibility = ViewStates.Visible;
                 txtNight.Visibility = ViewStates.Visible;
             }
-            P_IFR_Dual_Local_4Alt.altRisk = P_IFR_Dual_Local3.risk1 + P_IFR_Dual_Local3.risk2 + P_IFR_Dual_Local4.risk3 + P_IFR_Dual_Local4.risk4 + P_IFR_Dual_Local4.risk5 + P_IFR_Dual_Local_3DayNight.ceilingRisk;
-            sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", P_IFR_Dual_Local_4Alt.altRisk, 9, 12);
+            Q_IFR_Dual_XC_8Alternate.altRisk = Q_IFR_Dual_XC_7AlternateDayandNight.ceilingRisk + Q_IFR_Dual_XC7.risk1 + Q_IFR_Dual_XC7.risk2 + Q_IFR_Dual_XC8.risk3 + Q_IFR_Dual_XC8.risk4 + Q_IFR_Dual_XC8.risk5;
+            sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", Q_IFR_Dual_XC_8Alternate.altRisk, 9, 12);
 
             btn1500.Touch += (s, e) =>
             {
                 nightCeiling = sc.button1Pressed(btn1500, btn1200, btn1000to, txtNight);
-                if (P_IFR_Dual_Local_1DayNight.time == 0)
+                if (Q_IFR_Dual_XC_1DayNight.time == 0)
                 {
                     ceilingRisk = dayCeiling;
                     lblDay.Visibility = ViewStates.Visible;
@@ -108,7 +114,7 @@ namespace ARA.Droid
                     btn1000to.Visibility = ViewStates.Invisible;
                     txtNight.Visibility = ViewStates.Invisible;
                 }
-                else if (P_IFR_Dual_Local_1DayNight.time == 1)
+                else if (Q_IFR_Dual_XC_1DayNight.time == 1)
                 {
                     ceilingRisk = nightCeiling;
                     lblDay.Visibility = ViewStates.Invisible;
@@ -136,13 +142,13 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                P_IFR_Dual_Local_4Alt.altRisk = P_IFR_Dual_Local3.risk1 + P_IFR_Dual_Local3.risk2 + P_IFR_Dual_Local4.risk3 + P_IFR_Dual_Local4.risk4 + P_IFR_Dual_Local4.risk5 + P_IFR_Dual_Local_3DayNight.ceilingRisk;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", P_IFR_Dual_Local_4Alt.altRisk, 9, 12);
+                Q_IFR_Dual_XC_8Alternate.altRisk = Q_IFR_Dual_XC_7AlternateDayandNight.ceilingRisk + Q_IFR_Dual_XC7.risk1 + Q_IFR_Dual_XC7.risk2 + Q_IFR_Dual_XC8.risk3 + Q_IFR_Dual_XC8.risk4 + Q_IFR_Dual_XC8.risk5;
+                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", Q_IFR_Dual_XC_8Alternate.altRisk, 9, 12);
             };
             btn1200.Touch += (s, e) =>
             {
                 nightCeiling = sc.button2Pressed(btn1500, btn1200, btn1000to, txtNight);
-                if (P_IFR_Dual_Local_1DayNight.time == 0)
+                if (Q_IFR_Dual_XC_1DayNight.time == 0)
                 {
                     ceilingRisk = dayCeiling;
                     lblDay.Visibility = ViewStates.Visible;
@@ -156,7 +162,7 @@ namespace ARA.Droid
                     btn1000to.Visibility = ViewStates.Invisible;
                     txtNight.Visibility = ViewStates.Invisible;
                 }
-                else if (P_IFR_Dual_Local_1DayNight.time == 1)
+                else if (Q_IFR_Dual_XC_1DayNight.time == 1)
                 {
                     ceilingRisk = nightCeiling;
                     lblDay.Visibility = ViewStates.Invisible;
@@ -184,13 +190,13 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                P_IFR_Dual_Local_4Alt.altRisk = P_IFR_Dual_Local3.risk1 + P_IFR_Dual_Local3.risk2 + P_IFR_Dual_Local4.risk3 + P_IFR_Dual_Local4.risk4 + P_IFR_Dual_Local4.risk5 + P_IFR_Dual_Local_3DayNight.ceilingRisk;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", P_IFR_Dual_Local_4Alt.altRisk, 9, 12);
+                Q_IFR_Dual_XC_8Alternate.altRisk = Q_IFR_Dual_XC_7AlternateDayandNight.ceilingRisk + Q_IFR_Dual_XC7.risk1 + Q_IFR_Dual_XC7.risk2 + Q_IFR_Dual_XC8.risk3 + Q_IFR_Dual_XC8.risk4 + Q_IFR_Dual_XC8.risk5;
+                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", Q_IFR_Dual_XC_8Alternate.altRisk, 9, 12);
             };
             btn1000to.Touch += (s, e) =>
             {
                 nightCeiling = sc.button3Pressed(btn1500, btn1200, btn1000to, txtNight);
-                if (P_IFR_Dual_Local_1DayNight.time == 0)
+                if (Q_IFR_Dual_XC_1DayNight.time == 0)
                 {
                     ceilingRisk = dayCeiling;
                     lblDay.Visibility = ViewStates.Visible;
@@ -204,7 +210,7 @@ namespace ARA.Droid
                     btn1000to.Visibility = ViewStates.Invisible;
                     txtNight.Visibility = ViewStates.Invisible;
                 }
-                else if (P_IFR_Dual_Local_1DayNight.time == 1)
+                else if (Q_IFR_Dual_XC_1DayNight.time == 1)
                 {
                     ceilingRisk = nightCeiling;
                     lblDay.Visibility = ViewStates.Invisible;
@@ -232,14 +238,14 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                P_IFR_Dual_Local_4Alt.altRisk = P_IFR_Dual_Local3.risk1 + P_IFR_Dual_Local3.risk2 + P_IFR_Dual_Local4.risk3 + P_IFR_Dual_Local4.risk4 + P_IFR_Dual_Local4.risk5 + P_IFR_Dual_Local_3DayNight.ceilingRisk;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", P_IFR_Dual_Local_4Alt.altRisk, 9, 12);
+                Q_IFR_Dual_XC_8Alternate.altRisk = Q_IFR_Dual_XC_7AlternateDayandNight.ceilingRisk + Q_IFR_Dual_XC7.risk1 + Q_IFR_Dual_XC7.risk2 + Q_IFR_Dual_XC8.risk3 + Q_IFR_Dual_XC8.risk4 + Q_IFR_Dual_XC8.risk5;
+                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", Q_IFR_Dual_XC_8Alternate.altRisk, 9, 12);
             };
 
             btn1000.Touch += (s, e) =>
             {
                 dayCeiling = sc.button1Pressed(btn1000, btn800, btn600, txtDay);
-                if (P_IFR_Dual_Local_1DayNight.time == 0)
+                if (Q_IFR_Dual_XC_1DayNight.time == 0)
                 {
                     ceilingRisk = dayCeiling;
                     lblDay.Visibility = ViewStates.Visible;
@@ -253,7 +259,7 @@ namespace ARA.Droid
                     btn1000to.Visibility = ViewStates.Invisible;
                     txtNight.Visibility = ViewStates.Invisible;
                 }
-                else if (P_IFR_Dual_Local_1DayNight.time == 1)
+                else if (Q_IFR_Dual_XC_1DayNight.time == 1)
                 {
                     ceilingRisk = nightCeiling;
                     lblDay.Visibility = ViewStates.Invisible;
@@ -281,13 +287,13 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                P_IFR_Dual_Local_4Alt.altRisk = P_IFR_Dual_Local3.risk1 + P_IFR_Dual_Local3.risk2 + P_IFR_Dual_Local4.risk3 + P_IFR_Dual_Local4.risk4 + P_IFR_Dual_Local4.risk5 + P_IFR_Dual_Local_3DayNight.ceilingRisk;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", P_IFR_Dual_Local_4Alt.altRisk, 9, 12);
+                Q_IFR_Dual_XC_8Alternate.altRisk = Q_IFR_Dual_XC_7AlternateDayandNight.ceilingRisk + Q_IFR_Dual_XC7.risk1 + Q_IFR_Dual_XC7.risk2 + Q_IFR_Dual_XC8.risk3 + Q_IFR_Dual_XC8.risk4 + Q_IFR_Dual_XC8.risk5;
+                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", Q_IFR_Dual_XC_8Alternate.altRisk, 9, 12);
             };
             btn800.Touch += (s, e) =>
             {
                 dayCeiling = sc.button2Pressed(btn1000, btn800, btn600, txtDay);
-                if (P_IFR_Dual_Local_1DayNight.time == 0)
+                if (Q_IFR_Dual_XC_1DayNight.time == 0)
                 {
                     ceilingRisk = dayCeiling;
                     lblDay.Visibility = ViewStates.Visible;
@@ -301,7 +307,7 @@ namespace ARA.Droid
                     btn1000to.Visibility = ViewStates.Invisible;
                     txtNight.Visibility = ViewStates.Invisible;
                 }
-                else if (P_IFR_Dual_Local_1DayNight.time == 1)
+                else if (Q_IFR_Dual_XC_1DayNight.time == 1)
                 {
                     ceilingRisk = nightCeiling;
                     lblDay.Visibility = ViewStates.Invisible;
@@ -329,13 +335,13 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                P_IFR_Dual_Local_4Alt.altRisk = P_IFR_Dual_Local3.risk1 + P_IFR_Dual_Local3.risk2 + P_IFR_Dual_Local4.risk3 + P_IFR_Dual_Local4.risk4 + P_IFR_Dual_Local4.risk5 + P_IFR_Dual_Local_3DayNight.ceilingRisk;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", P_IFR_Dual_Local_4Alt.altRisk, 9, 12);
+                Q_IFR_Dual_XC_8Alternate.altRisk = Q_IFR_Dual_XC_7AlternateDayandNight.ceilingRisk + Q_IFR_Dual_XC7.risk1 + Q_IFR_Dual_XC7.risk2 + Q_IFR_Dual_XC8.risk3 + Q_IFR_Dual_XC8.risk4 + Q_IFR_Dual_XC8.risk5;
+                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", Q_IFR_Dual_XC_8Alternate.altRisk, 9, 12);
             };
             btn600.Touch += (s, e) =>
             {
                 dayCeiling = sc.button3Pressed(btn1000, btn800, btn600, txtDay);
-                if (P_IFR_Dual_Local_1DayNight.time == 0)
+                if (Q_IFR_Dual_XC_1DayNight.time == 0)
                 {
                     ceilingRisk = dayCeiling;
                     lblDay.Visibility = ViewStates.Visible;
@@ -349,7 +355,7 @@ namespace ARA.Droid
                     btn1000to.Visibility = ViewStates.Invisible;
                     txtNight.Visibility = ViewStates.Invisible;
                 }
-                else if (P_IFR_Dual_Local_1DayNight.time == 1)
+                else if (Q_IFR_Dual_XC_1DayNight.time == 1)
                 {
                     ceilingRisk = nightCeiling;
                     lblDay.Visibility = ViewStates.Invisible;
@@ -377,22 +383,22 @@ namespace ARA.Droid
                     txtDay.Visibility = ViewStates.Visible;
                     txtNight.Visibility = ViewStates.Visible;
                 }
-                P_IFR_Dual_Local_4Alt.altRisk = P_IFR_Dual_Local3.risk1 + P_IFR_Dual_Local3.risk2 + P_IFR_Dual_Local4.risk3 + P_IFR_Dual_Local4.risk4 + P_IFR_Dual_Local4.risk5 + P_IFR_Dual_Local_3DayNight.ceilingRisk;
-                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", P_IFR_Dual_Local_4Alt.altRisk, 9, 12);
+                Q_IFR_Dual_XC_8Alternate.altRisk = Q_IFR_Dual_XC_7AlternateDayandNight.ceilingRisk + Q_IFR_Dual_XC7.risk1 + Q_IFR_Dual_XC7.risk2 + Q_IFR_Dual_XC8.risk3 + Q_IFR_Dual_XC8.risk4 + Q_IFR_Dual_XC8.risk5;
+                sc.riskShow(txtRisk, txtRiskNum, "Alternate Risk", Q_IFR_Dual_XC_8Alternate.altRisk, 9, 12);
             };
 
-            
+
             var btnNext = FindViewById<ImageButton>(Resource.Id.btnContinueFrom2);
             var btnBack = FindViewById<ImageButton>(Resource.Id.btnBackfrom2);
 
             btnNext.Click += delegate
             {
-                StartActivity(typeof(P_IFR_Dual_Local_4Alt));
+                StartActivity(typeof(Q_IFR_Dual_XC_8Alternate));
             };
 
             btnBack.Click += delegate
             {
-                StartActivity(typeof(P_IFR_Dual_Local_2Home));
+                StartActivity(typeof(Q_IFR_Dual_XC_6Destination));
             };
         }
     }

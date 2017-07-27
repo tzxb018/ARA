@@ -134,7 +134,19 @@ namespace ARA.Droid
             };
 
             btnNext.Click += (s, e) => {
-                StartActivity(typeof(Z_Risk_Summary));
+                if (string.IsNullOrEmpty(aircraft))
+                {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                    alert.SetTitle("Alert");
+                    alert.SetMessage("You need to input an aircraft number");
+                    alert.SetNeutralButton("OK", delegate
+                    {
+                        alert.Dispose();
+                    });
+                    alert.Show();
+                }
+                else
+                    StartActivity(typeof(Z_Risk_Summary));
             };
         }
 

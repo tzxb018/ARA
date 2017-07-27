@@ -199,7 +199,7 @@ namespace ARA.Droid
                 }
                 string subjectDate = "Risk Assessment Survey - " + E_Personal_Information.first + " " + E_Personal_Information.last + " (" + month + "/" + day + "/" + year + ")"; 
                 email.PutExtra(Intent.ExtraSubject, subjectDate); //subject
-                email.PutExtra(Intent.ExtraText, E_Personal_Information.first + " " + E_Personal_Information.last + "\n" + "\n" +  txtFlight.Text.ToString() + "\n"+ "\n" + txtSHF.Text.ToString() + "\n" + "\n" + txtRisk1.Text.ToString() + "\n" + "\n" + txtRisk2.Text.ToString() + "\n" + "\n" +  txtRisk3.Text.ToString() + "\n" + "\n" + txtRisk4.Text.ToString() + "\n" + "\n" + txtRisk5.Text.ToString() + "\n" + "\n" + "\n" +  "Sent by Aviation Risk Assessment App"); //text
+                email.PutExtra(Intent.ExtraText, "Student Name: " + E_Personal_Information.first + " " + E_Personal_Information.last +  "Flight Time: " + E_Personal_Information.hour + ":" + E_Personal_Information.min + " \n" + "Aircraft Number: " + Y_Aircraft_and_Instructor.aircraft + "\n" + "\n" +  txtFlight.Text.ToString() + "\n"+ "\n" + txtSHF.Text.ToString() + "\n" + "\n" + txtRisk1.Text.ToString() + "\n" + "\n" + txtRisk2.Text.ToString() + "\n" + "\n" +  txtRisk3.Text.ToString() + "\n" + "\n" + txtRisk4.Text.ToString() + "\n" + "\n" + txtRisk5.Text.ToString() + "\n" + "\n" + "\n" +  "Sent by Aviation Risk Assessment App"); //text
                 email.SetType("message/rfc822");
                 StartActivity(Intent.CreateChooser(email, "Send Email Via"));
             };

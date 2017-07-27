@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Aircraft and Instructor")]
+    [Activity(Label = "Aircraft and Instructor", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, MainLauncher = true)]
     public class Y_Aircraft_and_Instructor : Activity
     {
         public static string aircraft, instructor, personal, email;
@@ -32,14 +32,31 @@ namespace ARA.Droid
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spinner.Adapter = adapter;
 
-            
-
 
             EditText txtAircraft = FindViewById<EditText>(Resource.Id.txtAircraft);
             AutoCompleteTextView txtEmail = FindViewById<AutoCompleteTextView>(Resource.Id.txtYourEmail);
 
-            aircraft = txtAircraft.Text;
-            personal = txtEmail.Text;
+            if (!(String.IsNullOrEmpty(personal)))
+            {
+                txtEmail.Text = personal;
+            }
+
+            if (!(String.IsNullOrEmpty(aircraft)))
+            {
+                txtAircraft.Text = aircraft;
+            }
+
+
+            txtEmail.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
+                personal = txtEmail.Text;
+            };
+
+
+            txtAircraft.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
+                aircraft = txtAircraft.Text;
+            };
 
             var btnNext = FindViewById<ImageButton>(Resource.Id.btnContinueFromAandI);
             var btnBack = FindViewById<ImageButton>(Resource.Id.btnBackfromAandI);
@@ -124,6 +141,9 @@ namespace ARA.Droid
         private void Spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Spinner spinner = (Spinner)sender;
+            instructor = (string)spinner.GetItemAtPosition(e.Position);
+
+
 
             if (instructor.Equals("Tom Arington"))
             {
@@ -236,7 +256,9 @@ namespace ARA.Droid
             else if (instructor.Equals("Mark Wunderlich"))
             {
                 email = "mark1derlich@gmail.com";
+                int a = 1;
             }
+
         }
     }
 

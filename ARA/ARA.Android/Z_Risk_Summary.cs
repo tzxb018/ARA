@@ -12,9 +12,11 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Risk Summary")]
+    [Activity(Label = "Risk Summary", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class Z_Risk_Summary : Activity
     {
+        public int year = DateTime.Now.Year, month = DateTime.Now.Month - 1, day = DateTime.Now.Day;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -113,7 +115,7 @@ namespace ARA.Droid
                         txtRisk3.Visibility = ViewStates.Visible;
                         txtRisk4.Visibility = ViewStates.Visible;
                         txtRisk5.Visibility = ViewStates.Visible;
-                        sc.riskSummary("Enroute or Practice Area Risk", txtRisk2, M_VFR_Night_XC3.enrouteRisk, 8, 10);
+                        sc.riskSummary("Enroute or Practice Area Risk", txtRisk2, M_VFR_Night_XC3.enrouteRisk, 7, 9);
                         sc.riskSummary("Destination or Aux Field Risk", txtRisk3, M_VFR_Night_XC5.DestinationRisk, 9, 12);
                         sc.riskSummary("Alternate Risk", txtRisk4, M_VFR_Night_XC7.altRisk, 9, 12);
                         sc.riskSummary("PIC Risk", txtRisk5, M_VFR_Night_XC9.pic, 2, 3);
@@ -156,26 +158,27 @@ namespace ARA.Droid
                         txtFlight.Text = "Flying under IFR - Day, Commerical/CFI Solo - Local Area (10)";
                         sc.riskSummary("Total Risk - Student Human Factors", txtSHF, F_Student_Human_Factors.SHFRisk, 7, 9);
                         txtRisk1.Text = "Home Airfield Risk: " + N_IFR_Day_Local_Home.HomeRisk;
+                        sc.riskSummary("Home Airfield Risk", txtRisk1, N_IFR_Day_Local_Home.HomeRisk, 8, 10);
                         txtRisk2.Visibility = ViewStates.Visible;
                         txtRisk3.Visibility = ViewStates.Visible;
                         txtRisk4.Visibility = ViewStates.Invisible;
                         txtRisk5.Visibility = ViewStates.Invisible;
-                        txtRisk2.Text = "Alternate Risk: " + N_IFR_Day_Local_Alternate.AltRisk;
-                        txtRisk3.Text = "PIC Risk: " + N_IFR_Day_Local_PIC.PIC;
+                        sc.riskSummary("Alternate Risk" , txtRisk2, N_IFR_Day_Local_Alternate.AltRisk, 10, 12);
+                        sc.riskSummary("PIC Risk", txtRisk3, N_IFR_Day_Local_PIC.PIC, 2, 3);
                     }
                     else //XC
                     {
                         txtFlight.Text = "Flying under IFR - Day, Commercial/CFI Solo - Cross Country (11)";
                         sc.riskSummary("Total Risk - Student Human Factors", txtSHF, F_Student_Human_Factors.SHFRisk, 7, 9);
-                        txtRisk1.Text = "Departure Airfield Risk: " + O_IFR_Day_XC_1Departure.HomeRisk;
+                        sc.riskSummary("Departure Airfield Risk",txtRisk1, O_IFR_Day_XC_1Departure.HomeRisk, 8, 10);
                         txtRisk2.Visibility = ViewStates.Visible;
                         txtRisk3.Visibility = ViewStates.Visible;
                         txtRisk4.Visibility = ViewStates.Visible;
                         txtRisk5.Visibility = ViewStates.Visible;
-                        txtRisk2.Text = "Enroute Risk: " + O_IFR_Day_XC_2Enroute.enroute;
-                        txtRisk3.Text = "Destination Risk: " + O_IFR_Day_XC_3Destination.destinationRisk;
-                        txtRisk4.Text = "Alternate Risk: " + O_IFR_Day_XC_4Alternate.AltRisk;
-                        txtRisk5.Text = "PIC Risk: " + O_IFR_Day_XC_5PIC.PIC;
+                        sc.riskSummary("Enroute Risk", txtRisk2, O_IFR_Day_XC_2Enroute.enroute, 7, 9);
+                        sc.riskSummary("Destination Risk", txtRisk3, O_IFR_Day_XC_3Destination.destinationRisk, 8, 10);
+                        sc.riskSummary("Alternate Risk", txtRisk4, O_IFR_Day_XC_4Alternate.AltRisk, 9, 12);
+                        sc.riskSummary("PIC Risk", txtRisk5, O_IFR_Day_XC_5PIC.PIC, 2, 3);
                     }
                 }
             }
@@ -185,7 +188,21 @@ namespace ARA.Droid
                StartActivity(typeof(Y_Aircraft_and_Instructor));
            };
 
-            btnNext.Visibility = ViewStates.Invisible;
+            btnNext.Click += (s, e) =>
+            {
+                Intent email = new Intent(Intent.ActionSend);
+                email.PutExtra(Intent.ExtraEmail, new string[] {Y_Aircraft_and_Instructor.email});
+
+                if (!(string.IsNullOrEmpty(Y_Aircraft_and_Instructor.personal)))
+                {
+                    email.PutExtra(Android.Content.Intent.ExtraCc, new string[] { Y_Aircraft_and_Instructor.personal });
+                }
+                string subjectDate = "Risk Assessment Survey - " + E_Personal_Information.first + " " + E_Personal_Information.last + " (" + month + "/" + day + "/" + year + ")"; 
+                email.PutExtra(Intent.ExtraSubject, subjectDate); //subject
+                email.PutExtra(Intent.ExtraText, E_Personal_Information.first + " " + E_Personal_Information.last + "\n" + "\n" +  txtFlight.Text.ToString() + "\n"+ "\n" + txtSHF.Text.ToString() + "\n" + "\n" + txtRisk1.Text.ToString() + "\n" + "\n" + txtRisk2.Text.ToString() + "\n" + "\n" +  txtRisk3.Text.ToString() + "\n" + "\n" + txtRisk4.Text.ToString() + "\n" + "\n" + txtRisk5.Text.ToString() + "\n" + "\n" + "\n" +  "Sent by Aviation Risk Assessment App"); //text
+                email.SetType("message/rfc822");
+                StartActivity(Intent.CreateChooser(email, "Send Email Via"));
+            };
         }
 
     }

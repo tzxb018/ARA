@@ -13,7 +13,7 @@ using ARA.Droid.Fragments;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Alternate")]
+    [Activity(Label = "Alternate", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class Q_IFR_Dual_XC_7AlternateDayandNight : Activity
     {
         public static int dayCeiling, nightCeiling, ceilingRisk;

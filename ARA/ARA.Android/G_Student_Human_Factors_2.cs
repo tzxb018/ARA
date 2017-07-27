@@ -627,11 +627,39 @@ namespace ARA.Droid
                     {
                         if (D_Syllabus_Activity.isLocal) //Local
                         {
-                            
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(P_IFR_Dual_Local_1DayNight));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
                         }
                         else //XC
                         {
-
+                            if (F_Student_Human_Factors.SHFRisk < 9)
+                            {
+                                StartActivity(typeof(Q_IFR_Dual_XC_1DayNight));
+                            }
+                            else
+                            {
+                                AlertDialog.Builder alertSHFisHigh = new AlertDialog.Builder(this);
+                                alertSHFisHigh.SetTitle("Alert");
+                                alertSHFisHigh.SetMessage("Your Student Human Factor Risk is too high!");
+                                alertSHFisHigh.SetNeutralButton("OK", delegate
+                                {
+                                    alertSHFisHigh.Dispose();
+                                });
+                                alertSHFisHigh.Show();
+                            }
                         }
                     }
                     else //Night

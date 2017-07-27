@@ -168,6 +168,25 @@ namespace ARA.Droid
             });
             alert.Show();
         }
+
+        public void riskSummary(string risktype, TextView riskText, int risk, int low, int med)
+        {
+            if (risk < low)
+            {
+                riskText.SetTextColor(Android.Graphics.Color.Green);
+                riskText.Text = risktype + " - OKAY: " + risk;
+            }
+            else if (risk >= low && risk < med)
+            {
+                riskText.SetTextColor(Android.Graphics.Color.Yellow);
+                riskText.Text = risktype + " - CAUTION: " + risk ;
+            }
+            else
+            {
+                riskText.SetTextColor(Android.Graphics.Color.Red);
+                riskText.Text = risktype + " - NO GO! :" + risk;
+            }
+        }
        
     }
 }

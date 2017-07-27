@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Aircraft and Instructor", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, MainLauncher = true)]
+    [Activity(Label = "Aircraft and Instructor", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class Y_Aircraft_and_Instructor : Activity
     {
         public static string aircraft, instructor, personal, email;

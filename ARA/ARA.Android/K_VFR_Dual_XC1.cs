@@ -59,9 +59,9 @@ namespace ARA.Droid
             btn24to30.Text = "24 - 30 kts";
 
             lblWindCFI.Text = "Wind (CFI)";
-            btn0to15CFI.Text = "0 - 15 kts";
-            btn16to25.Text = "16 - 25 kts";
-            btn26to35.Text = "26 - 35 kts";
+            btn0to15CFI.Text = "0 - 5 kts";
+            btn16to25.Text = "6 - 10 kts";
+            btn26to35.Text = "11 - 15 kts";
 
             ShortCutFunctions class1 = new ShortCutFunctions();
             class1.defaultVals(btn0to15, btn16to20, btn21to25, txtWindPIME, windPime);

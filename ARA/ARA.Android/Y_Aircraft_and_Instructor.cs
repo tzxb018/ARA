@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ARA.Droid
 {
-    [Activity(Label = "Aircraft and Instructor")]
+    [Activity(Label = "Aircraft and Instructor", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait, MainLauncher = true)]
     public class Y_Aircraft_and_Instructor : Activity
     {
         public static string aircraft, instructor, personal, email;
@@ -32,14 +32,31 @@ namespace ARA.Droid
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spinner.Adapter = adapter;
 
-            
-
 
             EditText txtAircraft = FindViewById<EditText>(Resource.Id.txtAircraft);
             AutoCompleteTextView txtEmail = FindViewById<AutoCompleteTextView>(Resource.Id.txtYourEmail);
 
-            aircraft = txtAircraft.Text;
-            personal = txtEmail.Text;
+            if (!(String.IsNullOrEmpty(personal)))
+            {
+                txtEmail.Text = personal;
+            }
+
+            if (!(String.IsNullOrEmpty(aircraft)))
+            {
+                txtAircraft.Text = aircraft;
+            }
+
+
+            txtEmail.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
+                personal = txtEmail.Text;
+            };
+
+
+            txtAircraft.TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
+            {
+                aircraft = txtAircraft.Text;
+            };
 
             var btnNext = FindViewById<ImageButton>(Resource.Id.btnContinueFromAandI);
             var btnBack = FindViewById<ImageButton>(Resource.Id.btnBackfromAandI);
@@ -95,11 +112,11 @@ namespace ARA.Droid
                     {
                         if (D_Syllabus_Activity.isLocal) //Local
                         {
-
+                            StartActivity(typeof(P_IFR_Dual_Local_4Alt));
                         }
                         else //XC
                         {
-
+                            StartActivity(typeof(Q_IFR_Dual_XC_8Alternate));
                         }
                     }
                     else //Night
@@ -117,13 +134,142 @@ namespace ARA.Droid
             };
 
             btnNext.Click += (s, e) => {
-                StartActivity(typeof(Z_Risk_Summary));
+                if (string.IsNullOrEmpty(aircraft))
+                {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                    alert.SetTitle("Alert");
+                    alert.SetMessage("You need to input an aircraft number");
+                    alert.SetNeutralButton("OK", delegate
+                    {
+                        alert.Dispose();
+                    });
+                    alert.Show();
+                }
+                else
+                    StartActivity(typeof(Z_Risk_Summary));
             };
         }
 
         private void Spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Spinner spinner = (Spinner)sender;
+            instructor = (string)spinner.GetItemAtPosition(e.Position);
+
+
+
+            if (instructor.Equals("Tom Arington"))
+            {
+                email = "tarington@unomaha.edu";
+            }
+            else if (instructor.Equals("Jim Beyers"))
+            {
+                email = "jimbeyer34@gmail.com";
+            }
+            else if (instructor.Equals("Nick Bolander"))
+            {
+                email = "bolandernb@gmail.com";
+            }
+            else if (instructor.Equals("Eric Busskohl"))
+            {
+                email = "ebusskohl23@gmail.com";
+            }
+            else if (instructor.Equals("Thomas Christoffersen"))
+            {
+                email = "thchristoffersen@gmai.com";
+            }
+            else if (instructor.Equals("Benji Cunningham"))
+            {
+                email = "benjicunningham05@gmail.com";
+            }
+            else if (instructor.Equals("Steve Dethlefs"))
+            {
+                email = "sdethlefs22@gmail.com";
+            }
+            else if (instructor.Equals("Ken Green"))
+            {
+                email = "ksgreen54@yahoo.com";
+            }
+            else if (instructor.Equals("Joe Gustafson"))
+            {
+                email = "joeaugustafson68112@gmail.com";
+            }
+            else if (instructor.Equals("David Haller"))
+            {
+                email = "David.Haller@airmethods.com";
+            }
+            else if (instructor.Equals("Adam Liston"))
+            {
+                email = "ajiliston08@gmail.com";
+            }
+            else if (instructor.Equals("Nick Lynam"))
+            {
+                email = "nlynam94@gmail.com";
+            }
+            else if (instructor.Equals("Dan Manning"))
+            {
+                email = "dmanning@unomaha.edu";
+            }
+            else if (instructor.Equals("Ted Manos"))
+            {
+                email = "tmanos@unomaha.edu";
+            }
+            else if (instructor.Equals("Steve Michael"))
+            {
+                email = "sbmichael@cox.net";
+            }
+            else if (instructor.Equals("Brandon Perkins"))
+            {
+                email = "bperkins@unomaha.edu";
+            }
+            else if (instructor.Equals("Will Powers"))
+            {
+                email = "willpowers77@gmail.com";
+            }
+            else if (instructor.Equals("Tony Reedy"))
+            {
+                email = "anthonyreedy@msn.com";
+            }
+            else if (instructor.Equals("Ben Reher"))
+            {
+                email = "breher865@gmail.com";
+            }
+            else if (instructor.Equals("Joel Rourke"))
+            {
+                email = "rourke.joel@gmail.com";
+            }
+            else if (instructor.Equals("John Rued"))
+            {
+                email = "johnrued@gmail.com";
+            }
+            else if (instructor.Equals("Tiernan Siems"))
+            {
+                email = "tiernansiems@hotmail.com";
+            }
+            else if (instructor.Equals("Mark Van Pelt"))
+            {
+                email = "imvp@cox.net";
+            }
+            else if (instructor.Equals("Bryce Vezner"))
+            {
+                email = "brycevezner44@gmail.com";
+            }
+            else if (instructor.Equals("Glen Weaver"))
+            {
+                email = "johnglenweaver@gmail.com";
+            }
+            else if (instructor.Equals("Joe Wendl"))
+            {
+                email = "jmwendl@gmail.com";
+            }
+            else if (instructor.Equals("Ryan Williams"))
+            {
+                email = "williams.ryan073@gmail.com";
+            }
+            else if (instructor.Equals("Mark Wunderlich"))
+            {
+                email = "mark1derlich@gmail.com";
+                int a = 1;
+            }
 
         }
     }
